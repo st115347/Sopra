@@ -1,0 +1,16 @@
+Read me Sopra
+
+Im Folgenden wird erläutert wie die Webapp aufgerufen werden kann:
+
+1. Um die Webapp aufzurufen tippt man in den Browser http://localhost:8080/greeting ein. Es wird nun folgende Nachricht angezeigt:
+
+   "Herzlich Willkommen auf der Lernplattform der Universität Hohenheim, Unbekannter!".
+
+2. Um die Nachricht zu personalisieren gibt man folgende URL in den Browser ein: http://localhost:8080/greeting?name=Name
+
+   Fügt man einen beliebigen Namen der unter 2. genannten URL ein, z.B http://localhost:8080/greeting?name=Peter so erscheint folgende Nachricht:
+
+   "Herzlich Willkommen auf der Lernplattform der Universität Hohenheim, Peter!"
+
+   Der Parameter "Name" ist mit dem default Wert "Unbekannter" definiert, aber man kann ihn immer explizit durch Query string überschreiben.
+
