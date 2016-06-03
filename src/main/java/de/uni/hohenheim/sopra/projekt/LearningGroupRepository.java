@@ -1,4 +1,4 @@
-package de.hohenheim.model;
+package de.uni.hohenheim.sopra.projekt;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -6,5 +6,6 @@ import org.springframework.stereotype.Repository;
 /**
  * Created by Meltem on 02.06.2016.
  */
+
 public interface LearningGroupRepository extends JpaRepository<LearningGroup, Integer> {
 }

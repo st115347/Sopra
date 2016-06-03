@@ -1,4 +1,4 @@
-package de.hohenheim.model;
+package de.uni.hohenheim.sopra.projekt;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -7,6 +7,7 @@ import java.util.List;
 /**
  * Created by Meltem on 02.06.2016.
  */
+
 @Entity
 public class LearningGroup {
 
