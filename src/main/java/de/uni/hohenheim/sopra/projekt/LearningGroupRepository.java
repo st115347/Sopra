@@ -1,4 +1,4 @@
-package de.hohenheim.model;
+package de.uni.hohenheim.sopra.projekt;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package de.hohenheim.model;
+package de.uni.hohenheim.sopra.projekt;
 
 import javax.persistence.*;
 import java.util.ArrayList;
