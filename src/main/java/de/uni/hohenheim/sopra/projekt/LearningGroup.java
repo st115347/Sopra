@@ -7,7 +7,6 @@ import java.util.List;
 /**
  * Created by Meltem on 02.06.2016.
  */
-
 @Entity
 public class LearningGroup {
 
