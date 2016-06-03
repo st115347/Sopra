@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class GreetingController {
     @RequestMapping("/greeting")
+    /**
+     * Diese Methode gibt den Begrüßungstext aus.
+     */
     public String greeting(@RequestParam(value="name", required=false, defaultValue="Unbekannter") String name, Model model) {
         model.addAttribute("name", name);
         return "greeting";
