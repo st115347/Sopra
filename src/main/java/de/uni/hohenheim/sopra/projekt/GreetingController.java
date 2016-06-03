@@ -16,7 +16,6 @@ import java.util.List
 /**
  * Created by Tabea on 20.05.2016.
  */
-
 @Controller
 public class GreetingController {
 
