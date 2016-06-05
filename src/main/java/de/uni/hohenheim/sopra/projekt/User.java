@@ -7,7 +7,6 @@ import javax.persistence.Id;
 /**
  * Created by Meltem on 02.06.2016.
  */
-
 @Entity
 public class User {
 
