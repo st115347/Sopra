@@ -1,9 +1,9 @@
 package de.uni.hohenheim.sopra.projekt;
 
-import de.hohenheim.model.LearningGroup;
-import de.hohenheim.model.LearningGroupRepository;
-import de.hohenheim.model.User;
-import de.hohenheim.model.UserRepository;
+import de.uni.hohenheim.sopra.projekt.LearningGroup;
+import de.uni.hohenheim.sopra.projekt.LearningGroupRepository;
+import de.uni.hohenheim.sopra.projekt.User;
+import de.uni.hohenheim.sopra.projekt.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
-import java.util.List
+import java.util.List;
 
 /**
  * Created by Tabea on 20.05.2016.
