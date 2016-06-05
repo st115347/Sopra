@@ -17,6 +17,7 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -71,6 +72,38 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<a class="btn btn-success" href="#" role="button">Link</a><p th:text="'Herzlich Willkommen auf der Lernplattform der Universität Hohenheim, ' + ${name} + '!'" />
+
+<div class="page-header">
+    <h1>Neue Lerngruppe erstellen</h1>
+</div>
+
+
+<form action="/add_lgp_do" method="get">
+    <table border="0" cellspacing="0" cellpadding="2">
+        <tbody>
+        <tr>
+            <td>Name der Lerngruppe:</td>
+            <td>
+                <input maxlength="50" name="Name_Lerngruppe" size="45" type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>Sichtbarkeit:</td>
+            <td>
+                <input checked="checked" name="Sichtbarkeit" type="radio" value="Privat" /> Privat
+                <input name="Sichtbarkeit" type="radio" value="Öffentlich" /> Öffentlich
+            </td>
+        </tr>
+
+           <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Abschicken" />
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+
 </body>
 </html>
