@@ -17,6 +17,7 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,9 +42,7 @@
                         <li><a href="#">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
                         <li><a href="#">Meine Lerngruppen</a></li>
-                        <li><a href="BeitragSchreiben.html">Beitrag schreiben</a></li>
                         <li><a href="#">Kommentare</a></li>
-                        <li><a href="/BeitragSchreiben">Beitrag schreiben</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Einstellungen</a></li>
                         <li role="separator" class="divider"></li>
@@ -58,7 +57,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="Login3.html">Login</a></li>
+                <li><a href="/Login3">Login</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -73,6 +72,37 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<a class="btn btn-success" href="#" role="button">Link</a><p th:text="'Herzlich Willkommen auf der Lernplattform der Universität Hohenheim, ' + ${name} + '!'" />
+
+<div class="page-header">
+    <h1>Login</h1>
+</div>
+
+
+<form action="/Login3" method="get">
+    <table border="0" cellspacing="0" cellpadding="2">
+        <tbody>
+        <tr>
+            <td>E-Mail:</td>
+            <td>
+                <input maxlength="50" name="E-Mail" size="45" type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>Passwort:</td>
+            <td>
+                <input maxlength="50" name="Passwort" size="45" type="text" />
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Abschicken" />
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+
 </body>
 </html>
