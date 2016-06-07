@@ -1,16 +1,13 @@
 package de.uni.hohenheim.sopra.projekt;
 
-<<<<<<< HEAD
-import org.springframework.stereotype.Service;
 
-=======
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.annotation.ManagedBean;
->>>>>>> master
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
