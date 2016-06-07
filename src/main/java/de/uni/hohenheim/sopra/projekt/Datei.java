@@ -2,6 +2,7 @@ package de.uni.hohenheim.sopra.projekt;
 
 import javax.persistence.*;
 
+@Entity
 /**
  * Created by hilaltaylan on 06.06.16.
  */

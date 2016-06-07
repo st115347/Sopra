@@ -1,5 +1,7 @@
 package de.uni.hohenheim.sopra.projekt;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+
 import javax.persistence.Column;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
