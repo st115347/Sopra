@@ -1,11 +1,14 @@
 package de.uni.hohenheim.sopra.projekt;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+
 import org.springframework.stereotype.Service;
 
-import javax.annotation.ManagedBean;
+
+import org.springframework.context.annotation.Bean;
+
+
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -15,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+
 /**
  * Created by hilaltaylan on 06.06.16.
  */
@@ -32,7 +36,6 @@ public class UserBean implements Serializable{
 
 
 
-
     @Autowired
     private LoginBean loginBean;
 
@@ -42,6 +45,7 @@ public class UserBean implements Serializable{
 
     @Autowired
     private BeitragBean beitragBean;
+
 
     public void setBeitragBean(BeitragBean beitragBean) {
         this.beitragBean = beitragBean;

@@ -1,24 +1,23 @@
 package de.uni.hohenheim.sopra.projekt;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
 import jdk.nashorn.internal.objects.annotations.Constructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
-import javax.annotation.ManagedBean;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
-
 @Service
-
 
 /**
  * Created by hilaltaylan on 05.06.16.
@@ -60,7 +59,6 @@ public class BeitragBean implements Serializable{
     public void setNeuerBeitragId(String neuesProjektId) {
         this.neuerBeitragId = neuesProjektId;
     }
-
 
     @Bean
     public String getBeitragName() {
