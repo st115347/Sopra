@@ -1,9 +1,12 @@
 package de.uni.hohenheim.sopra.projekt;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 /**
  * Created by hilaltaylan on 05.06.16.
  */
@@ -31,7 +34,7 @@ public class BeitragBean {
         this.neuerBeitragId = neuesProjektId;
     }
 
-
+    @Autowired
     private LoginBean loginBean;
 
     public String getBeitragName() {

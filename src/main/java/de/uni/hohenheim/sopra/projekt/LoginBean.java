@@ -1,9 +1,12 @@
 package de.uni.hohenheim.sopra.projekt;
 
+import org.springframework.stereotype.Service;
+
 import javax.persistence.*;
 import java.util.List;
 import java.util.Random;
 
+@Service
 /**
  * Created by hilaltaylan on 05.06.16.
  */

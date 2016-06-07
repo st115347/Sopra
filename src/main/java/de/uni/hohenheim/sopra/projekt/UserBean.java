@@ -1,11 +1,16 @@
 package de.uni.hohenheim.sopra.projekt;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
+
+@Service
 
 /**
  * Created by hilaltaylan on 06.06.16.
@@ -21,10 +26,12 @@ public class UserBean {
     private String userWohnort;
     private String userPlz;
     private String userPw;
+
+    @Autowired
     private LoginBean loginBean;
 
-
-
+    @Autowired
+    private BeitragBean beitragBean;
 
 
     public String getUserGebDatum() {

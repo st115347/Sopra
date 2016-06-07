@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="322a22d5-f37b-4dc0-a2b4-0d9aff52e684" name="Default" comment="" />
+    <list default="true" id="322a22d5-f37b-4dc0-a2b4-0d9aff52e684" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/BeitragBean.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/BeitragBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/Datei.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/Datei.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/LoginBean.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/LoginBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/UserBean.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/UserBean.java" />
+    </list>
     <ignored path="Sopra.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -131,12 +137,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="greeting.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="greeting.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="183">
               <caret line="49" column="54" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeitragBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/BeitragBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/LoginBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Datei.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/Datei.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#524#525#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,7 +183,7 @@
       <file leaf-file-name="add_lgpController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/add_lgpController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="285">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -153,7 +192,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BeitragSchreiben.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BeitragSchreiben.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/BeitragSchreiben.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -167,6 +206,16 @@
                 <element signature="n#style#0;n#h:inputText#1;n#h:form#0;n#h:body#0;n#ui:define#0;n#ui:composition#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h:message#1;n#h:form#0;n#h:body#0;n#ui:define#0;n#ui:composition#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/UserBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -524,13 +573,9 @@
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/B.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/BBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/Datei.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/BeitragBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/UserBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/Beitrag.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/Login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/LoginBean.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/Login2.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/Login3.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/add_lgp.html" />
@@ -540,6 +585,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/BeitragSchreiben.html" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/LoginRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/BeitragBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/UserBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/LoginBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/Datei.java" />
       </list>
     </option>
   </component>
@@ -584,8 +633,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -724,7 +773,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1192,8 +1241,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.BeitragSchreiben.html" />
-        <item index="1" class="java.lang.String" itemvalue="Spring Boot.SopraApplication" />
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.SopraApplication" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.BeitragSchreiben.html" />
         <item index="2" class="java.lang.String" itemvalue="Gradle.Sopra [bootRun]" />
         <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.greeting.html" />
         <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.Login3.html" />
@@ -1224,15 +1273,16 @@
       <workItem from="1465140859865" duration="17027000" />
       <workItem from="1465182328613" duration="3245000" />
       <workItem from="1465185901412" duration="311000" />
+      <workItem from="1465312925062" duration="374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31032000" />
+    <option name="totallyTimeSpent" value="31406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1242,12 +1292,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27123287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27123287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3398693" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15024233" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15024233" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1930533" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1482,27 +1532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/Datei.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/BeitragBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/UserBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/Beitrag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1598,13 +1627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/LoginBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/LearningGroupRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1613,24 +1635,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/LoginRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/add_lgpController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="49" column="54" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/BeitragSchreiben.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1644,6 +1648,59 @@
             <element signature="n#style#0;n#h:inputText#1;n#h:form#0;n#h:body#0;n#ui:define#0;n#ui:composition#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h:message#1;n#h:form#0;n#h:body#0;n#ui:define#0;n#ui:composition#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/BeitragBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/UserBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/add_lgpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/LoginBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/Datei.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="49" column="54" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
