@@ -7,6 +7,11 @@
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+src/main/java/de/uni/.idea/workspace.xml
+src/main/java/de/uni/.idea/tasks.xml
+src/main/java/de/uni/.idea/dictionaries
+src/main/java/de/uni/.idea/vcs.xml
+src/main/java/de/uni/.idea/jsLibraryMappings.xml
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
