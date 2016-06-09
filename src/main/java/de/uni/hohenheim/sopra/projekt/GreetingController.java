@@ -1,5 +1,9 @@
 package de.uni.hohenheim.sopra.projekt;
 
+import de.uni.hohenheim.sopra.projekt.LearningGroup;
+import de.uni.hohenheim.sopra.projekt.LearningGroupRepository;
+import de.uni.hohenheim.sopra.projekt.User;
+import de.uni.hohenheim.sopra.projekt.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
