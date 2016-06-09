@@ -1,8 +1,7 @@
 package de.uni.hohenheim.sopra.projekt;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -13,6 +12,7 @@ import java.util.Set;
 /**
  * Created by hilaltaylan on 06.06.16.
  */
+@Entity
 public class Beitrag implements Serializable{
 
     private static final long serialVersionUID = -8542604006878396929L;
@@ -26,16 +26,16 @@ public class Beitrag implements Serializable{
 
 
 
-    private Set<Datei> datei = new HashSet<Datei>(0);
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "projekt")
-    public Set<Datei> getDatei() {
-        return this.datei;
-    }
-
-    public void setDatei(Set<Datei> datei) {
-        this.datei = datei;
-    }
+//    private Set<Datei> datei = new HashSet<Datei>(0);
+//
+//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "projekt")
+//    public Set<Datei> getDatei() {
+//        return this.datei;
+//    }
+//
+//    public void setDatei(Set<Datei> datei) {
+//        this.datei = datei;
+//    }
 
     public String getId() {
         return id;

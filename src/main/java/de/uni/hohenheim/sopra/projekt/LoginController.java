@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by hilaltaylan on 07.06.16.
  */
 public class LoginController {
-
-    @Autowired
-    LoginRepository loginRepository;
+//
+//    @Autowired
+//    LoginRepository loginRepository;
 
     @Autowired
     UserRepository userRepository;
