@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Meltem on 02.06.2016.
+ * Created by Sören on 08.06.2016.
  */
 @Entity
 public class LearningGroup {
@@ -15,6 +15,7 @@ public class LearningGroup {
     Integer groupId;
 
     String name;
+    Boolean visibility;
 
     @ManyToMany
     @JoinTable(
@@ -46,5 +47,15 @@ public class LearningGroup {
     public void setUsers(List<User> users) {
         this.users = users;
     }
+
+    public Boolean getVisibility() {
+        return visibility;
+    }
+
+    public void setVisibility(Boolean visibility) {
+        this.visibility = visibility;
+    }
+
+
 
 }

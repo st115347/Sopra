@@ -41,7 +41,6 @@
                         <li><a href="greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
-                        <li><a href="/Beitrag schreiben">Beitrag schreiben</a></li>
                         <li><a href="#">Kommentare</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Einstellungen</a></li>
@@ -72,7 +71,29 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<a class="btn btn-success" href="#" role="button">Link</a><p th:text="'Herzlich Willkommen auf der Lernplattform der Universität Hohenheim, ' + ${name} + '!'" />
+
+<div class="page-header">
+    <h1>Meine Lerngruppen</h1>
+</div>
+
+<table style="width:50%">
+
+    <tr>
+        <td><b>Name der Lerngruppe</b></td>
+        <td><b>Sichtbarkeit</b></td>
+    </tr>
+    <tr th:each="lerngruppen : ${lerngruppe}">
+        <td th:text="${lerngruppen.name}"></td>
+        <td th:text="${lerngruppen.visibility}"></td>
+        <td >
+        <a th:href="'/get_lgp?id=' + ${lerngruppen.id}" role="button" class="btn btn-success" >Inhalt anzeigen</a>
+        </td>
+    </tr>
+</table>
+
+
+
+
 
 </body>
 </html>

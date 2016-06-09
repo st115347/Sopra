@@ -1,21 +1,8 @@
 package de.uni.hohenheim.sopra.projekt;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.stereotype.Service;
 
-
-import org.springframework.context.annotation.Bean;
-
-
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 
