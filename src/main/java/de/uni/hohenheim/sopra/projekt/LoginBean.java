@@ -22,83 +22,83 @@ public class LoginBean implements Serializable{
 
 
 
+//
+//        private String email;
+//        private String passwort;
+//        private String name;
+//
+//        @Bean
+//        public String getName(){return name;}
+//
+//        @Bean
+//        public void setName(String name){this.name=name;}
+//
+//        @Bean
+//        public String getEmail() {
+//            return email;
+//        }
+//
+//        @Bean
+//        public void setEmail(String email) {
+//            this.email = email;
+//        }
+//
+//        @Bean
+//        public String getPasswort() {
+//            return passwort;
+//        }
+//
+//        @Bean
+//        public void setPasswort(String passwort) {
+//            this.passwort = passwort;
+//        }
+//
+//
+//
+////        @Bean
+////        public String authentifikation() {
+////            User user = getUser(email);
+////            if (user != null) {
+////                if (user.getPasswort().equals(passwort)) {
+////
+////                    name = user.getVorname().substring(0, 1).toUpperCase()
+////                            + user.getVorname().substring(1).toLowerCase() + " "
+////                            + user.getNachname().substring(0, 1).toUpperCase()
+////                            + user.getNachname().substring(1).toLowerCase();
+////
+////
+////                }
+////            }
+////
+////            return "loginFail?faces-redirect=true";
+////
+////        }
+//
+//        private static final String charset = "0123456789abcdefghijklmnopqrstuvwxyz";
+//
+//
+//
+//
 
-        private String email;
-        private String passwort;
-        private String name;
-
-        @Bean
-        public String getName(){return name;}
-
-        @Bean
-        public void setName(String name){this.name=name;}
-
-        @Bean
-        public String getEmail() {
-            return email;
-        }
-
-        @Bean
-        public void setEmail(String email) {
-            this.email = email;
-        }
-
-        @Bean
-        public String getPasswort() {
-            return passwort;
-        }
-
-        @Bean
-        public void setPasswort(String passwort) {
-            this.passwort = passwort;
-        }
-
-
-
-        @Bean
-        public String authentifikation() {
-            User user = getUser(email);
-            if (user != null) {
-                if (user.getPasswort().equals(passwort)) {
-
-                    name = user.getVorname().substring(0, 1).toUpperCase()
-                            + user.getVorname().substring(1).toLowerCase() + " "
-                            + user.getNachname().substring(0, 1).toUpperCase()
-                            + user.getNachname().substring(1).toLowerCase();
-
-
-                }
-            }
-
-            return "loginFail?faces-redirect=true";
-
-        }
-
-        private static final String charset = "0123456789abcdefghijklmnopqrstuvwxyz";
-
-
-
-
-
-    private EntityManagerFactory emf = Persistence
-            .createEntityManagerFactory("EMF");
-    private EntityManager entityManager = emf.createEntityManager();
-
-        @Bean
-        public User getUser(String email) {
-            User n = null;
-            Query q = entityManager.createQuery(
-                    "SELECT n FROM User n WHERE n.email =:email").setParameter(
-                    "email", email);
-            @SuppressWarnings("unchecked")
-            List<User> l = q.getResultList();
-            for (int i = 0; i < l.size(); i++) {
-                n = l.get(i);
-            }
-
-            return n;
-
-        }
+//    private EntityManagerFactory emf = Persistence
+//            .createEntityManagerFactory("EMF");
+//    private EntityManager entityManager = emf.createEntityManager();
+//
+//        @Bean
+//        public User getUser(String email) {
+//            User n = null;
+//            Query q = entityManager.createQuery(
+//                    "SELECT n FROM User n WHERE n.email =:email").setParameter(
+//                    "email", email);
+//            @SuppressWarnings("unchecked")
+//            List<User> l = q.getResultList();
+//            for (int i = 0; i < l.size(); i++) {
+//                n = l.get(i);
+//            }
+//
+//            return n;
+//
+//        }
 
 
 
