@@ -41,12 +41,19 @@
                         <li><a href="greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
-                        <li><a href="/Beitrag schreiben">Beitrag schreiben</a></li>
                         <li><a href="#">Kommentare</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Einstellungen</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Hilfe</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a th:href="'/change_lgp?id=' + ${lerngruppe.id}" >Einstellungen der Lerngruppe ändern</a></li>
+                        <li><a href="#">Benutzer hinzufügen/entfernen</a></li>
+                        <li><a href="#">Lerngruppe löschen</a></li>
                     </ul>
                 </li>
             </ul>
@@ -72,7 +79,15 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<a class="btn btn-success" href="#" role="button">Link</a><p th:text="'Herzlich Willkommen auf der Lernplattform der Universität Hohenheim, ' + ${name} + '!'" />
+
+
+<p th:text="'Willkommen in der Lerngruppe ' + ${lerngruppe.name}" />
+<br/>
+<p>Inhalt dieser Lerngruppe...</p>
+
+<br/>
+<a class="btn btn-success" href="#" role="button">Beitrag erstellen</a>
+
 
 </body>
 </html>

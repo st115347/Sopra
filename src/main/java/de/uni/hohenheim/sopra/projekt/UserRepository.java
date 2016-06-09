@@ -1,6 +1,5 @@
 package de.uni.hohenheim.sopra.projekt;
 
-import de.uni.hohenheim.sopra.projekt.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

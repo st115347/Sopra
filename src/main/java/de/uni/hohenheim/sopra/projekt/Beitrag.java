@@ -2,12 +2,8 @@ package de.uni.hohenheim.sopra.projekt;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Created by hilaltaylan on 06.06.16.

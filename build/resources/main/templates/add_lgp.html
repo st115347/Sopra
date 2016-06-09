@@ -35,13 +35,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">FAQ <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Home</a></li>
+                <li><a href="/greeting">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Persönlicher Schreibtisch <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Übersicht</a></li>
+                        <li><a href="greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
-                        <li><a href="#">Meine Lerngruppen</a></li>
+                        <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
                         <li><a href="#">Kommentare</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Einstellungen</a></li>
@@ -57,7 +57,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/Login3">Login</a></li>
+                <li><a href="#">Login</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -73,34 +73,36 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<div class="page-header">
-    <h1>Neue Lerngruppe erstellen</h1>
-</div>
 
-
-<form action="/add_lgp_do" method="get">
-    <table border="0" cellspacing="0" cellpadding="2">
+<h1>Neue Lerngruppe hinzufügen</h1>
+<br/>
+<form action="#" th:action="@{/add_lgp}" th:object="${lerngruppe}" method="post">
+    <table border="0" cellspacing="1" cellpadding="2">
         <tbody>
-        <tr>
-            <td>Name der Lerngruppe:</td>
-            <td>
-                <input maxlength="50" name="Name_Lerngruppe" size="45" type="text" />
-            </td>
-        </tr>
-        <tr>
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Name der Lerngruppe</span>
+            <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        </div>
+
+        <br/>
+           <tr>
             <td>Sichtbarkeit:</td>
             <td>
-                <input checked="checked" name="Sichtbarkeit" type="radio" value="Privat" /> Privat
-                <input name="Sichtbarkeit" type="radio" value="Öffentlich" /> Öffentlich
+                <input name="Sichtbarkeit" type="radio" value="false" th:field="*{visibility}" /> Privat
+                <input  checked="checked"  name="Sichtbarkeit" type="radio" value="true" th:field="*{visibility}" /> Öffentlich
             </td>
         </tr>
 
-           <tr>
+        <tr>
             <td></td>
             <td>
-                <input type="submit" value="Abschicken" />
+                <br/>
+                <input type="submit" value="Lerngruppe erstellen" /> <input type="reset" value="Werte zurücksetzen" />
             </td>
         </tr>
+
         </tbody>
     </table>
 </form>
