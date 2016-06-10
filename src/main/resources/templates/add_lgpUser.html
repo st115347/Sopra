@@ -75,38 +75,31 @@
 </nav>
 
 
-<h1>Neue Lerngruppe hinzufügen</h1>
+<h1>Mitglieder zur Lerngruppe hinzufügen</h1>
 <br/>
-<form action="#" th:action="@{/add_lgp}" th:object="${lerngruppe}" method="post">
+<form action="#" th:action="@{/add_lgpUser}" th:object="${sopraUser}" method="post" id="beitragform">
     <table border="0" cellspacing="1" cellpadding="2">
         <tbody>
 
 
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Name der Lerngruppe</span>
-            <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+            <span class="input-group-addon" id="sizing-addon1">E-Mail-Adresse des Benutzers</span>
+            <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
         </div>
 
-        <br/>
-           <tr>
-            <td>Sichtbarkeit:</td>
-            <td>
-                <input name="Sichtbarkeit" type="radio" value="false" th:field="*{visibility}" /> Privat
-                <input  checked="checked"  name="Sichtbarkeit" type="radio" value="true" th:field="*{visibility}" /> Öffentlich
-            </td>
-        </tr>
+                <br/>
+
 
         <tr>
             <td></td>
             <td>
                 <br/>
-                <input type="submit" value="Lerngruppe erstellen" /> <input type="reset" value="Werte zurücksetzen" />
+                <input type="submit" value="Benutzer hinzufügen" /> <input type="reset" value="Werte zurücksetzen" />
             </td>
         </tr>
 
         </tbody>
     </table>
 </form>
-
 </body>
 </html>

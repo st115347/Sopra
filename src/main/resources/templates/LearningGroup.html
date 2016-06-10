@@ -52,8 +52,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a th:href="'/change_lgp?id=' + ${lerngruppe.id}" >Einstellungen der Lerngruppe ändern</a></li>
-                        <li><a href="#">Benutzer hinzufügen/entfernen</a></li>
-                        <li><a href="#">Lerngruppe löschen</a></li>
+                        <li><a th:href="'/add_lgpUser?id=' + ${lerngruppe.id}" >Benutzer hinzufügen/entfernen</a></li>
+                        <li><a th:href="'/del_lgp?id=' + ${lerngruppe.id}">Lerngruppe löschen</a></li>
                     </ul>
                 </li>
             </ul>
@@ -70,6 +70,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="/">Meine Nachrichten</a></li>
                         <li><a href="#">Meine Quiz</a></li>
+                        <li><a href="/change_profileSettings">Profil ändern</a></li>
                         <li><a href="#">Einstellungen</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Sprache</a></li>
@@ -86,8 +87,25 @@
 <p>Inhalt dieser Lerngruppe...</p>
 
 <br/>
-<a class="btn btn-success" href="#" role="button">Beitrag erstellen</a>
+<a class="btn btn-success" href="/add_beitrag" role="button">Beitrag erstellen</a>
+<br/>
 
+
+<div class="page-header">
+    <h1>Beiträge dieser Lerngruppe</h1>
+</div>
+
+<table style="width:50%">
+
+    <tr>
+        <td><b>Beitrag</b></td>
+        <td><b>Inhalt</b></td>
+    </tr>
+    <tr th:each="beitrag : ${beitrag}">
+        <td th:text="${name}"></td>
+        <td th:text="${text}"></td>
+    </tr>
+</table>
 
 </body>
 </html>
