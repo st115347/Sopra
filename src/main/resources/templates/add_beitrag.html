@@ -75,38 +75,36 @@
 </nav>
 
 
-<h1>Neue Lerngruppe hinzufügen</h1>
+<h1>Neuen Beitrag zur Lerngruppe hinzufügen</h1>
 <br/>
-<form action="#" th:action="@{/add_lgp}" th:object="${lerngruppe}" method="post">
+<form action="#" th:action="@{/add_beitrag}" th:object="${beitrag}" method="post" id="beitragform">
     <table border="0" cellspacing="1" cellpadding="2">
         <tbody>
 
 
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Name der Lerngruppe</span>
+            <span class="input-group-addon" id="sizing-addon1">Name des Beitrags</span>
             <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
         </div>
 
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Inhalt</span>
+            <input type="text" th:field="*{text}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        </div>
+
         <br/>
-           <tr>
-            <td>Sichtbarkeit:</td>
-            <td>
-                <input name="Sichtbarkeit" type="radio" value="false" th:field="*{visibility}" /> Privat
-                <input  checked="checked"  name="Sichtbarkeit" type="radio" value="true" th:field="*{visibility}" /> Öffentlich
-            </td>
-        </tr>
+
 
         <tr>
             <td></td>
             <td>
                 <br/>
-                <input type="submit" value="Lerngruppe erstellen" /> <input type="reset" value="Werte zurücksetzen" />
+                <input type="submit" value="Beitrag erstellen" /> <input type="reset" value="Werte zurücksetzen" />
             </td>
         </tr>
 
         </tbody>
     </table>
 </form>
-
 </body>
 </html>

@@ -57,7 +57,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Logout</a></li>
+                <li><a href="#">Login</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -75,15 +75,17 @@
 </nav>
 
 
-<h1>Neue Lerngruppe hinzufügen</h1>
+<h1>Einstellungen der Lerngruppe ändern</h1>
 <br/>
-<form action="#" th:action="@{/add_lgp}" th:object="${lerngruppe}" method="post">
+<form action="#" th:action="@{/change_lgp}" th:object="${lerngruppe}" method="post">
     <table border="0" cellspacing="1" cellpadding="2">
         <tbody>
 
-
+        <div>
+            <input type="hidden" th:field="*{id}" class="form-control"/>
+        </div>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Name der Lerngruppe</span>
+            <span class="input-group-addon" id="sizing-addon1">Neuer Name der Lerngruppe</span>
             <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
         </div>
 
@@ -100,7 +102,7 @@
             <td></td>
             <td>
                 <br/>
-                <input type="submit" value="Lerngruppe erstellen" /> <input type="reset" value="Werte zurücksetzen" />
+                <input type="submit" value="Änderungen speichern" /> <input type="reset" value="Werte zurücksetzen" />
             </td>
         </tr>
 
