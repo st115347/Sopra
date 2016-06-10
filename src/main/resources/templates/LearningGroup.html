@@ -64,7 +64,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Login</a></li>
+                <li><a href="#">Logout</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -87,7 +87,7 @@
 <p>Inhalt dieser Lerngruppe...</p>
 
 <br/>
-<a class="btn btn-success" href="/add_beitrag" role="button">Beitrag erstellen</a>
+<a class="btn btn-success" th:href="'/add_beitrag?id='+ ${lerngruppe.id}" role="button">Beitrag erstellen</a>
 <br/>
 
 
@@ -101,9 +101,9 @@
         <td><b>Beitrag</b></td>
         <td><b>Inhalt</b></td>
     </tr>
-    <tr th:each="beitrag : ${beitrag}">
-        <td th:text="${name}"></td>
-        <td th:text="${text}"></td>
+    <tr th:each="beitraege : ${beitrag}" th:if="${lerngruppe.id} == ${beitraege.groupId}" >
+        <td th:text="${beitraege.name}"></td>
+        <td th:text="${beitraege.text}"></td>
     </tr>
 </table>
 

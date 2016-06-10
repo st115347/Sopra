@@ -57,6 +57,7 @@ public class LearningGroupController {
     @RequestMapping("/get_lgp")
     public String getLearninggroup(@RequestParam(value="id", required=true) Integer groupId, Model model){
         model.addAttribute("lerngruppe", learningGroupRepository.findOne(groupId));
+        model.addAttribute("beitrag", beitragRepository.findAll());
         return "LearningGroup";
     }
 
@@ -84,8 +85,10 @@ public class LearningGroupController {
 
 
     @RequestMapping(value="/add_beitrag", method= RequestMethod.GET)
-    public String add_beitragForm(Model model){
-        model.addAttribute("beitrag", new Beitrag());
+    public String add_beitragForm(@RequestParam(value="id", required=true) Integer groupId, Model model){
+        Beitrag beitrag = new Beitrag();
+        beitrag.setGroupId(groupId);
+        model.addAttribute("beitrag", beitrag);
         return "add_beitrag";
     }
 
