@@ -57,7 +57,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Logout</a></li>
+                <li><a href="#">Login</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -75,32 +75,48 @@
 </nav>
 
 
-<h1>Neue Lerngruppe hinzufügen</h1>
+<h1>Eigenes Profil ändern</h1>
 <br/>
-<form action="#" th:action="@{/add_lgp}" th:object="${lerngruppe}" method="post">
+<form action="#" th:action="@{/change_profileSettings}" th:object="${sopraUser}" method="post">
     <table border="0" cellspacing="1" cellpadding="2">
         <tbody>
 
-
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Name der Lerngruppe</span>
-            <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        <div>
+            <input type="hidden" th:field="*{username}" class="form-control"/>
         </div>
-
-        <br/>
-           <tr>
-            <td>Sichtbarkeit:</td>
-            <td>
-                <input name="Sichtbarkeit" type="radio" value="false" th:field="*{visibility}" /> Privat
-                <input  checked="checked"  name="Sichtbarkeit" type="radio" value="true" th:field="*{visibility}" /> Öffentlich
-            </td>
-        </tr>
+        <div>
+            <input type="hidden" th:field="*{email}" class="form-control"/>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Vorname</span>
+            <input type="text" th:field="*{vorname}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Nachname</span>
+            <input type="text" th:field="*{nachname}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Geburtsdatum</span>
+            <input type="text" th:field="*{geburtsdatum}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Hochschule</span>
+            <input type="text" th:field="*{hochschule}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Studiengang</span>
+            <input type="text" th:field="*{studiengang}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Fachsemester</span>
+            <input type="text" th:field="*{fachsemester}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        </div>
 
         <tr>
             <td></td>
             <td>
                 <br/>
-                <input type="submit" value="Lerngruppe erstellen" /> <input type="reset" value="Werte zurücksetzen" />
+                <input type="submit" value="Änderungen speichern" /> <input type="reset" value="Werte zurücksetzen" />
             </td>
         </tr>
 
