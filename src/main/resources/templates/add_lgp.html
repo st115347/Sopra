@@ -92,11 +92,18 @@
            <tr>
             <td>Sichtbarkeit:</td>
             <td>
-                <input name="Sichtbarkeit" type="radio" value="false" th:field="*{visibility}" /> Privat
+                <input name="Sichtbarkeit" type="radio" value="false" th:field="*{visibility}" id="private" /> Privat
                 <input  checked="checked"  name="Sichtbarkeit" type="radio" value="true" th:field="*{visibility}" /> Öffentlich
             </td>
         </tr>
+        <!--
+        <tr>
+            <div>
+                <input type="hidden" class="form-control" id="passwordbox" placeholder="Passwort für Lerngruppe" th:field="*{password}" />
 
+            </div>
+        </tr>
+        -->
         <tr>
             <td></td>
             <td>
@@ -108,6 +115,30 @@
         </tbody>
     </table>
 </form>
+<!--
+<script>
+    var checkbox = document.getElementById('private');
+    var pwbox = document.getElementById('passwordbox');
+    checkbox.click(function() {
+       if(checkbox.checked){
+           pwbox = changeInputType(pwbox,'password');
+       }else{
+           pwbox = changeInputType(pwbox,'hidden');
+       }
+    });
 
+    function changeInputType(oldObject, oType) {
+        var newObject = document.createElement('input');
+        newObject.type = oType;
+        if(oldObject.size) newObject.size = oldObject.size;
+        if(oldObject.value) newObject.value = oldObject.value;
+        if(oldObject.name) newObject.name = oldObject.name;
+        if(oldObject.id) newObject.id = oldObject.id;
+        if(oldObject.className) newObject.className = oldObject.className;
+        oldObject.parentNode.replaceChild(newObject,oldObject);
+        return newObject;
+    }
+</script>
+-->
 </body>
 </html>

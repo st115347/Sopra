@@ -40,7 +40,7 @@ public class LearningGroupController {
     @Autowired
     UserService userService;
 
-
+    private int groupIDSave;
 
     @RequestMapping(value="/add_lgp", method= RequestMethod.GET)
     public String greetingForm(Model model) {

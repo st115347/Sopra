@@ -16,6 +16,9 @@ public class LearningGroup {
 
     String name;
     Boolean visibility;
+    int membercount;
+    String owner;
+    String password;
 
     @ManyToMany
     @JoinTable(
@@ -57,17 +60,41 @@ public class LearningGroup {
     }
 
     public boolean addUser(SopraUser user){
+        if (sopraUsers.size()==0){
+            owner = user.getVorname() + " " + user.getNachname();
+        }
         if (sopraUsers.size() > 10){
             return false;
         }
         sopraUsers.add(user);
+        membercount++;
         return true;
     }
 
     public void removeUser(SopraUser user){
         sopraUsers.remove(user);
+        membercount--;
     }
 
+    public int getMembercount(){
+        return membercount;
+    }
+
+
+    public String getOwner(){
+        return owner;
+    }
+
+    public void setPassword(String password){
+        this.password = password;
+    }
+
+    public boolean comparePassword(Password password){
+        if(this.password.equals(password.getPw())){
+            return true;
+        }
+        return false;
+    }
 
 
 

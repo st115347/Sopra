@@ -78,18 +78,19 @@
     <h1>Meine Lerngruppen</h1>
 </div>
 
-<table style="width:50%">
-
+<table class="table">
     <tr>
-        <td><b>Name der Lerngruppe</b></td>
-        <td><b>Sichtbarkeit</b></td>
+        <td><b>Lerngruppe</b></td>
+        <td><b>Öffentlich</b></td>
+        <td><b>Besitzer</b></td>
+        <td></td>
     </tr>
-    <tr th:each="lerngruppen : ${lerngruppe}">
-        <td th:text="${lerngruppen.name}"></td>
-        <td th:text="${lerngruppen.visibility}"></td>
-        <td >
-        <a th:href="'/get_lgp?id=' + ${lerngruppen.id}" role="button" class="btn btn-success" >Inhalt anzeigen</a>
-        </td>
+    <tr th:each="lgp : ${lerngruppe}" >
+        <td th:text="${lgp.name}"></td>
+        <td th:if="${lgp.visibility}">Ja</td>
+        <td th:unless="${lgp.visibility}">Nein</td>
+        <td th:text="${lgp.owner}"></td>
+        <td><a th:href="'/get_lgp/?id=' + ${lgp.id}" role="button" class="btn btn-success" >Inhalt Anzeigen</a></td>
     </tr>
 </table>
 

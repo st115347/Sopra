@@ -1,10 +1,7 @@
 package de.uni.hohenheim.sopra.projekt.controller;
 
 import de.uni.hohenheim.sopra.projekt.UserService;
-import de.uni.hohenheim.sopra.projekt.model.LearningGroup;
-import de.uni.hohenheim.sopra.projekt.model.LearningGroupRepository;
-import de.uni.hohenheim.sopra.projekt.model.SopraUser;
-import de.uni.hohenheim.sopra.projekt.model.SopraUserRepository;
+import de.uni.hohenheim.sopra.projekt.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -45,6 +42,8 @@ public class GreetingController {
     @Autowired
     UserService userService;
 
+    private int groupIDSave;
+
 
     @RequestMapping("/greeting")
     /**
@@ -68,6 +67,16 @@ public class GreetingController {
         user.setEmail("a");
         sopraUserRepository.save(user);
 
+        SopraUser user1 = new SopraUser();
+        authsAdmin.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+        userDetailsManager.createUser(new User("asdf", passwordEncoder.encode("asdf"), authsAdmin));
+        user1.setUsername("asdf");
+        user1.setPasswort("asdf");
+        user1.setEmail("asdf");
+        user1.setNachname("Peter");
+        user1.setVorname("Hans");
+        sopraUserRepository.save(user1);
+
         SopraUser s = new SopraUser();
         LearningGroup l = new LearningGroup();
         l.setId(1);
@@ -80,11 +89,17 @@ public class GreetingController {
         LearningGroup l2 = new LearningGroup();
         l2.setId(3);
         l2.setName("hsgh");
+        l2.setPassword("asdf");
         l2.setVisibility(false);
         LearningGroup l3 = new LearningGroup();
         l3.setId(4);
         l3.setName("asfafs");
         l3.setVisibility(true);
+        l.addUser(user1);
+        l1.addUser(user1);
+        l2.addUser(user1);
+        l3.addUser(user1);
+
         learningGroupRepository.save(l);
         learningGroupRepository.save(l1);
         learningGroupRepository.save(l2);
@@ -148,7 +163,13 @@ public class GreetingController {
     public String gotoLGP(@RequestParam(value = "id", required = true) Integer lgpid, Model model){
         LearningGroup grp = learningGroupRepository.findOne(lgpid);
         SopraUser user = userService.getCurrentSopraUser();
-        if(!grp.addUser(user)){
+        if(!grp.getVisibility()){
+            groupIDSave = lgpid;
+            model.addAttribute("Password", new Password());
+            return "/passwd_join_lgp";
+        }
+        else if(!grp.addUser(user)){
+            //TODO show site stating group is full
             return "/join_lgp";
         }
         learningGroupRepository.save(grp);
@@ -161,6 +182,32 @@ public class GreetingController {
         model.addAttribute("lerngruppe", usergrps);
         return "myLearningGroups";
 
+    }
+
+    @RequestMapping(value ="/passwd_join_lgp", method=RequestMethod.POST)
+    public String protectedJoin(@ModelAttribute Password password, Model model){
+
+        LearningGroup grp = learningGroupRepository.findOne(groupIDSave);
+        SopraUser user = userService.getCurrentSopraUser();
+
+        if(grp.comparePassword(password)){
+            if (grp.addUser(user)){
+                learningGroupRepository.save(grp);
+                List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
+                for (LearningGroup l : learningGroupRepository.findAll()){
+                    if((l.getSopraUsers().contains(user))){
+                        usergrps.add(l);
+                    }
+                }
+                model.addAttribute("lerngruppe", usergrps);
+                return "myLearningGroups";
+            }
+            //TODO show site stating group is full
+            return displayLGP(model);
+
+        }
+        //TODO show site stating password is wrong
+        return displayLGP(model);
     }
 
 
