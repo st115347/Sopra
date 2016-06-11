@@ -1,5 +1,6 @@
 package de.uni.hohenheim.sopra.projekt.controller;
 
+import de.uni.hohenheim.sopra.projekt.UserService;
 import de.uni.hohenheim.sopra.projekt.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,6 +37,9 @@ public class LearningGroupController {
     @Autowired
     BeitragRepository beitragRepository;
 
+    @Autowired
+    UserService userService;
+
 
 
     @RequestMapping(value="/add_lgp", method= RequestMethod.GET)
@@ -50,6 +54,7 @@ public class LearningGroupController {
             if(result.hasErrors()){
                 return "add_lgp";
             }
+        lerngruppe.addUser(userService.getCurrentSopraUser());
         learningGroupRepository.save(lerngruppe);
         return "greeting";
     }
@@ -57,17 +62,16 @@ public class LearningGroupController {
 
     @RequestMapping("/myLearningGroups")
     public String myLearningGroups(Model model){
-
-        SopraUser user = sopraUserRepository.findByUsername(((User) SecurityContextHolder.getContext().getAuthentication()
-                .getPrincipal()).getUsername());
+        SopraUser user = userService.getCurrentSopraUser();
         List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
         for (LearningGroup l : learningGroupRepository.findAll()){
-            if(l.getSopraUsers().contains(user)){
+            if((l.getSopraUsers().contains(user))){
                 usergrps.add(l);
             }
         }
-       model.addAttribute("lerngruppe", usergrps);
+        model.addAttribute("lerngruppe", usergrps);
         return "myLearningGroups";
+
     }
 
 
@@ -120,9 +124,31 @@ public class LearningGroupController {
 
     @RequestMapping(value="/del_lgp", method= RequestMethod.GET)
     public String del_lgp(@RequestParam(value="id", required=true) Integer groupId, Model model){
-        learningGroupRepository.delete(groupId);
+        SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(groupId);
+        if (!(lgp.getSopraUsers().get(0).equals(user))){
+            List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
+            for (LearningGroup l : learningGroupRepository.findAll()){
+                if((l.getSopraUsers().contains(user))){
+                    usergrps.add(l);
+                }
+            }
+            model.addAttribute("lerngruppe", usergrps);
+            return "myLearningGroups";
+        }
+        learningGroupRepository.delete(lgp);
+        List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
+        for (LearningGroup l : learningGroupRepository.findAll()){
+            if((l.getSopraUsers().contains(user))){
+                usergrps.add(l);
+            }
+        }
+        model.addAttribute("lerngruppe", usergrps);
         return "myLearningGroups";
+
     }
+
+
 
 
 }

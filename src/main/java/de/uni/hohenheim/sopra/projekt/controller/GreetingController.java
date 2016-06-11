@@ -42,6 +42,8 @@ public class GreetingController {
     private UserDetailsManager userDetailsManager;
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
+    @Autowired
+    UserService userService;
 
 
     @RequestMapping("/greeting")
@@ -51,18 +53,22 @@ public class GreetingController {
     public String greeting(@RequestParam(value="name", required=false, defaultValue="Unbekannter") String name, Model model) {
         SopraUser user = sopraUserRepository.findByUsername(((User) SecurityContextHolder.getContext().getAuthentication()
                 .getPrincipal()).getUsername());
-        model.addAttribute("name", user.getVorname());
+        model.addAttribute("user", user);
         return "greeting";
     }
 
     @RequestMapping(value="/register", method= RequestMethod.GET)
     public String registerForm(Model model) {
+        SopraUser user = new SopraUser();
+        Collection<GrantedAuthority> authsAdmin = new ArrayList<>();
+        authsAdmin.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+        userDetailsManager.createUser(new User("a", passwordEncoder.encode("b"), authsAdmin));
+        user.setUsername("a");
+        user.setPasswort("b");
+        user.setEmail("a");
+        sopraUserRepository.save(user);
 
         SopraUser s = new SopraUser();
-        s.setUsername("a");
-        s.setEmail("a");
-        s.setPasswort("b");
-        sopraUserRepository.save(s);
         LearningGroup l = new LearningGroup();
         l.setId(1);
         l.setName("haha");
@@ -74,7 +80,7 @@ public class GreetingController {
         LearningGroup l2 = new LearningGroup();
         l2.setId(3);
         l2.setName("hsgh");
-        l2.setVisibility(true);
+        l2.setVisibility(false);
         LearningGroup l3 = new LearningGroup();
         l3.setId(4);
         l3.setName("asfafs");
@@ -123,20 +129,32 @@ public class GreetingController {
 
     @RequestMapping(value="/join_lgp")
     public String displayLGP(Model model){
-        model.addAttribute("lerngruppe", learningGroupRepository.findAll());
+
+        List<LearningGroup> grp = new ArrayList<LearningGroup>();
+        for (LearningGroup l : learningGroupRepository.findAll()){
+            if (l.getSopraUsers().contains(userService.getCurrentSopraUser())) {
+
+            }else {
+                grp.add(l);
+            }
+        }
+
+
+        model.addAttribute("lerngruppe", grp);
         return "join_lgp";
     }
 
     @RequestMapping(value ="/finish_join_lgp")
     public String gotoLGP(@RequestParam(value = "id", required = true) Integer lgpid, Model model){
         LearningGroup grp = learningGroupRepository.findOne(lgpid);
-        SopraUser user = sopraUserRepository.findByUsername(((User) SecurityContextHolder.getContext().getAuthentication()
-                .getPrincipal()).getUsername());
-        grp.addUser(user);
+        SopraUser user = userService.getCurrentSopraUser();
+        if(!grp.addUser(user)){
+            return "/join_lgp";
+        }
         learningGroupRepository.save(grp);
         List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
         for (LearningGroup l : learningGroupRepository.findAll()){
-            if(l.getSopraUsers().contains(user)){
+            if((l.getSopraUsers().contains(user))){
                 usergrps.add(l);
             }
         }

@@ -53,7 +53,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a th:href="'/change_lgp?id=' + ${lerngruppe.id}" >Einstellungen der Lerngruppe ändern</a></li>
-                        <li><a th:href="'/add_lgpUser?id=' + ${lerngruppe.id}" >Benutzer hinzufügen/entfernen</a></li>
+                        <li><a th:href="'/add_lgpUser?id=' + ${lerngruppe.id}" >Benutzer entfernen</a></li>
                         <li><a th:href="'/del_lgp?id=' + ${lerngruppe.id}">Lerngruppe löschen</a></li>
                     </ul>
                 </li>
@@ -83,6 +83,8 @@
 </nav>
 
 
+<!--/*@thymesVar id="lerngruppe" type="de.uni.hohenheim.sopra.projekt.model.LearningGroup"*/-->
+<!--/*@thymesVar id="beitrag" type="de.uni.hohenheim.sopra.projekt.model.Beitrag"*/-->
 <p th:text="'Willkommen in der Lerngruppe ' + ${lerngruppe.name}" />
 <br/>
 <p>Inhalt dieser Lerngruppe...</p>

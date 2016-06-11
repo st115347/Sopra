@@ -56,13 +56,19 @@ public class LearningGroup {
         this.visibility = visibility;
     }
 
-    public void addUser(SopraUser user){
+    public boolean addUser(SopraUser user){
+        if (sopraUsers.size() > 10){
+            return false;
+        }
         sopraUsers.add(user);
+        return true;
     }
 
     public void removeUser(SopraUser user){
         sopraUsers.remove(user);
     }
+
+
 
 
 
