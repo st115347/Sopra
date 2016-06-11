@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by hilaltaylan on 06.06.16.
+ * Created by Sören on 10.06.16.
  */
 @Entity
 public class Beitrag implements Serializable{
@@ -19,11 +19,18 @@ public class Beitrag implements Serializable{
     @Column(name = "id")
     private String id;
 
+    @Column(name = "autor")
+    private String autor;
+
     @Column(name = "name")
     private String name;
 
     @Column(name = "text")
     private String text;
+
+    //Zur Referenz auf die Richtige Lerngruppe
+    @Column(name = "lerngruppe")
+    private Integer groupId;
 
 
 
@@ -62,4 +69,19 @@ public class Beitrag implements Serializable{
         this.text = text;
     }
 
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public Integer getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(Integer groupId) {
+        this.groupId = groupId;
+    }
 }
