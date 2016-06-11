@@ -1,5 +1,6 @@
 package de.uni.hohenheim.sopra.projekt;
 
+import de.uni.hohenheim.sopra.projekt.model.SopraUserRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SecurityDemoApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(SecurityDemoApplication.class, args);
 	}
 }

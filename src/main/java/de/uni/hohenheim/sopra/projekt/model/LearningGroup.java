@@ -56,6 +56,14 @@ public class LearningGroup {
         this.visibility = visibility;
     }
 
+    public void addUser(SopraUser user){
+        sopraUsers.add(user);
+    }
+
+    public void removeUser(SopraUser user){
+        sopraUsers.remove(user);
+    }
+
 
 
 }

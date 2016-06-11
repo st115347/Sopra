@@ -9,8 +9,16 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.provisioning.UserDetailsManager;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Sören on 05.06.2016.
@@ -49,7 +57,16 @@ public class LearningGroupController {
 
     @RequestMapping("/myLearningGroups")
     public String myLearningGroups(Model model){
-       model.addAttribute("lerngruppe", learningGroupRepository.findAll());
+
+        SopraUser user = sopraUserRepository.findByUsername(((User) SecurityContextHolder.getContext().getAuthentication()
+                .getPrincipal()).getUsername());
+        List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
+        for (LearningGroup l : learningGroupRepository.findAll()){
+            if(l.getSopraUsers().contains(user)){
+                usergrps.add(l);
+            }
+        }
+       model.addAttribute("lerngruppe", usergrps);
         return "myLearningGroups";
     }
 
@@ -107,15 +124,5 @@ public class LearningGroupController {
         return "myLearningGroups";
     }
 
-    @RequestMapping(value="/add_lgpUser", method= RequestMethod.GET)
-    public String add_lgpUserForm(@RequestParam(value="id", required=true) Integer groupId, Model model){
-        model.addAttribute("lerngruppe", learningGroupRepository.findOne(groupId));
-        return "add_lgpUser";
-    }
 
-    //muss noch implementiert werden
-    @RequestMapping(value="/add_lgpUser", method= RequestMethod.POST)
-    public String add_lgpUserSubmit(){
-       return "greeting";
-    }
 }

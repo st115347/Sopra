@@ -17,7 +17,6 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -75,31 +74,18 @@
 </nav>
 
 
-<h1>Mitglieder zur Lerngruppe hinzufügen</h1>
-<br/>
-<form action="#" th:action="@{/add_lgpUser}" th:object="${sopraUser}" method="post" id="beitragform">
-    <table border="0" cellspacing="1" cellpadding="2">
-        <tbody>
-
-
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">E-Mail-Adresse des Benutzers</span>
-            <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-
-                <br/>
-
-
+    <table style="...">
         <tr>
+            <td><b>Lerngruppe</b></td>
             <td></td>
-            <td>
-                <br/>
-                <input type="submit" value="Benutzer hinzufügen" /> <input type="reset" value="Werte zurücksetzen" />
-            </td>
+            <td><b>Öffentlich</b></td>
         </tr>
-
-        </tbody>
+        <tr th:each="lgp : ${lerngruppe}" >
+            <td th:text="${lgp.name}"></td>
+            <td></td>
+            <td th:text="${lgp.visibility}"></td>
+            <td><a th:href="'finish_join_lgp/?id=' + ${lgp.id}" role="button" class="btn btn-success" >Beitreten</a></td>
+        </tr>
     </table>
-</form>
 </body>
 </html>
