@@ -59,6 +59,13 @@ public class LearningGroup {
         this.visibility = visibility;
     }
 
+
+    /**
+     * Method adds Users to group only if there are free spots.
+     * Also IMPORTANT!! First user to be added is also OWNER of this group!
+     * @param user
+     * @return
+     */
     public boolean addUser(SopraUser user){
         if (sopraUsers.size()==0){
             owner = user.getVorname() + " " + user.getNachname();

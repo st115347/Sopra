@@ -9,6 +9,8 @@ import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 /**
  * Created by Tabea on 12.06.16.
+ * Class is used to hold and create information regarding answers to discussions
+ * in a Learninggroup
  */
 @Entity
 public class Antwort_Beitrag {
@@ -23,7 +25,7 @@ public class Antwort_Beitrag {
     @Column(name = "authorfrom")
     String author;
 
-    @Column(name = "content")
+    @Column(name = "content", length = 10000)
     String content;
 
     @Column(name = "topic")

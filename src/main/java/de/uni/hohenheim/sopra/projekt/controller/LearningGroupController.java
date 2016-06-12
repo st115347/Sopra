@@ -51,6 +51,13 @@ public class LearningGroupController {
         return "add_lgp";
     }
 
+    /**
+     *  Checking if visibility should be true or false,
+     *  saving learninggroup
+     * @param lerngruppe
+     * @param result
+     * @return
+     */
         //Validator-Klasse oder Annotations müssen noch implementiert werden
     @RequestMapping(value="/add_lgp", method= RequestMethod.POST)
     public String greetingSubmit(@Valid @ModelAttribute LearningGroup lerngruppe, BindingResult result) {
@@ -66,12 +73,17 @@ public class LearningGroupController {
         else{
             lerngruppe.setVisibility(false);
         }
+
         lerngruppe.addUser(userService.getCurrentSopraUser());
         learningGroupRepository.save(lerngruppe);
         return "greeting";
     }
 
-
+    /**
+     * selecting only learninggroups in which user is member.
+     * @param model
+     * @return
+     */
     @RequestMapping("/myLearningGroups")
     public String myLearningGroups(Model model){
         SopraUser user = userService.getCurrentSopraUser();
@@ -117,6 +129,12 @@ public class LearningGroupController {
     }
 
 
+    /**
+     * Creating new beitrag and sending it to form to be filled in.
+     * @param groupId
+     * @param model
+     * @return
+     */
     @RequestMapping(value="/add_beitrag", method= RequestMethod.GET)
     public String add_beitragForm(@RequestParam(value="id", required=true) Integer groupId, Model model){
         Beitrag beitrag = new Beitrag();
@@ -125,8 +143,18 @@ public class LearningGroupController {
         return "add_beitrag";
     }
 
+
+    /**
+     * Setting author of beitrag as current user.
+     * saving beitrag
+     * going to showbeitrag
+     * @param beitrag
+     * @param result
+     * @param model
+     * @return
+     */
     @RequestMapping(value="/add_beitrag", method= RequestMethod.POST)
-    public String add_beitragSubmit(@Valid @ModelAttribute Beitrag beitrag, BindingResult result){
+    public String add_beitragSubmit(@Valid @ModelAttribute Beitrag beitrag, BindingResult result,Model model){
         if(result.hasErrors()){
             return "add_beitrag";
         }
@@ -134,9 +162,17 @@ public class LearningGroupController {
         beitrag.setAuthor(user.getVorname() + " "+ user.getNachname());
 
         beitragRepository.save(beitrag);
-        return "greeting";
+        model.addAttribute("beitrag",beitrag);
+        return "show_beitrag";
     }
 
+    /**
+     * Only deleting if current user is also owner of group
+     * then going to myLearninggroups
+     * @param groupId
+     * @param model
+     * @return
+     */
     @RequestMapping(value="/del_lgp", method= RequestMethod.GET)
     public String del_lgp(@RequestParam(value="id", required=true) Integer groupId, Model model){
         SopraUser user = userService.getCurrentSopraUser();
@@ -163,6 +199,12 @@ public class LearningGroupController {
 
     }
 
+    /**
+     * Selecting Beitrag and displaying it.
+     * @param id
+     * @param model
+     * @return
+     */
     @RequestMapping(value="/show_beitrag")
     public String showBeitrag(@RequestParam(value = "id") Integer id, Model model){
         Beitrag b = beitragRepository.findOne(id);
@@ -170,6 +212,15 @@ public class LearningGroupController {
         return "show_beitrag";
     }
 
+
+    /**
+     * Creating new Answer to Beitrag,
+     * short-term saving GroupID into instance variable.
+     * sending Answer to form to be filled in.
+     * @param id
+     * @param model
+     * @return
+     */
     @RequestMapping(value="/answer_beitrag", method=RequestMethod.GET)
     public String answerBeitragStart(@RequestParam(value="id") Integer id, Model model){
         Antwort_Beitrag answer = new Antwort_Beitrag();
@@ -178,6 +229,14 @@ public class LearningGroupController {
         return "answer_beitrag";
     }
 
+    /**
+     * setting author of answer as current user, setting answer as answer to beitrag,
+     * saving beitrag and answer.
+     * going to show_beitrag
+     * @param answer
+     * @param model
+     * @return
+     */
     @RequestMapping(value="/answer_beitrag", method=RequestMethod.POST)
     public String answerBeitragFinish(@ModelAttribute Antwort_Beitrag answer, Model model){
         SopraUser user = userService.getCurrentSopraUser();
@@ -186,14 +245,8 @@ public class LearningGroupController {
         antwort_beitragRepository.save(answer);
         b.setAnswers(answer);
         beitragRepository.save(b);
-        List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
-        for (LearningGroup l : learningGroupRepository.findAll()){
-            if((l.getSopraUsers().contains(user))){
-                usergrps.add(l);
-            }
-        }
-        model.addAttribute("lerngruppe", usergrps);
-        return "myLearningGroups";
+        model.addAttribute("beitrag",b);
+        return "show_beitrag";
     }
 
 

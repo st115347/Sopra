@@ -16,6 +16,9 @@ public class Beitrag implements Serializable{
     @Id
     @GeneratedValue
     @Column(name = "id")
+    /*
+    Changed ID type to Integer from String
+     */
     private Integer id;
 
     @Column(name = "author")
@@ -24,13 +27,16 @@ public class Beitrag implements Serializable{
     @Column(name = "name")
     private String name;
 
-    @Column(name = "text")
+    @Column(name = "text",length = 10000)
     private String text;
 
     //Zur Referenz auf die Richtige Lerngruppe
     @Column(name = "lerngruppe")
     private Integer groupId;
 
+    /*
+    List holding all answers to this beitrag.
+     */
     @OneToMany
     List<Antwort_Beitrag> answers = new ArrayList<Antwort_Beitrag>();
 
@@ -96,6 +102,7 @@ public class Beitrag implements Serializable{
         return answers;
     }
 
+    //not yet used. maybe never neccesary
     public void removeAnswer(){
 
     }

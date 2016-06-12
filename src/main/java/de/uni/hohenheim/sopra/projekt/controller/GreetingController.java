@@ -58,6 +58,12 @@ public class GreetingController {
 
     @RequestMapping(value="/register", method= RequestMethod.GET)
     public String registerForm(Model model) {
+
+        /*
+            Starting with init block.
+            When clicking register on login page
+            this will create example users and example groups to join.
+         */
         SopraUser user = new SopraUser();
         Collection<GrantedAuthority> authsAdmin = new ArrayList<>();
         authsAdmin.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
@@ -106,6 +112,12 @@ public class GreetingController {
         learningGroupRepository.save(l1);
         learningGroupRepository.save(l2);
         learningGroupRepository.save(l3);
+        /*
+        Ending of init block.
+
+        -> HowTo init: click register. then go back to login page. you can now login with 'a' as username and 'b' as passwort.
+         */
+
 
         model.addAttribute("sopraUser", new SopraUser());
         return "register";
@@ -138,13 +150,17 @@ public class GreetingController {
         if(result.hasErrors()){
             return "change_profileSettings";
         }
-        SopraUser sopraUser_new = sopraUserRepository.findByUsername(((User) SecurityContextHolder.getContext().getAuthentication()
-                .getPrincipal()).getUsername());
+        SopraUser sopraUser_new = userService.getCurrentSopraUser();
         sopraUser_new = sopraUser_old;
         sopraUserRepository.save(sopraUser_new);
         return "greeting";
     }
 
+    /**
+     * Selecting all groups in which User is not yet member and displaying them
+     * @param model
+     * @return
+     */
     @RequestMapping(value="/join_lgp")
     public String displayLGP(Model model){
 
@@ -162,6 +178,15 @@ public class GreetingController {
         return "join_lgp";
     }
 
+
+    /**
+     *  Checking if selected LearningGroup is password protected:
+     *  goto 'passwd_join_lgp' if yes.
+     *
+     * @param lgpid
+     * @param model
+     * @return
+     */
     @RequestMapping(value ="/finish_join_lgp")
     public String gotoLGP(@RequestParam(value = "id", required = true) Integer lgpid, Model model){
         LearningGroup grp = learningGroupRepository.findOne(lgpid);
@@ -176,17 +201,20 @@ public class GreetingController {
             return "/join_lgp";
         }
         learningGroupRepository.save(grp);
-        List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
-        for (LearningGroup l : learningGroupRepository.findAll()){
-            if((l.getSopraUsers().contains(user))){
-                usergrps.add(l);
-            }
-        }
-        model.addAttribute("lerngruppe", usergrps);
-        return "myLearningGroups";
+        return displayLGP(model);
 
     }
 
+
+    /**
+     * Checking if entered password corresponds to learninggroup password.
+     * -> if yes: will return link to 'myLearningGroups'
+     * -> if no: will return to 'join:lgp'
+     *
+     * @param password
+     * @param model
+     * @return next Website
+     */
     @RequestMapping(value ="/passwd_join_lgp", method=RequestMethod.POST)
     public String protectedJoin(@ModelAttribute Password password, Model model){
 
@@ -196,14 +224,7 @@ public class GreetingController {
         if(grp.comparePassword(password)){
             if (grp.addUser(user)){
                 learningGroupRepository.save(grp);
-                List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
-                for (LearningGroup l : learningGroupRepository.findAll()){
-                    if((l.getSopraUsers().contains(user))){
-                        usergrps.add(l);
-                    }
-                }
-                model.addAttribute("lerngruppe", usergrps);
-                return "myLearningGroups";
+                return displayLGP(model);
             }
             //TODO show site stating group is full
             return displayLGP(model);
