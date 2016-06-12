@@ -26,10 +26,10 @@ public class SopraUser implements Serializable{
   private String passwort;
 
   @Column(name = "vorname")
-  private String vorname;
+  private String vorname="";
 
   @Column(name = "nachname")
-  private String nachname;
+  private String nachname="";
 
   @Column(name = "geburtsdatum")
   private String geburtsdatum;

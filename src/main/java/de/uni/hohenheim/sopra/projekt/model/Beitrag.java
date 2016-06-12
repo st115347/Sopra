@@ -1,10 +1,9 @@
 package de.uni.hohenheim.sopra.projekt.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Sören on 10.06.16.
@@ -17,10 +16,10 @@ public class Beitrag implements Serializable{
     @Id
     @GeneratedValue
     @Column(name = "id")
-    private String id;
+    private Integer id;
 
-    @Column(name = "autor")
-    private String autor;
+    @Column(name = "author")
+    private String author;
 
     @Column(name = "name")
     private String name;
@@ -32,6 +31,10 @@ public class Beitrag implements Serializable{
     @Column(name = "lerngruppe")
     private Integer groupId;
 
+    @OneToMany
+    List<Antwort_Beitrag> answers = new ArrayList<Antwort_Beitrag>();
+
+    int countAnswers=0;
 
 
 //    private Set<Datei> datei = new HashSet<Datei>(0);
@@ -45,11 +48,11 @@ public class Beitrag implements Serializable{
 //        this.datei = datei;
 //    }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -69,12 +72,12 @@ public class Beitrag implements Serializable{
         this.text = text;
     }
 
-    public String getAutor() {
-        return autor;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public Integer getGroupId() {
@@ -83,5 +86,24 @@ public class Beitrag implements Serializable{
 
     public void setGroupId(Integer groupId) {
         this.groupId = groupId;
+    }
+
+    public void setAnswers(Antwort_Beitrag b){
+        answers.add(b);
+    }
+
+    public List<Antwort_Beitrag> getAnswers(){
+        return answers;
+    }
+
+    public void removeAnswer(){
+
+    }
+
+    public void setCountAnswers(int x){
+
+    }
+    public int getCountAnswers(){
+        return answers.size();
     }
 }

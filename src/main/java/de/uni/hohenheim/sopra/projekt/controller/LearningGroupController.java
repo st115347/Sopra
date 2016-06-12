@@ -40,6 +40,9 @@ public class LearningGroupController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    Antwort_BeitragRepository antwort_beitragRepository;
+
     private int groupIDSave;
 
     @RequestMapping(value="/add_lgp", method= RequestMethod.GET)
@@ -52,8 +55,17 @@ public class LearningGroupController {
     @RequestMapping(value="/add_lgp", method= RequestMethod.POST)
     public String greetingSubmit(@Valid @ModelAttribute LearningGroup lerngruppe, BindingResult result) {
             if(result.hasErrors()){
+                //TODO show error message
                 return "add_lgp";
             }
+        Password p = new Password();
+        p.setPw("");
+        if(lerngruppe.comparePassword(p)){
+            lerngruppe.setVisibility(true);
+        }
+        else{
+            lerngruppe.setVisibility(false);
+        }
         lerngruppe.addUser(userService.getCurrentSopraUser());
         learningGroupRepository.save(lerngruppe);
         return "greeting";
@@ -118,6 +130,9 @@ public class LearningGroupController {
         if(result.hasErrors()){
             return "add_beitrag";
         }
+        SopraUser user = userService.getCurrentSopraUser();
+        beitrag.setAuthor(user.getVorname() + " "+ user.getNachname());
+
         beitragRepository.save(beitrag);
         return "greeting";
     }
@@ -146,6 +161,39 @@ public class LearningGroupController {
         model.addAttribute("lerngruppe", usergrps);
         return "myLearningGroups";
 
+    }
+
+    @RequestMapping(value="/show_beitrag")
+    public String showBeitrag(@RequestParam(value = "id") Integer id, Model model){
+        Beitrag b = beitragRepository.findOne(id);
+        model.addAttribute("beitrag", b);
+        return "show_beitrag";
+    }
+
+    @RequestMapping(value="/answer_beitrag", method=RequestMethod.GET)
+    public String answerBeitragStart(@RequestParam(value="id") Integer id, Model model){
+        Antwort_Beitrag answer = new Antwort_Beitrag();
+        groupIDSave = id;
+        model.addAttribute("answer",answer);
+        return "answer_beitrag";
+    }
+
+    @RequestMapping(value="/answer_beitrag", method=RequestMethod.POST)
+    public String answerBeitragFinish(@ModelAttribute Antwort_Beitrag answer, Model model){
+        SopraUser user = userService.getCurrentSopraUser();
+        answer.setAuthor(user.getVorname()+" "+user.getNachname());
+        Beitrag b = beitragRepository.findOne(groupIDSave);
+        antwort_beitragRepository.save(answer);
+        b.setAnswers(answer);
+        beitragRepository.save(b);
+        List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
+        for (LearningGroup l : learningGroupRepository.findAll()){
+            if((l.getSopraUsers().contains(user))){
+                usergrps.add(l);
+            }
+        }
+        model.addAttribute("lerngruppe", usergrps);
+        return "myLearningGroups";
     }
 
 

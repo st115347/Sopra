@@ -65,6 +65,8 @@ public class GreetingController {
         user.setUsername("a");
         user.setPasswort("b");
         user.setEmail("a");
+        user.setVorname("Tabea");
+        user.setNachname("Schmid");
         sopraUserRepository.save(user);
 
         SopraUser user1 = new SopraUser();
@@ -113,6 +115,7 @@ public class GreetingController {
     @RequestMapping(value="/register", method= RequestMethod.POST)
     public String registerSubmit(@Valid @ModelAttribute SopraUser sopraUser, BindingResult result) {
         if(result.hasErrors()){
+            //TODO add error detection and error output
             return "register";
         }
         Collection<GrantedAuthority> authsAdmin = new ArrayList<>();

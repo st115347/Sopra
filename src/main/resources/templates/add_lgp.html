@@ -78,67 +78,21 @@
 
 <h1>Neue Lerngruppe hinzufügen</h1>
 <br/>
-<form action="#" th:action="@{/add_lgp}" th:object="${lerngruppe}" method="post">
-    <table border="0" cellspacing="1" cellpadding="2">
-        <tbody>
-
-
-        <div class="input-group input-group-lg">
+<form action="#" th:action="@{/add_lgp}" th:object="${lerngruppe}" method="post" >
+    <div class="input-group input-group-lg" >
             <span class="input-group-addon" id="sizing-addon1">Name der Lerngruppe</span>
             <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
         </div>
-
-        <br/>
-           <tr>
-            <td>Sichtbarkeit:</td>
-            <td>
-                <input name="Sichtbarkeit" type="radio" value="false" th:field="*{visibility}" id="private" /> Privat
-                <input  checked="checked"  name="Sichtbarkeit" type="radio" value="true" th:field="*{visibility}" /> Öffentlich
-            </td>
-        </tr>
-        <!--
-        <tr>
-            <div>
-                <input type="hidden" class="form-control" id="passwordbox" placeholder="Passwort für Lerngruppe" th:field="*{password}" />
-
-            </div>
-        </tr>
-        -->
-        <tr>
-            <td></td>
-            <td>
-                <br/>
-                <input type="submit" value="Lerngruppe erstellen" /> <input type="reset" value="Werte zurücksetzen" />
-            </td>
-        </tr>
-
-        </tbody>
-    </table>
+    <div></div>
+        <div class="input-group input-group-lg" >
+            <span class="input-group-addon" id="sizing-addon2">Passwort der Lerngruppe</span>
+            <input type="password" class="form-control" placeholder="Feld freilassen für öffentliche Gruppe"
+                   th:field="*{password}" aria-describedby="sizing-addon2" />
+        </div>
+        <div>
+            <input type="submit" value="Lerngruppe erstellen" /> <input type="reset" value="Werte zurücksetzen" />
+        </div>
 </form>
-<!--
-<script>
-    var checkbox = document.getElementById('private');
-    var pwbox = document.getElementById('passwordbox');
-    checkbox.click(function() {
-       if(checkbox.checked){
-           pwbox = changeInputType(pwbox,'password');
-       }else{
-           pwbox = changeInputType(pwbox,'hidden');
-       }
-    });
 
-    function changeInputType(oldObject, oType) {
-        var newObject = document.createElement('input');
-        newObject.type = oType;
-        if(oldObject.size) newObject.size = oldObject.size;
-        if(oldObject.value) newObject.value = oldObject.value;
-        if(oldObject.name) newObject.name = oldObject.name;
-        if(oldObject.id) newObject.id = oldObject.id;
-        if(oldObject.className) newObject.className = oldObject.className;
-        oldObject.parentNode.replaceChild(newObject,oldObject);
-        return newObject;
-    }
-</script>
--->
 </body>
 </html>

@@ -18,7 +18,7 @@ public class LearningGroup {
     Boolean visibility;
     int membercount;
     String owner;
-    String password;
+    String password="";
 
     @ManyToMany
     @JoinTable(
@@ -94,6 +94,10 @@ public class LearningGroup {
             return true;
         }
         return false;
+    }
+
+    public String getPassword(){
+        return password;
     }
 
 
