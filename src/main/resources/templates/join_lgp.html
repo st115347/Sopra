@@ -41,7 +41,6 @@
                         <li><a href="greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
-                        <li><a href="/join_lgp">Lernguppe Beitreten</a></li>
                         <li><a href="#">Kommentare</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Einstellungen</a></li>
@@ -73,7 +72,24 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<center><p>Herzlich Willkommen auf der Lernplattform der Universität Hohenheim.</p> </center>
 
+
+    <table class="table">
+        <tr>
+            <td><b>Lerngruppe</b></td>
+            <td><b>Öffentlich</b></td>
+            <td><b>Besitzer</b></td>
+            <td><b>Freie Plätze</b></td>
+            <td></td>
+        </tr>
+        <tr th:each="lgp : ${lerngruppe}" >
+            <td th:text="${lgp.name}"></td>
+            <td th:if="${lgp.visibility}">Ja</td>
+            <td th:unless="${lgp.visibility}">Nein</td>
+            <td th:text="${lgp.owner}"></td>
+            <td th:text="${10 - lgp.membercount}"></td>
+            <td><a th:href="'finish_join_lgp/?id=' + ${lgp.id}" role="button" class="btn btn-success" >Beitreten</a></td>
+        </tr>
+    </table>
 </body>
 </html>

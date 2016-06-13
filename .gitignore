@@ -1,0 +1,14 @@
+#Ignore build folders
+/out
+/build
+/target
+/classes
+
+#Ignore IntelliJ configuration
+/.idea
+/.gradle
+*.iml
+
+#Ignore Eclise configuration
+.classpath
+.project

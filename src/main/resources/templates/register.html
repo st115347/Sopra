@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h1>Registrierung für neue Benutzer</h1>
+<br/>
+<form action="#" th:action="@{/register}" th:object="${sopraUser}" method="post">
+    <table border="0" cellspacing="1" cellpadding="2">
+        <tbody>
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon">E-Mail - Adresse</span>
+            <input type="text" th:field="*{username}" class="form-control" placeholder="" aria-describedby="sizing-addon"/>
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1" >Passwort</span>
+            <input type="text" th:field="*{passwort}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon2">Nachname</span>
+            <input type="text" th:field="*{nachname}" class="form-control" placeholder="" aria-describedby="sizing-addon2"/>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon3">Vorname</span>
+            <input type="text" th:field="*{vorname}" class="form-control" placeholder="" aria-describedby="sizing-addon3"/>
+        </div>
+
+         <tr>
+            <td></td>
+            <td>
+                <br/>
+                <input type="submit" value="Registrieren" /> <input type="reset" value="Werte zurücksetzen" />
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</form>
+
+</body>
+</html>

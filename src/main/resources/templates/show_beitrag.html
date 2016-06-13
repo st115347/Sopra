@@ -73,7 +73,44 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<center><p>Herzlich Willkommen auf der Lernplattform der Universität Hohenheim.</p> </center>
+
+<br/>
+<br/>
+<br/>
+
+
+<div class="page-header">
+
+    <h1 th:text="${beitrag.name}"></h1>
+    <a th:href="'/answer_beitrag/?id=' + ${beitrag.id}" role="button" class="btn btn-success" >Antworten</a>
+</div>
+
+<div>
+    <table class="table" width="80%">
+        <tr>
+            <td th:text="${beitrag.author+':'}"></td>
+        </tr>
+        <tr>
+            <td th:utext="${beitrag.text}"></td>
+        </tr>
+
+        <tr>
+        <table th:each="answer : ${beitrag.answers}" class="table table-striped">
+            <tr>
+                 <td th:text="${'@'+answer.to}"></td>
+                 <td th:text="${'From:'+answer.author}"></td>
+            </tr>
+            <tr>
+                <td th:utext="${''+answer.content}"></td>
+
+                <td></td>
+            </tr>
+            <tr></tr>
+        </table>
+        </tr>
+
+    </table>
+</div>
 
 </body>
 </html>
