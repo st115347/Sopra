@@ -41,20 +41,11 @@
                         <li><a href="greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
-                        <li><a href="/join_lgp">Lernguppe Beitreten</a></li>
                         <li><a href="#">Kommentare</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Einstellungen</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Hilfe</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a th:href="'/change_lgp?id=' + ${lerngruppe.id}" >Einstellungen der Lerngruppe ändern</a></li>
-                        <li><a th:href="'/add_lgpUser?id=' + ${lerngruppe.id}" >Benutzer entfernen</a></li>
-                        <li><a th:href="'/del_lgp?id=' + ${lerngruppe.id}">Lerngruppe löschen</a></li>
                     </ul>
                 </li>
             </ul>
@@ -83,36 +74,22 @@
 </nav>
 
 
-<!--/*@thymesVar id="lerngruppe" type="de.uni.hohenheim.sopra.projekt.model.LearningGroup"*/-->
-<!--/*@thymesVar id="beitrag" type="de.uni.hohenheim.sopra.projekt.model.Beitrag"*/-->
-<p th:text="'Willkommen in der Lerngruppe ' + ${lerngruppe.name}" />
-<br/>
-
-<br/>
-<br/>
-
-
-<div class="page-header">
-    <h1>Diskussionen dieser Lerngruppe</h1>
-    <a class="btn btn-success" th:href="'/add_beitrag?id='+ ${lerngruppe.id}" role="button">Neues Topic erstellen</a>
-
-</div>
-
-<table class="table">
-
-    <tr>
-        <td><b>Topic</b></td>
-        <td><b>Autor</b></td>
-        <td><b>Antworten</b></td>
-        <td></td>
-    </tr>
-    <tr th:each="beitraege : ${beitrag}" th:if="${lerngruppe.id} == ${beitraege.groupId}" >
-        <td th:text="${beitraege.name}" ></td>
-        <td th:text="${beitraege.author}"></td>
-        <td th:text="${beitraege.countAnswers}" style="color:gray"/>
-        <td><a th:href="'/show_beitrag/?id=' + ${beitraege.id}" role="button" class="btn btn-success" >Anzeigen</a></td>
-    </tr>
-</table>
-
+    <table class="table">
+        <tr>
+            <td><b>Lerngruppe</b></td>
+            <td><b>Öffentlich</b></td>
+            <td><b>Besitzer</b></td>
+            <td><b>Freie Plätze</b></td>
+            <td></td>
+        </tr>
+        <tr th:each="lgp : ${lerngruppe}" >
+            <td th:text="${lgp.name}"></td>
+            <td th:if="${lgp.visibility}">Ja</td>
+            <td th:unless="${lgp.visibility}">Nein</td>
+            <td th:text="${lgp.owner}"></td>
+            <td th:text="${10 - lgp.membercount}"></td>
+            <td><a th:href="'finish_join_lgp/?id=' + ${lgp.id}" role="button" class="btn btn-success" >Beitreten</a></td>
+        </tr>
+    </table>
 </body>
 </html>
