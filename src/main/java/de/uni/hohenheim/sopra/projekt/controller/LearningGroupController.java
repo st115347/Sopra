@@ -199,6 +199,8 @@ public class LearningGroupController {
 
     }
 
+
+
     /**
      * Selecting Beitrag and displaying it.
      * @param id
@@ -249,7 +251,36 @@ public class LearningGroupController {
         return "show_beitrag";
     }
 
+   @RequestMapping(value="/show_user_lgp")
+   public String showUser(@RequestParam(value="id", required=true) Integer groupId, Model model){
+        LearningGroup lgp = learningGroupRepository.findOne(groupId);
+            if(lgp.getSopraUsers().get(0).equals(userService.getCurrentSopraUser())) {
 
+                List<SopraUser> memberList = lgp.getSopraUsers();
+                memberList.remove(0);
+                model.addAttribute("users",memberList);
+                model.addAttribute("lerngruppe",lgp);
+                groupIDSave = groupId;
+                return "show_user_ownerlgp";
+            }
+       model.addAttribute("users", lgp.getSopraUsers());
+       model.addAttribute("lerngruppe",lgp);
+        return "show_user_lgp";
+   }
+
+    @RequestMapping(value="/del_user")
+    public String del_user(@RequestParam (value ="id")String userId, Model model) {
+        LearningGroup lgp = learningGroupRepository.findOne(groupIDSave);
+        lgp.removeUser(sopraUserRepository.findByUsername(userId));
+        learningGroupRepository.save(lgp);
+        model.addAttribute("lerngruppe", lgp);
+        List<SopraUser> memberList = lgp.getSopraUsers();
+        memberList.remove(0);
+        model.addAttribute("users",memberList);
+        model.addAttribute("lerngruppe",lgp);
+        groupIDSave = lgp.getId();
+        return "show_user_ownerlgp";
+    }
 
 
 }
