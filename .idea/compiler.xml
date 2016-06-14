@@ -8,5 +8,9 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Sopra_main" target="1.8" />
+      <module name="Sopra_test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

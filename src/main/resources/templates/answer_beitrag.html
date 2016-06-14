@@ -15,9 +15,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+    <!-- include summernote css/js-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,6 +49,7 @@
                         <li><a href="greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
+                        <li><a href="/join_lgp">Lernguppe Beitreten</a></li>
                         <li><a href="#">Kommentare</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Einstellungen</a></li>
@@ -74,32 +82,33 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-
-<h1>Mitglieder zur Lerngruppe hinzufügen</h1>
 <br/>
-<form action="#" th:action="@{/add_lgpUser}" th:object="${sopraUser}" method="post" id="beitragform">
-    <table border="0" cellspacing="1" cellpadding="2">
-        <tbody>
+<br/>
+<br/>
 
-
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">E-Mail-Adresse des Benutzers</span>
-            <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-
-                <br/>
-
-
-        <tr>
-            <td></td>
-            <td>
-                <br/>
-                <input type="submit" value="Benutzer hinzufügen" /> <input type="reset" value="Werte zurücksetzen" />
-            </td>
-        </tr>
-
-        </tbody>
-    </table>
+<form th:action="@{/answer_beitrag}" th:object="${answer}" method="post">
+<div class="form-group">
+    <label for="to">To</label>
+    <input type="text" class="form-control" id="to" placeholder="" th:field="*{to}"/>
+</div>
+    <div class="form-group">
+        <label for="topic">Topic</label>
+        <input type="text" class="form-control" id="topic" placeholder="" th:field="*{topic}"/>
+    </div>
+    <div id="summernote"><p>Hier bitte deinen Beitrag erstellen.</p></div>
+    <input type="hidden" class="form-control" id="content" placeholder="" th:field="*{content}"/>
+    <script>
+        $(document).ready(function() {
+            $('#summernote').summernote();
+        });
+    </script>
+    <script>
+        function output (){
+            document.getElementById('content').value=""+$('#summernote').summernote('code');
+        }
+    </script>
+    <button onclick="output()" th:type="submit" class="btn btn-default" id="submitbtn">Bestätigen</button>
 </form>
+
 </body>
 </html>

@@ -17,7 +17,6 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,7 +42,6 @@
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
                         <li><a href="/join_lgp">Lernguppe Beitreten</a></li>
-                        <li><a href="#">Kommentare</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">Einstellungen</a></li>
                         <li role="separator" class="divider"></li>
@@ -75,54 +73,14 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-
-<h1>Eigenes Profil ändern</h1>
-<br/>
-<form action="#" th:action="@{/change_profileSettings}" th:object="${sopraUser}" method="post">
-    <table border="0" cellspacing="1" cellpadding="2">
-        <tbody>
-
-        <div>
-            <input type="hidden" th:field="*{username}" class="form-control"/>
-        </div>
-        <div>
-            <input type="hidden" th:field="*{email}" class="form-control"/>
-        </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Vorname</span>
-            <input type="text" th:field="*{vorname}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Nachname</span>
-            <input type="text" th:field="*{nachname}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Geburtsdatum</span>
-            <input type="text" th:field="*{geburtsdatum}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Hochschule</span>
-            <input type="text" th:field="*{hochschule}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Studiengang</span>
-            <input type="text" th:field="*{studiengang}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Fachsemester</span>
-            <input type="text" th:field="*{fachsemester}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-
-        <tr>
-            <td></td>
-            <td>
-                <br/>
-                <input type="submit" value="Änderungen speichern" /> <input type="reset" value="Werte zurücksetzen" />
-            </td>
-        </tr>
-
-        </tbody>
-    </table>
+<form class="form-inline" action="#" th:action="@{/passwd_join_lgp}" th:object="${Password}" method="post">
+    <div class="form-group">
+        <label for="lgppassword">Passwort für Lerngruppe</label>
+        <input type="password" class="form-control" id="lgppassword" placeholder="Passwort" th:field="*{pw}"/>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-default">Bestätigen</button>
+    </div>
 </form>
 
 </body>
