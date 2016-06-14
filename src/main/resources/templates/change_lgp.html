@@ -39,7 +39,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Persönlicher Schreibtisch <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="greeting">Übersicht</a></li>
+                        <li><a href="/greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
                         <li><a href="/join_lgp">Lernguppe Beitreten</a></li>
@@ -78,37 +78,27 @@
 
 <h1>Einstellungen der Lerngruppe ändern</h1>
 <br/>
-<form action="#" th:action="@{/change_lgp}" th:object="${lerngruppe}" method="post">
-    <table border="0" cellspacing="1" cellpadding="2">
-        <tbody>
 
-        <div>
-            <input type="hidden" th:field="*{id}" class="form-control"/>
-        </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Neuer Name der Lerngruppe</span>
-            <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
 
-        <br/>
-           <tr>
-            <td>Sichtbarkeit:</td>
-            <td>
-                <input name="Sichtbarkeit" type="radio" value="false" th:field="*{visibility}" /> Privat
-                <input  checked="checked"  name="Sichtbarkeit" type="radio" value="true" th:field="*{visibility}" /> Öffentlich
-            </td>
-        </tr>
 
-        <tr>
-            <td></td>
-            <td>
-                <br/>
-                <input type="submit" value="Änderungen speichern" /> <input type="reset" value="Werte zurücksetzen" />
-            </td>
-        </tr>
 
-        </tbody>
-    </table>
+<form action="#" th:action="@{/change_lgp}" th:object="${lerngruppe}" method="post" >
+    <div>
+        <input type="hidden" th:field="*{id}" class="form-control"/>
+    </div>
+    <div class="input-group input-group-lg" >
+        <span class="input-group-addon" id="sizing-addon1">Name der Lerngruppe</span>
+        <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+    </div>
+    <div></div>
+    <div class="input-group input-group-lg" >
+        <span class="input-group-addon" id="sizing-addon2">Passwort der Lerngruppe</span>
+        <input type="password" class="form-control" placeholder="Feld freilassen für öffentliche Gruppe"
+               th:field="*{password}" aria-describedby="sizing-addon2" />
+    </div>
+    <div>
+        <input type="submit" value="Lerngruppe erstellen" /> <input type="reset" value="Werte zurücksetzen" />
+    </div>
 </form>
 
 </body>
