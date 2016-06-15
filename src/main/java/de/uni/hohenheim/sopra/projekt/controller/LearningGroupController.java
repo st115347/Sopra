@@ -122,7 +122,16 @@ public class LearningGroupController {
             return "change_lgp?id="+groupId;
         }
         LearningGroup lerngruppe_new = learningGroupRepository.findOne(groupId);
-        lerngruppe_new.setVisibility(lerngruppe_old.getVisibility());
+
+        Password p = new Password();
+        p.setPw("");
+        if(lerngruppe_old.comparePassword(p)){
+            lerngruppe_new.setVisibility(true);
+        }
+        else{
+            lerngruppe_new.setVisibility(false);
+        }
+        lerngruppe_new.setPassword(lerngruppe_old.getPassword());
         lerngruppe_new.setName(lerngruppe_old.getName());
         learningGroupRepository.save(lerngruppe_new);
         return "/greeting";
