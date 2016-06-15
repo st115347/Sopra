@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Getting Started: Serving Web Content</title>
@@ -15,17 +14,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
-    <!-- include libraries(jQuery, bootstrap) -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet"/>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
-
-    <!-- include summernote css/js-->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet"/>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -83,38 +73,33 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-
-<h1>Neuen Beitrag zur Lerngruppe hinzufügen</h1>
-<br/>
-<form action="#" th:action="@{/add_beitrag}" th:object="${beitrag}" method="post" id="beitragform">
-    <table border="0" cellspacing="1" cellpadding="2">
-        <tbody>
+<div class="page-header">
+    <h1>Datei in Lerngruppe hochladen</h1>
+ </div>
 
 
-        <div>
-            <input type="hidden" th:field="*{groupId}" class="form-control"/>
-        </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Name des Beitrags</span>
-            <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
+<div th:if="${message}">
+    <h2 th:text="${message}"/>
+</div>
 
-        <div id="summernote"><p>Hier bitte deinen Beitrag erstellen.</p></div>
-        <input type="hidden" class="form-control" id="content" placeholder="" th:field="*{text}"/>
-        <script>
-            $(document).ready(function() {
-                $('#summernote').summernote();
-            });
-        </script>
-        <script>
-            function output (){
-                document.getElementById('content').value=""+$('#summernote').summernote('code');
-            }
-        </script>
-        <button onclick="output()" th:type="submit" class="btn btn-default" id="submitbtn">Bestätigen</button>
+<div>
+    <form th:action="@{/fileUploadForm}" method="POST" enctype="multipart/form-data" action="/">
+        <table>
+            <tr><td>Datei auswählen:</td><td><input type="file" name="file" /></td></tr>
+            <tr><td>Datei benennen:</td><td><input type="text" name="name" /></td></tr>
+            <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+        </table>
+    </form>
+</div>
 
-        </tbody>
-    </table>
-</form>
+<div class="page-header">
+    <h1>Bereits hochgeladene Dateien</h1>
+</div>
+<div>
+    <ul>
+        <li th:each="file : ${files}" th:text="${file}"></li>
+    </ul>
+</div>
+
 </body>
 </html>
