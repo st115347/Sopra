@@ -49,14 +49,14 @@ public class GreetingController {
     /**
      * Diese Methode gibt den Begrüßungstext aus.
      */
-    public String greeting(@RequestParam(value="name", required=false, defaultValue="Unbekannter") String name, Model model) {
+    public String greeting(@RequestParam(value = "name", required = false, defaultValue = "Unbekannter") String name, Model model) {
         SopraUser user = sopraUserRepository.findByUsername(((User) SecurityContextHolder.getContext().getAuthentication()
                 .getPrincipal()).getUsername());
         model.addAttribute("user", user);
         return "greeting";
     }
 
-    @RequestMapping(value="/register", method= RequestMethod.GET)
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String registerForm(Model model) {
 
         /*
@@ -124,9 +124,9 @@ public class GreetingController {
     }
 
     //Validator-Klasse oder Annotations müssen noch implementiert werden
-    @RequestMapping(value="/register", method= RequestMethod.POST)
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String registerSubmit(@Valid @ModelAttribute SopraUser sopraUser, BindingResult result) {
-        if(result.hasErrors()){
+        if (result.hasErrors()) {
             //TODO add error detection and error output
             return "register";
         }
@@ -137,17 +137,17 @@ public class GreetingController {
         return "login";
     }
 
-    @RequestMapping(value="/change_profileSettings", method= RequestMethod.GET)
-    public String change_profileSettingsForm(Model model){
+    @RequestMapping(value = "/change_profileSettings", method = RequestMethod.GET)
+    public String change_profileSettingsForm(Model model) {
         model.addAttribute("sopraUser", sopraUserRepository.findByUsername(((User) SecurityContextHolder.getContext().getAuthentication()
                 .getPrincipal()).getUsername()));
         return "change_profileSettings";
     }
 
     //Validator-Klasse oder Annotations müssen noch implementiert werden
-    @RequestMapping(value="/change_profileSettings", method= RequestMethod.POST)
-    public String change_profileSettingsSubmit(@Valid @ModelAttribute SopraUser sopraUser_old, BindingResult result){
-        if(result.hasErrors()){
+    @RequestMapping(value = "/change_profileSettings", method = RequestMethod.POST)
+    public String change_profileSettingsSubmit(@Valid @ModelAttribute SopraUser sopraUser_old, BindingResult result) {
+        if (result.hasErrors()) {
             return "change_profileSettings";
         }
         SopraUser sopraUser_new = userService.getCurrentSopraUser();
@@ -158,17 +158,18 @@ public class GreetingController {
 
     /**
      * Selecting all groups in which User is not yet member and displaying them
+     *
      * @param model
      * @return
      */
-    @RequestMapping(value="/join_lgp")
-    public String displayLGP(Model model){
+    @RequestMapping(value = "/join_lgp")
+    public String join_lgp(Model model) {
 
         List<LearningGroup> grp = new ArrayList<LearningGroup>();
-        for (LearningGroup l : learningGroupRepository.findAll()){
+        for (LearningGroup l : learningGroupRepository.findAll()) {
             if (l.getSopraUsers().contains(userService.getCurrentSopraUser())) {
 
-            }else {
+            } else {
                 grp.add(l);
             }
         }
@@ -180,25 +181,24 @@ public class GreetingController {
 
 
     /**
-     *  Checking if selected LearningGroup is password protected:
-     *  goto 'passwd_join_lgp' if yes.
+     * Checking if selected LearningGroup is password protected:
+     * goto 'passwd_join_lgp' if yes.
      *
      * @param lgpid
      * @param model
      * @return
      */
-    @RequestMapping(value ="/finish_join_lgp")
-    public String gotoLGP(@RequestParam(value = "id", required = true) Integer lgpid, Model model){
+    @RequestMapping(value = "/finish_join_lgp")
+    public String gotoLGP(@RequestParam(value = "id", required = true) Integer lgpid, Model model) {
         LearningGroup grp = learningGroupRepository.findOne(lgpid);
         SopraUser user = userService.getCurrentSopraUser();
-        if(!grp.getVisibility()){
+        if (!grp.getVisibility()) {
             groupIDSave = lgpid;
             model.addAttribute("Password", new Password());
             return "/passwd_join_lgp";
-        }
-        else if(!grp.addUser(user)){
+        } else if (!grp.addUser(user)) {
             //TODO show site stating group is full
-            return "/join_lgp";
+            return displayLGP(model);
         }
         learningGroupRepository.save(grp);
         return displayLGP(model);
@@ -215,14 +215,14 @@ public class GreetingController {
      * @param model
      * @return next Website
      */
-    @RequestMapping(value ="/passwd_join_lgp", method=RequestMethod.POST)
-    public String protectedJoin(@ModelAttribute Password password, Model model){
+    @RequestMapping(value = "/passwd_join_lgp", method = RequestMethod.POST)
+    public String protectedJoin(@ModelAttribute Password password, Model model) {
 
         LearningGroup grp = learningGroupRepository.findOne(groupIDSave);
         SopraUser user = userService.getCurrentSopraUser();
 
-        if(grp.comparePassword(password)){
-            if (grp.addUser(user)){
+        if (grp.comparePassword(password)) {
+            if (grp.addUser(user)) {
                 learningGroupRepository.save(grp);
                 return displayLGP(model);
             }
@@ -234,5 +234,17 @@ public class GreetingController {
         return displayLGP(model);
     }
 
+    public String displayLGP(Model model) {
 
+    SopraUser user = userService.getCurrentSopraUser();
+    List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
+    for(LearningGroup l :learningGroupRepository.findAll()) {
+        if ((l.getSopraUsers().contains(user))) {
+            usergrps.add(l);
+        }
+    }
+
+    model.addAttribute("lerngruppe",usergrps);
+    return"myLearningGroups";
+}
 }
