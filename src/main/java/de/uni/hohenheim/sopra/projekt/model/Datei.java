@@ -10,7 +10,7 @@ public class Datei {
 
     @Id
     @GeneratedValue
-    int i;
+    int id;
     @Column(name = "datei")
     private String fileContent;
 
