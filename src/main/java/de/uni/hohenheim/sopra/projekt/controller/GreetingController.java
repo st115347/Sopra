@@ -126,11 +126,9 @@ public class GreetingController {
         return "register";
     }
 
-    //Validator-Klasse oder Annotations müssen noch implementiert werden
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String registerSubmit(@Valid @ModelAttribute SopraUser sopraUser, BindingResult result) {
+    public String registerSubmit(@Valid @ModelAttribute SopraUser sopraUser, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            //TODO add error detection and error output
             return "register";
         }
         Collection<GrantedAuthority> authsAdmin = new ArrayList<>();

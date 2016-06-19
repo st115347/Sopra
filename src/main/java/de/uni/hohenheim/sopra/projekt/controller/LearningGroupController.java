@@ -58,11 +58,10 @@ public class LearningGroupController {
      * @param result
      * @return
      */
-        //Validator-Klasse oder Annotations müssen noch implementiert werden
+
     @RequestMapping(value="/add_lgp", method= RequestMethod.POST)
     public String addLearningGroupSubmit(@Valid @ModelAttribute("lerngruppe") LearningGroup lerngruppe, BindingResult result, Model model) {
             if(result.hasErrors()){
-                //TODO show error message
                 return "add_lgp";
             }
         Password p = new Password();
