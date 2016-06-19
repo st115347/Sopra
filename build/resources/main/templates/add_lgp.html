@@ -83,7 +83,7 @@
             <span class="input-group-addon" id="sizing-addon1">Name der Lerngruppe</span>
             <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
         </div>
-    <div></div>
+    <div><p style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error.</p></div>
         <div class="input-group input-group-lg" >
             <span class="input-group-addon" id="sizing-addon2">Passwort der Lerngruppe</span>
             <input type="password" class="form-control" placeholder="Feld freilassen für öffentliche Gruppe"

@@ -46,7 +46,7 @@ public class LearningGroupController {
     private int groupIDSave;
 
     @RequestMapping(value="/add_lgp", method= RequestMethod.GET)
-    public String greetingForm(Model model) {
+    public String addLearningGroupForm(Model model) {
         model.addAttribute("lerngruppe", new LearningGroup());
         return "add_lgp";
     }
@@ -58,11 +58,10 @@ public class LearningGroupController {
      * @param result
      * @return
      */
-        //Validator-Klasse oder Annotations müssen noch implementiert werden
+
     @RequestMapping(value="/add_lgp", method= RequestMethod.POST)
-    public String greetingSubmit(@Valid @ModelAttribute LearningGroup lerngruppe, BindingResult result) {
+    public String addLearningGroupSubmit(@Valid @ModelAttribute("lerngruppe") LearningGroup lerngruppe, BindingResult result, Model model) {
             if(result.hasErrors()){
-                //TODO show error message
                 return "add_lgp";
             }
         Password p = new Password();
@@ -249,7 +248,14 @@ public class LearningGroupController {
      * @return
      */
     @RequestMapping(value="/answer_beitrag", method=RequestMethod.POST)
-    public String answerBeitragFinish(@ModelAttribute Antwort_Beitrag answer, Model model){
+    public String answerBeitragFinish(@Valid @ModelAttribute("answer") Antwort_Beitrag answer, BindingResult result, Model model){
+        if(result.hasErrors()) {
+            return "answer_beitrag";
+        }
+
+        if(answer.getTo().equals("")){
+            answer.setTo("All");
+        }
         SopraUser user = userService.getCurrentSopraUser();
         answer.setAuthor(user.getVorname()+" "+user.getNachname());
         Beitrag b = beitragRepository.findOne(groupIDSave);
@@ -260,6 +266,12 @@ public class LearningGroupController {
         return "show_beitrag";
     }
 
+    /**
+     * displaying memberlist in learninggroup
+     * @param groupId
+     * @param model
+     * @return
+     */
    @RequestMapping(value="/show_user_lgp")
    public String showUser(@RequestParam(value="id", required=true) Integer groupId, Model model){
         LearningGroup lgp = learningGroupRepository.findOne(groupId);
@@ -277,6 +289,12 @@ public class LearningGroupController {
         return "show_user_lgp";
    }
 
+    /**
+     * deleting user from learninggroup
+     * @param userId
+     * @param model
+     * @return
+     */
     @RequestMapping(value="/del_user")
     public String del_user(@RequestParam (value ="id")String userId, Model model) {
         LearningGroup lgp = learningGroupRepository.findOne(groupIDSave);

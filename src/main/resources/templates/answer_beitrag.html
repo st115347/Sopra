@@ -88,7 +88,7 @@
 
 <form th:action="@{/answer_beitrag}" th:object="${answer}" method="post">
 <div class="form-group">
-    <label for="to">To</label>
+    <label for="to">An</label>
     <input type="text" class="form-control" id="to" placeholder="" th:field="*{to}"/>
 </div>
     <div class="form-group">
@@ -97,6 +97,7 @@
     </div>
     <div id="summernote"><p>Hier bitte deinen Beitrag erstellen.</p></div>
     <input type="hidden" class="form-control" id="content" placeholder="" th:field="*{content}"/>
+    <div><p style="color:red" th:if="${#fields.hasErrors('content')}" th:errors="*{content}">Text Error.</p></div>
     <script>
         $(document).ready(function() {
             $('#summernote').summernote();
