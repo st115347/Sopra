@@ -66,7 +66,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Logout</a></li>
+                <li><a href="/logout">Logout</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -98,7 +98,7 @@
             <span class="input-group-addon" id="sizing-addon1">Name des Beitrags</span>
             <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
         </div>
-
+        <div><p style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error.</p></div>
         <div id="summernote"><p>Hier bitte deinen Beitrag erstellen.</p></div>
         <input type="hidden" class="form-control" id="content" placeholder="" th:field="*{text}"/>
         <script>
@@ -111,6 +111,7 @@
                 document.getElementById('content').value=""+$('#summernote').summernote('code');
             }
         </script>
+        <div><p style="color:red" th:if="${#fields.hasErrors('text')}" th:errors="*{text}">Text Error.</p></div>
         <button onclick="output()" th:type="submit" class="btn btn-default" id="submitbtn">Bestätigen</button>
 
         </tbody>

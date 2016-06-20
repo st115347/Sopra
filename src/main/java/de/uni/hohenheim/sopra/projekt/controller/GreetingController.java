@@ -12,6 +12,7 @@ import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -43,6 +44,8 @@ public class GreetingController {
     UserService userService;
 
     private int groupIDSave;
+
+    private boolean showgrpfullerror=false;
 
 
     @RequestMapping("/greeting")
@@ -123,11 +126,9 @@ public class GreetingController {
         return "register";
     }
 
-    //Validator-Klasse oder Annotations müssen noch implementiert werden
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String registerSubmit(@Valid @ModelAttribute SopraUser sopraUser, BindingResult result) {
+    public String registerSubmit(@Valid @ModelAttribute SopraUser sopraUser, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            //TODO add error detection and error output
             return "register";
         }
         Collection<GrantedAuthority> authsAdmin = new ArrayList<>();
@@ -173,9 +174,11 @@ public class GreetingController {
                 grp.add(l);
             }
         }
-
-
         model.addAttribute("lerngruppe", grp);
+        if(showgrpfullerror){
+            model.addAttribute("error","Die Lerngruppe ist voll.");
+            showgrpfullerror=false;
+        }
         return "join_lgp";
     }
 
@@ -197,8 +200,8 @@ public class GreetingController {
             model.addAttribute("Password", new Password());
             return "/passwd_join_lgp";
         } else if (!grp.addUser(user)) {
-            //TODO show site stating group is full
-            return displayLGP(model);
+            showgrpfullerror=true;
+            return "redirect:/join_lgp";
         }
         learningGroupRepository.save(grp);
         return displayLGP(model);
@@ -216,7 +219,7 @@ public class GreetingController {
      * @return next Website
      */
     @RequestMapping(value = "/passwd_join_lgp", method = RequestMethod.POST)
-    public String protectedJoin(@ModelAttribute Password password, Model model) {
+    public String protectedJoin(@ModelAttribute("Password") Password password, BindingResult result, Model model) {
 
         LearningGroup grp = learningGroupRepository.findOne(groupIDSave);
         SopraUser user = userService.getCurrentSopraUser();
@@ -226,14 +229,17 @@ public class GreetingController {
                 learningGroupRepository.save(grp);
                 return displayLGP(model);
             }
-            //TODO show site stating group is full
-            return displayLGP(model);
+                showgrpfullerror=true;
+                return "redirect:/join_lgp";
 
+
+            }
+
+            result.rejectValue("pw","error.password","Das eingegebene Passwort ist falsch");
+            return "passwd_join_lgp";
         }
-        //TODO show site stating password is wrong
-        return displayLGP(model);
-    }
 
+    //Hilfsmethode
     public String displayLGP(Model model) {
 
     SopraUser user = userService.getCurrentSopraUser();
