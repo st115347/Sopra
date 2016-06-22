@@ -1,6 +1,9 @@
 package de.uni.hohenheim.sopra.projekt.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -44,17 +47,6 @@ public class Beitrag implements Serializable{
 
     int countAnswers=0;
 
-
-//    private Set<Datei> datei = new HashSet<Datei>(0);
-//
-//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "projekt")
-//    public Set<Datei> getDatei() {
-//        return this.datei;
-//    }
-//
-//    public void setDatei(Set<Datei> datei) {
-//        this.datei = datei;
-//    }
 
     public Integer getId() {
         return id;
