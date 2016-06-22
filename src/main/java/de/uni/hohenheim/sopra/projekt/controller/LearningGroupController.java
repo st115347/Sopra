@@ -79,7 +79,7 @@ public class LearningGroupController {
     }
 
     /**
-     * selecting only learninggroups in which user is member.
+     * Selecting only learninggroups in which user is member.
      * @param model
      * @return
      */
@@ -97,7 +97,13 @@ public class LearningGroupController {
 
     }
 
-
+    /**
+     * Selecting learninggroup and all postings.
+     * In LearningGroup.html Thymeleaf iterates over all postings and selects only the matching ones to the groupId
+     * @param groupId
+     * @param model
+     * @return
+     */
     @RequestMapping("/get_lgp")
     public String getLearninggroup(@RequestParam(value="id", required=true) Integer groupId, Model model){
         model.addAttribute("lerngruppe", learningGroupRepository.findOne(groupId));
@@ -240,7 +246,7 @@ public class LearningGroupController {
     }
 
     /**
-     * setting author of answer as current user, setting answer as answer to beitrag,
+     * Setting author of answer as current user, setting answer as answer to beitrag,
      * saving beitrag and answer.
      * going to show_beitrag
      * @param answer
@@ -267,7 +273,7 @@ public class LearningGroupController {
     }
 
     /**
-     * displaying memberlist in learninggroup
+     * Displaying memberlist in learninggroup
      * @param groupId
      * @param model
      * @return
@@ -290,7 +296,7 @@ public class LearningGroupController {
    }
 
     /**
-     * deleting user from learninggroup
+     * Deleting user from learninggroup only if current user is also owner of group
      * @param userId
      * @param model
      * @return
