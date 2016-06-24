@@ -75,7 +75,7 @@ public class LearningGroupController {
 
         lerngruppe.addUser(userService.getCurrentSopraUser());
         learningGroupRepository.save(lerngruppe);
-        return "greeting";
+        return "myLearningGroups";
     }
 
     /**
@@ -100,47 +100,73 @@ public class LearningGroupController {
     /**
      * Selecting learninggroup and all postings.
      * In LearningGroup.html Thymeleaf iterates over all postings and selects only the matching ones to the groupId
+     * If current user is owner of the group go to LearningGroup_owner
+     * If not go to LearningGroup
      * @param groupId
      * @param model
      * @return
      */
     @RequestMapping("/get_lgp")
     public String getLearninggroup(@RequestParam(value="id", required=true) Integer groupId, Model model){
-        model.addAttribute("lerngruppe", learningGroupRepository.findOne(groupId));
+        SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(groupId);
+        model.addAttribute("lerngruppe", lgp);
         model.addAttribute("beitrag", beitragRepository.findAll());
+        if (lgp.getSopraUsers().get(0).equals(user)) {
+            return "LearningGroup_owner";
+        }
         return "LearningGroup";
     }
 
 
     @RequestMapping(value="/change_lgp", method= RequestMethod.GET)
     public String changeLgpForm(@RequestParam(value="id", required=true) Integer groupId, Model model){
-        model.addAttribute("lerngruppe", learningGroupRepository.findOne(groupId));
-        return "change_lgp";
+        SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(groupId);
+        if (lgp.getSopraUsers().get(0).equals(user)) {
+            model.addAttribute("lerngruppe", lgp);
+            return "change_lgp";
+        }
+        return "LearningGroup";
     }
 
 
-    //Validator-Klasse oder Annotations müssen noch implementiert werden
+    /**
+     * Settings of the learninggroup can be changed only by owner
+     * @param lerngruppe_old
+     * @param result
+     * @param model
+     * @return
+     */
     @RequestMapping(value="/change_lgp", method= RequestMethod.POST)
-    public String changeLgpSubmit(@Valid  @ModelAttribute LearningGroup lerngruppe_old, BindingResult result){
+    public String changeLgpSubmit(@Valid  @ModelAttribute("lerngruppe") LearningGroup lerngruppe_old, BindingResult result, Model model) {
         Integer groupId = lerngruppe_old.getId();
-        if(result.hasErrors()){
-            return "change_lgp?id="+groupId;
+        if (result.hasErrors()) {
+            return "change_lgp";
         }
         LearningGroup lerngruppe_new = learningGroupRepository.findOne(groupId);
-
         Password p = new Password();
         p.setPw("");
-        if(lerngruppe_old.comparePassword(p)){
-            lerngruppe_new.setVisibility(true);
+            if (lerngruppe_old.comparePassword(p)) {
+                lerngruppe_new.setVisibility(true);
+            } else {
+                lerngruppe_new.setVisibility(false);
+            }
+            lerngruppe_new.setPassword(lerngruppe_old.getPassword());
+            lerngruppe_new.setName(lerngruppe_old.getName());
+            learningGroupRepository.save(lerngruppe_new);
+            SopraUser user = userService.getCurrentSopraUser();
+            List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
+            for (LearningGroup l : learningGroupRepository.findAll()){
+            if((l.getSopraUsers().contains(user))){
+                usergrps.add(l);
+            }
         }
-        else{
-            lerngruppe_new.setVisibility(false);
+        model.addAttribute("lerngruppe", usergrps);
+            return "myLearningGroups";
         }
-        lerngruppe_new.setPassword(lerngruppe_old.getPassword());
-        lerngruppe_new.setName(lerngruppe_old.getName());
-        learningGroupRepository.save(lerngruppe_new);
-        return "/greeting";
-    }
+
+
 
 
     /**
