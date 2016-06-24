@@ -16,7 +16,7 @@ public class LearningGroup {
     @GeneratedValue
     Integer groupId;
 
-    @Size(min=2, max=40, message = "Name muss zwischen 2-40 Zeichen lang sein")
+    @Size(min=1, max=40, message = "Der Name muss zwischen 2-40 Zeichen lang sein")
     String name;
     Boolean visibility;
     int membercount;
