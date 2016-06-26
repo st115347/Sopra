@@ -31,7 +31,7 @@ public class Beitrag implements Serializable{
     @Column(name = "name")
     @Size(min=1, max=50, message="Das Topic muss zwischen 1 und 50 Zeichen lang sein")
     private String name;
-    @Size(min=1, max=9999, message="Die Nachricht darf nicht leer sein oder länger als 9999 Zeichen")
+    @Size(min=12, max=9999, message="Die Nachricht darf nicht leer sein oder länger als 9999 Zeichen")
     @Column(name = "text",length = 10000)
     private String text;
 

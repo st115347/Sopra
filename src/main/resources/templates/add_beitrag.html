@@ -95,11 +95,11 @@
             <input type="hidden" th:field="*{groupId}" class="form-control"/>
         </div>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Name des Beitrags</span>
+            <span class="input-group-addon" id="sizing-addon1">Thema des Beitrags</span>
             <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
         </div>
         <div><p style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error.</p></div>
-        <div id="summernote"><p>Hier bitte deinen Beitrag erstellen.</p></div>
+        <div id="summernote"></div>
         <input type="hidden" class="form-control" id="content" placeholder="" th:field="*{text}"/>
         <script>
             $(document).ready(function() {
