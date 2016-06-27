@@ -95,7 +95,7 @@
         <label for="topic">Topic</label>
         <input type="text" class="form-control" id="topic" placeholder="" th:field="*{topic}"/>
     </div>
-    <div id="summernote"><p>Hier bitte deinen Beitrag erstellen.</p></div>
+    <div id="summernote"></div>
     <input type="hidden" class="form-control" id="content" placeholder="" th:field="*{content}"/>
     <div><p style="color:red" th:if="${#fields.hasErrors('content')}" th:errors="*{content}">Text Error.</p></div>
     <script>

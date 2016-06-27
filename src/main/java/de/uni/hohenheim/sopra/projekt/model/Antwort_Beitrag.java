@@ -26,7 +26,7 @@ public class Antwort_Beitrag {
     @Column(name = "authorfrom")
     String author;
 
-    @Size(min=1, max=9999, message="Die Nachricht darf nicht leer sein oder länger als 9999 Zeichen")
+    @Size(min=12, max=9999, message="Die Nachricht darf nicht leer sein oder länger als 9999 Zeichen")
     @Column(name = "content", length = 10000)
     String content;
 
