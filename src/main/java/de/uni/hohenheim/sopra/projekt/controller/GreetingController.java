@@ -61,67 +61,6 @@ public class GreetingController {
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String registerForm(Model model) {
-
-        /*
-            Starting with init block.
-            When clicking register on login page
-            this will create example users and example groups to join.
-         */
-        SopraUser user = new SopraUser();
-        Collection<GrantedAuthority> authsAdmin = new ArrayList<>();
-        authsAdmin.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-        userDetailsManager.createUser(new User("a", passwordEncoder.encode("b"), authsAdmin));
-        user.setUsername("a");
-        user.setPasswort("b");
-        user.setEmail("a");
-        user.setVorname("Tabea");
-        user.setNachname("Schmid");
-        sopraUserRepository.save(user);
-
-        SopraUser user1 = new SopraUser();
-        authsAdmin.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-        userDetailsManager.createUser(new User("asdf", passwordEncoder.encode("asdf"), authsAdmin));
-        user1.setUsername("asdf");
-        user1.setPasswort("asdf");
-        user1.setEmail("asdf");
-        user1.setNachname("Peter");
-        user1.setVorname("Hans");
-        sopraUserRepository.save(user1);
-
-        SopraUser s = new SopraUser();
-        LearningGroup l = new LearningGroup();
-        l.setId(1);
-        l.setName("haha");
-        l.setVisibility(true);
-        LearningGroup l1 = new LearningGroup();
-        l1.setId(2);
-        l1.setName("asdf");
-        l1.setVisibility(true);
-        LearningGroup l2 = new LearningGroup();
-        l2.setId(3);
-        l2.setName("hsgh");
-        l2.setPassword("asdf");
-        l2.setVisibility(false);
-        LearningGroup l3 = new LearningGroup();
-        l3.setId(4);
-        l3.setName("asfafs");
-        l3.setVisibility(true);
-        l.addUser(user1);
-        l1.addUser(user1);
-        l2.addUser(user1);
-        l3.addUser(user1);
-
-        learningGroupRepository.save(l);
-        learningGroupRepository.save(l1);
-        learningGroupRepository.save(l2);
-        learningGroupRepository.save(l3);
-        /*
-        Ending of init block.
-
-        -> HowTo init: click register. then go back to login page. you can now login with 'a' as username and 'b' as passwort.
-         */
-
-
         model.addAttribute("sopraUser", new SopraUser());
         return "register";
     }
@@ -239,7 +178,12 @@ public class GreetingController {
             return "passwd_join_lgp";
         }
 
-    //Hilfsmethode
+    /**
+     * Hilfsmethode
+     * Searching groups in which user is member
+     * @param model
+     * @return
+     */
     public String displayLGP(Model model) {
 
     SopraUser user = userService.getCurrentSopraUser();
