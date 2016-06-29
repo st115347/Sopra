@@ -176,11 +176,18 @@ public class LearningGroupController {
      * @return
      */
     @RequestMapping(value="/add_beitrag", method= RequestMethod.GET)
-    public String add_beitragForm(@RequestParam(value="id", required=true) Integer groupId, Model model){
+    public String add_beitragForm(@RequestParam(value="id", required=true) Integer groupId, Model model) {
+        SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(groupId);
         Beitrag beitrag = new Beitrag();
         beitrag.setGroupId(groupId);
         model.addAttribute("beitrag", beitrag);
-        return "add_beitrag";
+        model.addAttribute("lerngruppe", lgp);
+        if (lgp.getSopraUsers().get(0).equals(user)) {
+            return "add_beitrag_owner";
+        } else {
+            return "add_beitrag";
+        }
     }
 
 
@@ -194,16 +201,33 @@ public class LearningGroupController {
      * @return
      */
     @RequestMapping(value="/add_beitrag", method= RequestMethod.POST)
-    public String add_beitragSubmit(@Valid @ModelAttribute Beitrag beitrag, BindingResult result,Model model){
+    public String add_beitragSubmit(@Valid @ModelAttribute Beitrag beitrag, BindingResult result,Model model, Integer groupId){
         if(result.hasErrors()){
             return "add_beitrag";
         }
         SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(groupId);
+        beitrag.setAuthor(user.getVorname() + " "+ user.getNachname());
+
+        beitragRepository.save(beitrag);
+        model.addAttribute("lerngruppe", lgp);
+        model.addAttribute("beitrag",beitrag);
+        return "show_beitrag";
+    }
+
+    @RequestMapping(value="/add_beitrag_owner", method= RequestMethod.POST)
+    public String add_beitragSubmit_owner(@Valid @ModelAttribute Beitrag beitrag, BindingResult result,Model model, Integer groupId){
+        if(result.hasErrors()){
+            return "add_beitrag_owner";
+        }
+        SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(groupId);
         beitrag.setAuthor(user.getVorname() + " "+ user.getNachname());
 
         beitragRepository.save(beitrag);
         model.addAttribute("beitrag",beitrag);
-        return "show_beitrag";
+        model.addAttribute("lerngruppe", lgp);
+        return "show_beitrag_owner";
     }
 
     /**
