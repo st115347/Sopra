@@ -60,6 +60,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a th:href="'/show_user_lgp?id=' + ${lerngruppe.id}" >Mitglieder anzeigen</a></li>
+                        <li><a th:href="'/show_user_lgp?id=' + ${lerngruppe.id}" >Mitglieder anzeigen</a></li>
+                        <li><a th:href="'/del_lgp?id=' + ${lerngruppe.id}">Lerngruppe löschen</a></li>
                     </ul>
                 </li>
             </ul>
@@ -92,10 +94,10 @@
 <br/>
 
 <form th:action="@{/answer_beitrag}" th:object="${answer}" method="post">
-<div class="form-group">
-    <label for="to">An</label>
-    <input type="text" class="form-control" id="to" placeholder="" th:field="*{to}"/>
-</div>
+    <div class="form-group">
+        <label for="to">An</label>
+        <input type="text" class="form-control" id="to" placeholder="" th:field="*{to}"/>
+    </div>
     <div class="form-group">
         <label for="topic">Topic</label>
         <input type="text" class="form-control" id="topic" placeholder="" th:field="*{topic}"/>

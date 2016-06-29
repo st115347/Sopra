@@ -203,6 +203,7 @@ public class LearningGroupController {
     @RequestMapping(value="/add_beitrag", method= RequestMethod.POST)
     public String add_beitragSubmit(@Valid @ModelAttribute Beitrag beitrag, BindingResult result,Model model, Integer groupId){
         if(result.hasErrors()){
+            model.addAttribute("lerngruppe", learningGroupRepository.findOne(groupId));
             return "add_beitrag";
         }
         SopraUser user = userService.getCurrentSopraUser();
@@ -218,6 +219,7 @@ public class LearningGroupController {
     @RequestMapping(value="/add_beitrag_owner", method= RequestMethod.POST)
     public String add_beitragSubmit_owner(@Valid @ModelAttribute Beitrag beitrag, BindingResult result,Model model, Integer groupId){
         if(result.hasErrors()){
+            model.addAttribute("lerngruppe", learningGroupRepository.findOne(groupId));
             return "add_beitrag_owner";
         }
         SopraUser user = userService.getCurrentSopraUser();
@@ -288,11 +290,17 @@ public class LearningGroupController {
      * @return
      */
     @RequestMapping(value="/answer_beitrag", method=RequestMethod.GET)
-    public String answerBeitragStart(@RequestParam(value="id") Integer id, Model model){
+    public String answerBeitragStart(@RequestParam(value="id") Integer id, Model model, Integer groupId){
         Antwort_Beitrag answer = new Antwort_Beitrag();
+        LearningGroup lgp = learningGroupRepository.findOne(groupIDSave);
         groupIDSave = id;
         model.addAttribute("answer",answer);
-        return "answer_beitrag";
+        model.addAttribute("lerngruppe", lgp);
+        if(lgp.getSopraUsers().get(0).equals(userService.getCurrentSopraUser())) {
+        return "answer_beitrag_owner"; }
+        else{
+            return "answer_beitrag";
+        }
     }
 
     /**
@@ -304,8 +312,9 @@ public class LearningGroupController {
      * @return
      */
     @RequestMapping(value="/answer_beitrag", method=RequestMethod.POST)
-    public String answerBeitragFinish(@Valid @ModelAttribute("answer") Antwort_Beitrag answer, BindingResult result, Model model){
+    public String answerBeitragFinish(@Valid @ModelAttribute("answer") Antwort_Beitrag answer, BindingResult result, Model model, Integer groupId){
         if(result.hasErrors()) {
+            model.addAttribute("lerngruppe", learningGroupRepository.findOne(groupId));
             return "answer_beitrag";
         }
 
@@ -321,7 +330,25 @@ public class LearningGroupController {
         model.addAttribute("beitrag",b);
         return "show_beitrag";
     }
+    @RequestMapping(value="/answer_beitrag_owner", method=RequestMethod.POST)
+    public String answerBeitragFinish_owner(@Valid @ModelAttribute("answer") Antwort_Beitrag answer, BindingResult result, Model model, Integer groupId){
+        if(result.hasErrors()) {
+            model.addAttribute("lerngruppe", learningGroupRepository.findOne(groupIDSave));
+            return "answer_beitrag_owner";
+        }
 
+        if(answer.getTo().equals("")){
+            answer.setTo("All");
+        }
+        SopraUser user = userService.getCurrentSopraUser();
+        answer.setAuthor(user.getVorname()+" "+user.getNachname());
+        Beitrag b = beitragRepository.findOne(groupIDSave);
+        antwort_beitragRepository.save(answer);
+        b.setAnswers(answer);
+        beitragRepository.save(b);
+        model.addAttribute("beitrag",b);
+        return "show_beitrag_owner";
+    }
     /**
      * Displaying memberlist in learninggroup
      * @param groupId
