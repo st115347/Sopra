@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
@@ -16,15 +17,16 @@ import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 public class Antwort_Beitrag {
 
     @Id
-            @GeneratedValue
+    @GeneratedValue
     Integer id;
 
     @Column(name = "author")
-    String to;
+    String to="";
 
     @Column(name = "authorfrom")
     String author;
 
+    @Size(min=12, max=9999, message="Die Nachricht darf nicht leer sein oder länger als 9999 Zeichen")
     @Column(name = "content", length = 10000)
     String content;
 

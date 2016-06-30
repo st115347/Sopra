@@ -29,19 +29,22 @@
             <span class="input-group-addon" id="sizing-addon">E-Mail - Adresse</span>
             <input type="text" th:field="*{username}" class="form-control" placeholder="" aria-describedby="sizing-addon"/>
         </div>
-
+        <div><p style="color:red" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Email Error.</p></div>
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1" >Passwort</span>
             <input type="text" th:field="*{passwort}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
         </div>
+        <div><p style="color:red" th:if="${#fields.hasErrors('passwort')}" th:errors="*{passwort}">Password Error.</p></div>
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon2">Nachname</span>
             <input type="text" th:field="*{nachname}" class="form-control" placeholder="" aria-describedby="sizing-addon2"/>
         </div>
+        <div><p style="color:red" th:if="${#fields.hasErrors('nachname')}" th:errors="*{nachname}">Name Error.</p></div>
         <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon3">Vorname</span>
             <input type="text" th:field="*{vorname}" class="form-control" placeholder="" aria-describedby="sizing-addon3"/>
         </div>
+        <div><p style="color:red" th:if="${#fields.hasErrors('vorname')}" th:errors="*{vorname}">Name Error.</p></div>
 
          <tr>
             <td></td>
