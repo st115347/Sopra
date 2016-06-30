@@ -44,6 +44,7 @@ public class LearningGroupController {
     Antwort_BeitragRepository antwort_beitragRepository;
 
     private int groupIDSave;
+    private int beitragIDSave;
 
     @RequestMapping(value="/add_lgp", method= RequestMethod.GET)
     public String addLearningGroupForm(Model model) {
@@ -61,9 +62,9 @@ public class LearningGroupController {
 
     @RequestMapping(value="/add_lgp", method= RequestMethod.POST)
     public String addLearningGroupSubmit(@Valid @ModelAttribute("lerngruppe") LearningGroup lerngruppe, BindingResult result, Model model) {
-            if(result.hasErrors()){
-                return "add_lgp";
-            }
+        if(result.hasErrors()){
+            return "add_lgp";
+        }
         Password p = new Password();
         p.setPw("");
         if(lerngruppe.comparePassword(p)){
@@ -75,7 +76,7 @@ public class LearningGroupController {
 
         lerngruppe.addUser(userService.getCurrentSopraUser());
         learningGroupRepository.save(lerngruppe);
-        return "myLearningGroups";
+        return myLearningGroups(model);
     }
 
     /**
@@ -147,24 +148,24 @@ public class LearningGroupController {
         LearningGroup lerngruppe_new = learningGroupRepository.findOne(groupId);
         Password p = new Password();
         p.setPw("");
-            if (lerngruppe_old.comparePassword(p)) {
-                lerngruppe_new.setVisibility(true);
-            } else {
-                lerngruppe_new.setVisibility(false);
-            }
-            lerngruppe_new.setPassword(lerngruppe_old.getPassword());
-            lerngruppe_new.setName(lerngruppe_old.getName());
-            learningGroupRepository.save(lerngruppe_new);
-            SopraUser user = userService.getCurrentSopraUser();
-            List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
-            for (LearningGroup l : learningGroupRepository.findAll()){
+        if (lerngruppe_old.comparePassword(p)) {
+            lerngruppe_new.setVisibility(true);
+        } else {
+            lerngruppe_new.setVisibility(false);
+        }
+        lerngruppe_new.setPassword(lerngruppe_old.getPassword());
+        lerngruppe_new.setName(lerngruppe_old.getName());
+        learningGroupRepository.save(lerngruppe_new);
+        SopraUser user = userService.getCurrentSopraUser();
+        List<LearningGroup> usergrps = new ArrayList<LearningGroup>();
+        for (LearningGroup l : learningGroupRepository.findAll()){
             if((l.getSopraUsers().contains(user))){
                 usergrps.add(l);
             }
         }
         model.addAttribute("lerngruppe", usergrps);
-            return "myLearningGroups";
-        }
+        return "myLearningGroups";
+    }
 
 
 
@@ -274,10 +275,19 @@ public class LearningGroupController {
      * @return
      */
     @RequestMapping(value="/show_beitrag")
-    public String showBeitrag(@RequestParam(value = "id") Integer id, Model model){
+    public String showBeitrag(@RequestParam(value = "id") Integer id, @RequestParam(value="grpid") Integer grpid, Model model){
         Beitrag b = beitragRepository.findOne(id);
         model.addAttribute("beitrag", b);
+        model.addAttribute("lerngruppe",learningGroupRepository.findOne(grpid));
         return "show_beitrag";
+    }
+
+    @RequestMapping(value="/show_beitrag_owner")
+    public String showBeitragOwner(@RequestParam(value = "id") Integer id, @RequestParam(value="grpid") Integer grpid, Model model){
+        Beitrag b = beitragRepository.findOne(id);
+        model.addAttribute("beitrag", b);
+        model.addAttribute("lerngruppe",learningGroupRepository.findOne(grpid));
+        return "show_beitrag_owner";
     }
 
 
@@ -290,14 +300,15 @@ public class LearningGroupController {
      * @return
      */
     @RequestMapping(value="/answer_beitrag", method=RequestMethod.GET)
-    public String answerBeitragStart(@RequestParam(value="id") Integer id, Model model, Integer groupId){
+    public String answerBeitragStart(@RequestParam(value="id") Integer id,@RequestParam(value="grpid") Integer grpid, Model model){
         Antwort_Beitrag answer = new Antwort_Beitrag();
-        LearningGroup lgp = learningGroupRepository.findOne(groupIDSave);
-        groupIDSave = id;
+        LearningGroup lgp = learningGroupRepository.findOne(grpid);
+        beitragIDSave = id;
+        groupIDSave = grpid;
         model.addAttribute("answer",answer);
         model.addAttribute("lerngruppe", lgp);
         if(lgp.getSopraUsers().get(0).equals(userService.getCurrentSopraUser())) {
-        return "answer_beitrag_owner"; }
+            return "answer_beitrag_owner"; }
         else{
             return "answer_beitrag";
         }
@@ -312,9 +323,10 @@ public class LearningGroupController {
      * @return
      */
     @RequestMapping(value="/answer_beitrag", method=RequestMethod.POST)
-    public String answerBeitragFinish(@Valid @ModelAttribute("answer") Antwort_Beitrag answer, BindingResult result, Model model, Integer groupId){
+    public String answerBeitragFinish(@Valid @ModelAttribute("answer") Antwort_Beitrag answer, BindingResult result, Model model){
+        LearningGroup lgp = learningGroupRepository.findOne(groupIDSave);
         if(result.hasErrors()) {
-            model.addAttribute("lerngruppe", learningGroupRepository.findOne(groupId));
+            model.addAttribute("lerngruppe", lgp);
             return "answer_beitrag";
         }
 
@@ -323,17 +335,20 @@ public class LearningGroupController {
         }
         SopraUser user = userService.getCurrentSopraUser();
         answer.setAuthor(user.getVorname()+" "+user.getNachname());
-        Beitrag b = beitragRepository.findOne(groupIDSave);
+        Beitrag b = beitragRepository.findOne(beitragIDSave);
         antwort_beitragRepository.save(answer);
         b.setAnswers(answer);
         beitragRepository.save(b);
+        model.addAttribute("lerngruppe", lgp);
         model.addAttribute("beitrag",b);
         return "show_beitrag";
+
     }
     @RequestMapping(value="/answer_beitrag_owner", method=RequestMethod.POST)
     public String answerBeitragFinish_owner(@Valid @ModelAttribute("answer") Antwort_Beitrag answer, BindingResult result, Model model, Integer groupId){
+        LearningGroup lgp = learningGroupRepository.findOne(groupIDSave);
         if(result.hasErrors()) {
-            model.addAttribute("lerngruppe", learningGroupRepository.findOne(groupIDSave));
+            model.addAttribute("lerngruppe", lgp);
             return "answer_beitrag_owner";
         }
 
@@ -342,10 +357,11 @@ public class LearningGroupController {
         }
         SopraUser user = userService.getCurrentSopraUser();
         answer.setAuthor(user.getVorname()+" "+user.getNachname());
-        Beitrag b = beitragRepository.findOne(groupIDSave);
+        Beitrag b = beitragRepository.findOne(beitragIDSave);
         antwort_beitragRepository.save(answer);
         b.setAnswers(answer);
         beitragRepository.save(b);
+        model.addAttribute("lerngruppe", lgp);
         model.addAttribute("beitrag",b);
         return "show_beitrag_owner";
     }
@@ -355,22 +371,22 @@ public class LearningGroupController {
      * @param model
      * @return
      */
-   @RequestMapping(value="/show_user_lgp")
-   public String showUser(@RequestParam(value="id", required=true) Integer groupId, Model model){
+    @RequestMapping(value="/show_user_lgp")
+    public String showUser(@RequestParam(value="id", required=true) Integer groupId, Model model){
         LearningGroup lgp = learningGroupRepository.findOne(groupId);
-            if(lgp.getSopraUsers().get(0).equals(userService.getCurrentSopraUser())) {
+        if(lgp.getSopraUsers().get(0).equals(userService.getCurrentSopraUser())) {
 
-                List<SopraUser> memberList = lgp.getSopraUsers();
-                memberList.remove(0);
-                model.addAttribute("users",memberList);
-                model.addAttribute("lerngruppe",lgp);
-                groupIDSave = groupId;
-                return "show_user_ownerlgp";
-            }
-       model.addAttribute("users", lgp.getSopraUsers());
-       model.addAttribute("lerngruppe",lgp);
+            List<SopraUser> memberList = lgp.getSopraUsers();
+            memberList.remove(0);
+            model.addAttribute("users",memberList);
+            model.addAttribute("lerngruppe",lgp);
+            groupIDSave = groupId;
+            return "show_user_ownerlgp";
+        }
+        model.addAttribute("users", lgp.getSopraUsers());
+        model.addAttribute("lerngruppe",lgp);
         return "show_user_lgp";
-   }
+    }
 
     /**
      * Deleting user from learninggroup only if current user is also owner of group
@@ -393,6 +409,6 @@ public class LearningGroupController {
     }
 
 
- 
+
 
 }
