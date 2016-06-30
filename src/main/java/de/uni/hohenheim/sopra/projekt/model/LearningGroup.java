@@ -1,6 +1,8 @@
 package de.uni.hohenheim.sopra.projekt.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,7 @@ public class LearningGroup {
     @GeneratedValue
     Integer groupId;
 
+    @Size(min=1, max=40, message = "Der Name muss zwischen 2-40 Zeichen lang sein")
     String name;
     Boolean visibility;
     int membercount;
@@ -70,7 +73,7 @@ public class LearningGroup {
         if (sopraUsers.size()==0){
             owner = user.getVorname() + " " + user.getNachname();
         }
-        if (sopraUsers.size() > 10){
+        if (sopraUsers.size() >=10){
             return false;
         }
         sopraUsers.add(user);

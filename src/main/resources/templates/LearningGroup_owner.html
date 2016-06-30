@@ -81,23 +81,40 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<br></br>
-<br></br>
-<br></br>
-<h1 th:text="${'Mitglieder in der Lernguppe ' + lerngruppe.name}"></h1>
-<br></br>
 
-    <table class="table">
 
-        <tr>
-            <td><b>Mitglieder</b></td>
-            <td></td>
-        </tr>
-        <tr th:each="user : ${users}">
-            <td th:text="${user.vorname +' '+ user.nachname}" ></td>
-            <td><a th:href="'/del_user/?id=' + ${user.username}" role="button" class="btn btn-success" >Mitglied entfernen</a></td>
-        </tr>
-    </table>
+<!--/*@thymesVar id="lerngruppe" type="de.uni.hohenheim.sopra.projekt.model.LearningGroup"*/-->
+<!--/*@thymesVar id="beitrag" type="de.uni.hohenheim.sopra.projekt.model.Beitrag"*/-->
+<p th:text="'Willkommen in der Lerngruppe ' + ${lerngruppe.name}" />
+<br/>
+
+<br/>
+<br/>
+
+<a class="btn btn-success" th:href="'/fileUploadForm?id='+ ${lerngruppe.id}" role="button">Datei hochladen</a>
+
+
+<div class="page-header">
+    <h1>Diskussionen dieser Lerngruppe</h1>
+    <a class="btn btn-success" th:href="'/add_beitrag?id='+ ${lerngruppe.id}" role="button">Neues Topic erstellen</a>
+
+</div>
+
+<table class="table">
+
+    <tr>
+        <td><b>Topic</b></td>
+        <td><b>Autor</b></td>
+        <td><b>Antworten</b></td>
+        <td></td>
+    </tr>
+    <tr th:each="beitraege : ${beitrag}" th:if="${lerngruppe.id} == ${beitraege.groupId}" >
+        <td th:text="${beitraege.name}" ></td>
+        <td th:text="${beitraege.author}"></td>
+        <td th:text="${beitraege.countAnswers}" style="color:gray"/>
+        <td><a th:href="'/show_beitrag/?id=' + ${beitraege.id}" role="button" class="btn btn-success" >Anzeigen</a></td>
+    </tr>
+</table>
 
 </body>
 </html>
