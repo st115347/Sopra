@@ -112,7 +112,7 @@
         <td th:text="${beitraege.name}" ></td>
         <td th:text="${beitraege.author}"></td>
         <td th:text="${beitraege.countAnswers}" style="color:gray"/>
-        <td><a th:href="'/show_beitrag/?id=' + ${beitraege.id}" role="button" class="btn btn-success" >Anzeigen</a></td>
+        <td><a th:href="'/show_beitrag_owner/?id=' + ${beitraege.id} + '&amp;grpid=' + ${lerngruppe.id}" role="button" class="btn btn-success" >Anzeigen</a></td>
     </tr>
 </table>
 
