@@ -17,11 +17,11 @@ public class SopraUser implements Serializable{
 
   private static final long serialVersionUID = 3039728383534501353L;
 
-
   @Id
   @Size(min=1, message="Bitte geben Sie eine Email Adresse ein")
   @Column (name = "username")
   private String username;
+
 
   @Column(name = "email")
   private String email;
