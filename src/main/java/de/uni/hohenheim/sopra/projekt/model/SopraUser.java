@@ -1,6 +1,9 @@
 package de.uni.hohenheim.sopra.projekt.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,22 +17,27 @@ public class SopraUser implements Serializable{
 
   private static final long serialVersionUID = 3039728383534501353L;
 
-
   @Id
+  @Size(min=1, message="Bitte geben Sie eine Email Adresse ein")
   @Column (name = "username")
   private String username;
+
 
   @Column(name = "email")
   private String email;
 
+
+  @Size(min=1, message="Bitte wählen Sie ein Passwort")
   @Column(name = "passwort")
   private String passwort;
 
+  @Size(min=1, message="Bitte geben Sie ihren Vornamen an")
   @Column(name = "vorname")
-  private String vorname="";
+  private String vorname;
 
+  @Size(min=1, message="Bitte geben Sie ihren Nachnamen an")
   @Column(name = "nachname")
-  private String nachname="";
+  private String nachname;
 
   @Column(name = "geburtsdatum")
   private String geburtsdatum;
