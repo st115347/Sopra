@@ -49,14 +49,6 @@
                         <li><a href="#">Hilfe</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a th:href="'/change_lgp?id=' + ${lerngruppe.id}" >Einstellungen der Lerngruppe ändern</a></li>
-                        <li><a th:href="'/show_user_lgp?id=' + ${lerngruppe.id}" >Mitglieder anzeigen</a></li>
-                        <li><a th:href="'/del_lgp?id=' + ${lerngruppe.id}">Lerngruppe löschen</a></li>
-                    </ul>
-                </li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
@@ -65,7 +57,7 @@
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/logout">Logout</a></li>
+                <li><a href="#">Logout</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -82,41 +74,26 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-
-<!--/*@thymesVar id="lerngruppe" type="de.uni.hohenheim.sopra.projekt.model.LearningGroup"*/-->
-<!--/*@thymesVar id="beitrag" type="de.uni.hohenheim.sopra.projekt.model.Beitrag"*/-->
-<p th:text="'Willkommen in der Lerngruppe ' + ${lerngruppe.name}" />
-<br/>
-
-<br/>
-<br/>
-
-<a class="btn btn-success" th:href="'/fileUploadForm?id='+ ${lerngruppe.id}" role="button">Datei hochladen</a>
-<a class="btn btn-success" th:href="'/MCquestion?id='+ ${lerngruppe.id}" role="button">Neue MC-Frage erstellen</a>
-<a class="btn btn-success" th:href="'/myMCquestions?id='+ ${lerngruppe.id}" role="button">Alle MC-Fragen anzeigen</a>
-
-
-<div class="page-header">
-    <h1>Diskussionen dieser Lerngruppe</h1>
-    <a class="btn btn-success" th:href="'/add_beitrag?id='+ ${lerngruppe.id}" role="button">Neues Topic erstellen</a>
-
-</div>
+<p th:text="'Multiple-Choice Fragen dieser Lerngruppe'" />
 
 <table class="table">
-
     <tr>
-        <td><b>Topic</b></td>
+        <td><b>Thema</b></td>
+        <td><b>Frage</b></td>
         <td><b>Autor</b></td>
-        <td><b>Antworten</b></td>
         <td></td>
     </tr>
-    <tr th:each="beitraege : ${beitrag}" th:if="${lerngruppe.id} == ${beitraege.groupId}" >
-        <td th:text="${beitraege.name}" ></td>
-        <td th:text="${beitraege.author}"></td>
-        <td th:text="${beitraege.countAnswers}" style="color:gray"/>
-        <td><a th:href="'/show_beitrag_owner/?id=' + ${beitraege.id} + '&amp;grpid=' + ${lerngruppe.id}" role="button" class="btn btn-success" >Anzeigen</a></td>
+    <tr th:each="MCquestion : ${MCquestions}" >
+        <td th:text="${MCquestion.getThema()}"></td>
+        <td th:text="${MCquestion.getFrage()}"></td>
+        <td th:text="${MCquestion.getAuthor()}"></td>
+        <td><a th:href="'/changeMCquestion/?id=' + ${MCquestion.getId()}" role="button" class="btn btn-success" >Details anzeigen / bearbeiten</a></td>
     </tr>
 </table>
+
+
+
+
 
 </body>
 </html>
