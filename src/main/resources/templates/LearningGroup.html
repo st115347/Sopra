@@ -89,7 +89,9 @@
 <br/>
 <br/>
 
-       <a class="btn btn-success" th:href="'/fileUploadForm?id='+ ${lerngruppe.id}" role="button">Datei hochladen</a>
+<a class="btn btn-success" th:href="'/fileUploadForm?id='+ ${lerngruppe.id}" role="button">Datei hochladen</a>
+<a class="btn btn-success" th:href="'/MCquestion?id='+ ${lerngruppe.id}" role="button">Neue MC-Frage erstellen</a>
+<a class="btn btn-success" th:href="'/myMCquestions?id='+ ${lerngruppe.id}" role="button">Alle MC-Fragen anzeigen</a>
 
 
 <div class="page-header">
@@ -110,7 +112,7 @@
         <td th:text="${beitraege.name}" ></td>
         <td th:text="${beitraege.author}"></td>
         <td th:text="${beitraege.countAnswers}" style="color:gray"/>
-        <td><a th:href="'/show_beitrag/?id=' + ${beitraege.id}" role="button" class="btn btn-success" >Anzeigen</a></td>
+        <td><a th:href="'/show_beitrag/?id=' + ${beitraege.id} + '&amp;grpid=' + ${lerngruppe.id}" role="button" class="btn btn-success" >Anzeigen</a></td>
     </tr>
 </table>
 
