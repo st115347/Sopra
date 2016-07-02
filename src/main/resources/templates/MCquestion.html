@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Study 2.0</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+</head>
+<body style="background-color:#d9f2e4">
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Lernplattform</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/greeting">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Persönlicher Schreibtisch <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/greeting">Übersicht</a></li>
+                        <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
+                        <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
+                        <li><a href="/join_lgp">Lernguppe beitreten</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Logout</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Meine Quiz</a></li>
+                        <li><a href="/change_profileSettings">Profil ändern</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<h1>Neue Multiple-Choice - Frage hinzufügen</h1>
+
+<p>Bitte geben Sie zu jeder Antwortmöglichkeit an, ob diese richtig ist oder nicht.</p>
+<p>Es können keine, eine oder mehrere (auch alle) Antworten richtig sein.</p>
+<br/>
+<form action="#" th:action="@{/MCquestion}" th:object="${MCquestion}" method="post" >
+    <div>
+        <input type="hidden" th:field="*{id}" class="form-control"/>
+    </div>
+    <div>
+        <input type="hidden" th:field="*{author}" class="form-control"/>
+    </div>
+    <div>
+        <input type="hidden" th:field="*{groupId}" class="form-control"/>
+    </div>
+    <div class="input-group input-group-lg" >
+        <span class="input-group-addon" id="sizing-addon1">Thema der Frage</span>
+        <input type="text" th:field="*{thema}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+    </div>
+    <div class="input-group input-group-lg" >
+        <span class="input-group-addon" id="sizing-addon1">Fragestellung</span>
+        <input type="text" th:field="*{frage}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+    </div>
+    <div class="input-group input-group-lg" >
+        <span class="input-group-addon" id="sizing-addon1">Antwortmöglichkeit 1</span>
+        <input type="text" th:field="*{antwort1}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+    </div>
+    <div class="input-group input-group-lg" >
+        <input name="Antwort unbenutzt" checked = "checked" type="radio" value="0" th:field="*{antwort1_lsg}" /> Antwort unbenutzt
+        <input name="Antwort richtig" type="radio" value="1" th:field="*{antwort1_lsg}" /> Antwort richtig
+        <input name="Antwort falsch" type="radio" value="2" th:field="*{antwort1_lsg}" /> Antwort falsch
+    </div>
+    <div class="input-group input-group-lg" >
+        <span class="input-group-addon" id="sizing-addon1">Antwortmöglichkeit 2</span>
+        <input type="text" th:field="*{antwort2}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+    </div>
+    <div class="input-group input-group-lg" >
+        <input name="Antwort unbenutzt" checked = "checked" type="radio" value="0" th:field="*{antwort2_lsg} " /> Antwort unbenutzt
+        <input name="Antwort richtig" type="radio" value="1" th:field="*{antwort2_lsg}" /> Antwort richtig
+        <input name="Antwort falsch" type="radio" value="2" th:field="*{antwort2_lsg}" /> Antwort falsch
+    </div>    <div class="input-group input-group-lg" >
+    <span class="input-group-addon" id="sizing-addon1">Antwortmöglichkeit 3</span>
+    <input type="text" th:field="*{antwort3}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+</div>
+    <div class="input-group input-group-lg" >
+        <input name="Antwort unbenutzt"  checked = "checked" type="radio" value="0" th:field="*{antwort3_lsg}" /> Antwort unbenutzt
+        <input name="Antwort richtig" type="radio" value="1" th:field="*{antwort3_lsg}" /> Antwort richtig
+        <input name="Antwort falsch" type="radio" value="2" th:field="*{antwort3_lsg}" /> Antwort falsch
+    </div>
+    <div class="input-group input-group-lg" >
+        <span class="input-group-addon" id="sizing-addon1">Antwortmöglichkeit 4</span>
+        <input type="text" th:field="*{antwort4}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+    </div>
+    <div class="input-group input-group-lg" >
+        <input name="Antwort unbenutzt"  checked = "checked" type="radio" value="0" th:field="*{antwort4_lsg}" /> Antwort unbenutzt
+        <input name="Antwort richtig" type="radio" value="1" th:field="*{antwort4_lsg}" /> Antwort richtig
+        <input name="Antwort falsch" type="radio" value="2" th:field="*{antwort4_lsg}" /> Antwort falsch
+    </div>
+    <div>
+        <input type="submit" value="Frage erstellen" /> <input type="reset" value="Werte zurücksetzen" />
+    </div>
+</form>
+<div style="position: absolute; left: 950px; top: -16px">
+    <h1><font face="Forte" color="LimeGreen">Study 2.0</font></h1>
+</div>
+</body>
+</html>

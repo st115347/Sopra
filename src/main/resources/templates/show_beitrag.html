@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Study 2.0</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -16,7 +16,7 @@
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="background-color:#d9f2e4">
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -27,13 +27,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Lernplattform</a>
+            <a class="navbar-brand" href="#"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">FAQ <span class="sr-only">(current)</span></a></li>
                 <li><a href="/greeting">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Persönlicher Schreibtisch <span class="caret"></span></a>
@@ -41,12 +40,7 @@
                         <li><a href="/greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
-                        <li><a href="/join_lgp">Lernguppe Beitreten</a></li>
-                        <li><a href="#">Kommentare</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Einstellungen</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Hilfe</a></li>
+                        <li><a href="/join_lgp">Lernguppe beitreten</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -56,23 +50,13 @@
                     </ul>
                 </li>
             </ul>
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search"/>
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/logout">Logout</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/">Meine Nachrichten</a></li>
                         <li><a href="#">Meine Quiz</a></li>
                         <li><a href="/change_profileSettings">Profil ändern</a></li>
-                        <li><a href="#">Einstellungen</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Sprache</a></li>
                     </ul>
                 </li>
             </ul>
@@ -117,6 +101,8 @@
 
     </table>
 </div>
-
+<div style="position: absolute; left: 950px; top: -16px">
+    <h1><font face="Forte" color="LimeGreen">Study 2.0</font></h1>
+</div>
 </body>
 </html>
