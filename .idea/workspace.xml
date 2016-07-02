@@ -2,106 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5663588c-275e-47f5-b2f9-7f1a9917ef43" name="Default" comment="fixed some problems">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__antlr_antlr_2_7_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__antlr_antlr_2_7_7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__aopalliance_aopalliance_1_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_classic_1_1_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_classic_1_1_7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_core_1_1_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ch_qos_logback_logback_core_1_1_7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_h2database_h2_1_4_191.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_h2database_h2_1_4_191.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__dom4j_dom4j_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__dom4j_dom4j_1_6_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_transaction_javax_transaction_api_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_transaction_javax_transaction_api_1_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_validation_validation_api_1_1_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_1_3_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__nz_net_ultraq_thymeleaf_thymeleaf_layout_dialect_1_3_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__ognl_ognl_3_0_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__ognl_ognl_3_0_8.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_core_8_0_33.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_core_8_0_33.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_el_8_0_33.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_el_8_0_33.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_33.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_33.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_33.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_33.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_tomcat_jdbc_8_0_33.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_tomcat_jdbc_8_0_33.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_tomcat_juli_8_0_33.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_tomcat_juli_8_0_33.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_aspectj_aspectjweaver_1_8_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_aspectj_aspectjweaver_1_8_9.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_2_4_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_2_4_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_hibernate_validator_5_2_4_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_hibernate_validator_5_2_4_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_javassist_javassist_3_18_1_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_javassist_javassist_3_18_1_GA.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_core_1_10_19.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_core_1_10_19.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_objenesis_objenesis_2_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_objenesis_objenesis_2_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_jcl_over_slf4j_1_7_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_jcl_over_slf4j_1_7_21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_jul_to_slf4j_1_7_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_jul_to_slf4j_1_7_21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_log4j_over_slf4j_1_7_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_log4j_over_slf4j_1_7_21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_thymeleaf_thymeleaf_2_1_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_thymeleaf_thymeleaf_2_1_4_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_thymeleaf_thymeleaf_spring4_2_1_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_thymeleaf_thymeleaf_spring4_2_1_4_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_unbescape_unbescape_1_1_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_unbescape_unbescape_1_1_0_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__xml_apis_xml_apis_1_0_b2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__xml_apis_xml_apis_1_0_b2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Sopra.iml" afterPath="$PROJECT_DIR$/.idea/modules/Sopra.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Sopra_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/Sopra_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/Sopra_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/Sopra_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/application.properties" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/add_lgp.html" afterPath="$PROJECT_DIR$/build/resources/main/templates/add_lgp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/greeting.html" afterPath="$PROJECT_DIR$/build/resources/main/templates/greeting.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradlew" afterPath="$PROJECT_DIR$/gradlew" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradlew.bat" afterPath="$PROJECT_DIR$/gradlew.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/SecurityDemoApplication.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/SecurityDemoApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/config/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/config/SecurityConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/config/TestSetup.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/config/TestSetup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/FileUploadController.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/FileUploadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/GreetingController.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/GreetingController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Antwort_Beitrag.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Antwort_Beitrag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Antwort_BeitragRepository.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Antwort_BeitragRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Beitrag.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Beitrag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/BeitragRepository.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/BeitragRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/LearningGroup.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/LearningGroup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/LearningGroupRepository.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/LearningGroupRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Password.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Password.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/SopraUser.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/SopraUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/SopraUserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/SopraUserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/add_beitrag.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/add_beitrag.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/add_lgp.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/add_lgp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/adminhome.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminhome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/answer_beitrag.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/answer_beitrag.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/change_lgp.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/change_lgp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/change_profileSettings.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/change_profileSettings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/fileUploadForm.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/fileUploadForm.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/join_lgp.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/join_lgp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/myLearningGroups.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/myLearningGroups.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/passwd_join_lgp.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/passwd_join_lgp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/show_beitrag.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/show_beitrag.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/show_user_lgp.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/show_user_lgp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/show_user_ownerlgp.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/show_user_ownerlgp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/userhome.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/userhome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/de/uni/hohenheim/sopra/projekt/SecurityDemoApplicationTests.java" afterPath="$PROJECT_DIR$/src/test/java/de/uni/hohenheim/sopra/projekt/SecurityDemoApplicationTests.java" />
     </list>
     <ignored path="Sopra.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -150,12 +52,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show_beitrag_owner.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show_beitrag_owner.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="60" column="56" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
+            <state relative-caret-position="200">
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="greeting.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,7 +91,7 @@
       <file leaf-file-name="show_beitrag.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1955">
+            <state relative-caret-position="2057">
               <caret line="121" column="7" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
               <folding />
             </state>
@@ -186,7 +101,7 @@
       <file leaf-file-name="answer_beitrag.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/answer_beitrag.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
+            <state relative-caret-position="1972">
               <caret line="116" column="7" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#3;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -198,7 +113,7 @@
       <file leaf-file-name="LearningGroupController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5559">
+            <state relative-caret-position="6698">
               <caret line="413" column="1" selection-start-line="413" selection-start-column="1" selection-end-line="413" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -233,8 +148,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1989">
-              <caret line="119" column="7" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
-              <folding />
+              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -243,8 +160,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="918">
-              <caret line="56" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="123" />
-              <folding />
+              <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="123" />
+              <folding>
+                <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -450,7 +369,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="1465671270053" />
+        <entry key="$PROJECT_DIR$" value="1467364774000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -463,6 +382,20 @@
                   <entry key="$PROJECT_DIR$">
                     <value>
                       <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/1.4.0.M2/b209cd3d05c7011ebb9601451253dc5c6c697523/spring-boot-gradle-plugin-1.4.0.M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/1.4.0.M2/1454b7b8268c8fe27ab001e7c31aae613c3214c2/spring-boot-gradle-plugin-1.4.0.M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/1.4.0.M2/3e0c51305bec5672f6d3524698f5e55ca8a2d5ee/spring-boot-loader-tools-1.4.0.M2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/1.4.0.M2/ff9d59e8cf2ae6ae5bc622c4d58f6c3d4de09df7/spring-boot-loader-tools-1.4.0.M2.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/0.5.6.RELEASE/ead850728464fa3eb062e3a6ce54619cc322dc67/dependency-management-plugin-0.5.6.RELEASE-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/0.5.6.RELEASE/b4833216b1cb83ec4a7476ac164843d976f28b4f/dependency-management-plugin-0.5.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.0.RC1/c8bed3be54c18d3bc50524376a7aa33218e4fe7f/spring-core-4.3.0.RC1-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.0.RC1/bb23549705441fe5635a5a53a734033765bd69cc/spring-core-4.3.0.RC1.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/ecf26c7507d67782a3bbd148d170b31dfad001aa/commons-logging-1.2-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar" />
+                          </list>
+                        </option>
                         <option name="path" value="$PROJECT_DIR$" />
                       </ExternalModuleBuildClasspathPojo>
                     </value>
@@ -617,7 +550,6 @@
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Password.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/del_user_lgp.html" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Datei.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/change_profileSettings.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fileUploadForm.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/join_lgp.html" />
@@ -641,9 +573,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_beitrag.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/answer_beitrag_owner.html" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/config/TestSetup.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.html" />
       </list>
     </option>
   </component>
@@ -790,12 +723,110 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sopra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sopra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sopra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sopra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sopra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sopra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projekt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1226,18 +1257,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51706487" sideWeight="0.50832075" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5255973" sideWeight="0.496511" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2760736" sideWeight="0.496511" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822084" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25945538" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25945538" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2193646" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1504,13 +1535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="58" column="52" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fileUploadForm.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -1585,12 +1609,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/answer_beitrag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
+        <state relative-caret-position="1972">
           <caret line="116" column="7" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#3;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1601,14 +1626,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1989">
-          <caret line="119" column="7" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
-          <folding />
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
+        <state relative-caret-position="2057">
           <caret line="121" column="7" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
           <folding />
         </state>
@@ -1617,8 +1644,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
-          <caret line="56" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="123" />
-          <folding />
+          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="123" />
+          <folding>
+            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1642,7 +1671,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5559">
+        <state relative-caret-position="6698">
           <caret line="413" column="1" selection-start-line="413" selection-start-column="1" selection-end-line="413" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1663,9 +1692,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="60" column="56" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
+        <state relative-caret-position="200">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
