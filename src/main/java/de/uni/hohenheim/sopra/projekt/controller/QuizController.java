@@ -28,6 +28,11 @@ public class QuizController {
     @Autowired
     SopraUserRepository sopraUserRepository;
 
+
+    @Autowired
+    LearningGroupRepository learningGroupRepository;
+
+
     @Autowired
     UserService userService;
 
@@ -36,30 +41,54 @@ public class QuizController {
     @RequestMapping(value="/MCquestion", method= RequestMethod.GET)
     public String mcqestionForm (@RequestParam(value="id", required=true) Integer groupId, Model model) {
 
+
+        SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(groupId);
+
+
         MCquestion mcQuestion = new MCquestion();
         mcQuestion.setGroupId(groupId);
         model.addAttribute("MCquestion", mcQuestion);
+        model.addAttribute("lerngruppe", lgp);
 
-        return "MCquestion";
+        if(lgp.getSopraUsers().get(0).equals(userService.getCurrentSopraUser())) {
+            return "MCquestion_owner"; }
+        else{
+            return "MCquestion";
+        }
     }
 
     //Validator-Klasse oder Annotations müssen noch implementiert werden
     //Zurodnung der MC-Frage zu konkretem Quiz fehlt noch (da Quiz noch komplett felht)
-    //Autor (aktueller User) wird derzeit nicht erkannt
     @RequestMapping(value="/MCquestion", method= RequestMethod.POST)
     public String MCquestionSubmit(@Valid  @ModelAttribute MCquestion mcquestion, BindingResult result, Model model){
         if(result.hasErrors()){
             return "MCquestion";
         }
 
-        mcquestion.setAuthor(userService.getCurrentSopraUser().getEmail());
+        SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(mcquestion.getGroupId());
+
+        mcquestion.setAuthor(userService.getCurrentSopraUser().getVorname()+" "+userService.getCurrentSopraUser().getNachname());
         mcquestionRepository.save(mcquestion);
-        return "/greeting";
+        model.addAttribute("lerngruppe", lgp);
+
+
+        if(lgp.getSopraUsers().get(0).equals(userService.getCurrentSopraUser())) {
+            return "redirect:myMCquestions_owner?id="+mcquestion.getGroupId(); }
+        else{
+            return "redirect:myMCquestions?id="+mcquestion.getGroupId();
+        }
+
     }
 
 
     @RequestMapping(value="/myMCquestions", method= RequestMethod.GET)
     public String mcqestionsOverview (@RequestParam(value="id", required=true) Integer groupId, Model model) {
+
+        SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(groupId);
+
 
         List<MCquestion> allMcQuestions = new ArrayList<MCquestion>(0);
         for (MCquestion mc : mcquestionRepository.findAll()){
@@ -68,19 +97,56 @@ public class QuizController {
             }
         }
         model.addAttribute("MCquestions", allMcQuestions);
+        model.addAttribute("lerngruppe", lgp);
+
+        if(lgp.getSopraUsers().get(0).equals(userService.getCurrentSopraUser())) {
+            return "myMCquestions_owner"; }
+        else{
+            return "myMCquestions";
+        }
+    }
 
 
-        return "myMCquestions";
+    @RequestMapping(value="/myMCquestions_owner", method= RequestMethod.GET)
+    public String mcqestionsOverview_owner (@RequestParam(value="id", required=true) Integer groupId, Model model) {
+
+        SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(groupId);
+
+
+        List<MCquestion> allMcQuestions = new ArrayList<MCquestion>(0);
+        for (MCquestion mc : mcquestionRepository.findAll()){
+            if((mc.getGroupId() == groupId)){
+                allMcQuestions.add(mc);
+            }
+        }
+        model.addAttribute("MCquestions", allMcQuestions);
+        model.addAttribute("lerngruppe", lgp);
+
+        if(lgp.getSopraUsers().get(0).equals(userService.getCurrentSopraUser())) {
+            return "myMCquestions_owner"; }
+        else{
+            return "myMCquestions";
+        }
     }
 
 
     @RequestMapping(value="/changeMCquestion", method= RequestMethod.GET)
     public String changeMCquestion (@RequestParam(value="id", required=true) Integer questionId, Model model) {
 
+
+        SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(mcquestionRepository.findOne(questionId).getGroupId());
+
+
         model.addAttribute("MCquestion", mcquestionRepository.findOne(questionId));
+        model.addAttribute("lerngruppe", lgp);
 
-
-        return "MCquestion";
+        if(lgp.getSopraUsers().get(0).equals(userService.getCurrentSopraUser())) {
+            return "MCquestion_owner"; }
+        else{
+            return "MCquestion";
+        }
     }
 
     //Validator-Klasse oder Annotations müssen noch implementiert werden
@@ -89,8 +155,18 @@ public class QuizController {
         if(result.hasErrors()){
             return "changeMCquestion";
         }
+        SopraUser user = userService.getCurrentSopraUser();
+        LearningGroup lgp = learningGroupRepository.findOne(mcquestion.getGroupId());
+
         mcquestionRepository.save(mcquestion);
-        return "/greeting";
+        model.addAttribute("lerngruppe", lgp);
+
+
+        if(lgp.getSopraUsers().get(0).equals(userService.getCurrentSopraUser())) {
+            return "redirect:myMCquestions_owner?id="+mcquestion.getGroupId(); }
+        else{
+            return "redirect:myMCquestions?id="+mcquestion.getGroupId();
+        }
     }
 
 
