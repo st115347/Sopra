@@ -1,30 +1,42 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Messages : Create</title>
+    <title>Study 2.0</title>
 </head>
-<body>
-<div>
+<body style="background-color:#d9f2e4">
+<h1><font face="Forte" color="LimeGreen">Study 2.0</font></h1>
+<div style="position: absolute; left: 5px; top: 27px">
+    <p><font face="Cambria" color="LightSlateGray" size="3">Die interaktive Lernplattform für Studierende!</font></p></div>
+<hr color="LimeGreen" size="3"/>
+<div style="position: absolute; left: 450px; top: 250px">
     <form name="f" th:action="@{/login}" method="post">
-        <fieldset>
-            <legend>Please Login</legend>
-            <div th:if="${param.error}" class="alert alert-error">
-                Invalid username and password.
-            </div>
-            <div th:if="${param.logout}" class="alert alert-success">
-                You have been logged out.
-            </div>
-            <label for="username">E-Mail</label>
-            <input type="text" id="username" name="username"/>
-            <label for="password">Passwort</label>
-            <input type="password" id="password" name="password"/>
-            <div class="form-actions">
-                <button type="submit" class="btn">Log in</button>
-            </div>
+        <fieldset style="border-color: LimeGreen;">
+            <font face="verdana" size="4">
+                <legend style="padding:15px">Bitte melden Sie sich an.</legend>
+                <div style="position: absolute; left: 60px; top: -70px">
+                    <div th:if="${param.error}" class="alert alert-error">
+                        <span style="background-color:limegreen;">Benutzername oder Passwort ungültig &#10008;</span>
+                    </div>
+                    <div th:if="${param.logout}" class="alert alert-success">
+                        <span style="background-color:limegreen;">Sie sind nun abgemeldet &#10004;</span>
+                    </div>
+                </div>
+                <label for="username">E-Mail</label>
+                <input type="text" id="username" name="username"/>
+                <label for="password">Passwort</label>
+                <input type="password" id="password" name="password"/>
+                <div class="form-actions" style="height:65px">
+                    <div style="position: absolute; left: 195px; top: 109px">
+                        <button type="submit" class="btn" style="background-color:#d9f2e4">Anmelden</button>
+                    </div>
+                </div>
+            </font>
         </fieldset>
     </form>
 </div>
 <br/>
-<a class="btn btn-success" href="/register" role="button">Registrieren</a>
+<font face="verdana" size="3">
+    <a class="btn btn-success" style="position: absolute; height: 20px; left: 450px; top: 420px" href="/register" role="button">Registrieren</a>
+</font>
 
 </body>
 </html>
