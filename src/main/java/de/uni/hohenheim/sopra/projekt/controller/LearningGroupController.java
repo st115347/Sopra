@@ -416,7 +416,8 @@ public class LearningGroupController {
      * @return
      */
     @RequestMapping(value="/del_beitrag")
-    public String del_beitrag(@RequestParam (value ="id")Integer id, @RequestParam(value="grpid") Integer grpid, Model model, RedirectAttributes loeschen) {
+    public String del_beitrag(@RequestParam (value ="id")Integer id, @RequestParam(value="grpid") Integer grpid,
+                              Model model, RedirectAttributes redirectAttributes) {
         LearningGroup lgp = learningGroupRepository.findOne(grpid);
         SopraUser user = userService.getCurrentSopraUser();
         if (lgp.getSopraUsers().get(0).equals(user)) {
@@ -429,15 +430,15 @@ public class LearningGroupController {
             model.addAttribute("beitrag", btg);
 
             learningGroupRepository.save(lgp);
-            grpid = lgp.getId();
 
             // List<Beitrag> beitragList = Beitrag.getbeitrags();
-            loeschen.addAttribute("id", id);
-            loeschen.addAttribute("grpid", grpid);
+            redirectAttributes.addAttribute("id", grpid);
             //return "redirect:/show_beitrag_owner";
-            return "del_beitrag";
+            return "redirect:/get_lgp";
         }
-        return "show_beitrag";
+        redirectAttributes.addAttribute("id", id);
+        redirectAttributes.addAttribute("grpid", grpid);
+        return "redirect:/show_beitrag";
     }
 
 
