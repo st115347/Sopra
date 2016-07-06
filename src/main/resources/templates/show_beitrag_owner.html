@@ -75,6 +75,7 @@
 
     <h1 th:text="${beitrag.name}"></h1>
     <a th:href="'/answer_beitrag/?id=' + ${beitrag.id}+'&amp;grpid='+${lerngruppe.id}" role="button" class="btn btn-success" >Antworten</a>
+    <a th:href="'/del_beitrag/?id=' + ${beitrag.id}+'&amp;grpid='+${lerngruppe.id}" role="button" class="btn btn-success" >Löschen</a>
 </div>
 
 <div>

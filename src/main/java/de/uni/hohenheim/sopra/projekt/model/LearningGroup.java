@@ -23,12 +23,16 @@ public class LearningGroup {
     String owner;
     String password="";
 
+
     @ManyToMany
     @JoinTable(
             name="GROUPPARTICIPANTS",
             joinColumns=@JoinColumn(name="GROUP_ID"),
             inverseJoinColumns=@JoinColumn(name="USER_ID"))
     List<SopraUser> sopraUsers = new ArrayList<>();
+
+
+
 
     public Integer getId() {
         return groupId;
@@ -63,6 +67,8 @@ public class LearningGroup {
     }
 
 
+
+
     /**
      * Method adds Users to group only if there are free spots.
      * Also IMPORTANT!! First user to be added is also OWNER of this group!
@@ -85,6 +91,7 @@ public class LearningGroup {
         sopraUsers.remove(user);
         membercount--;
     }
+
 
     public int getMembercount(){
         return membercount;
@@ -109,6 +116,7 @@ public class LearningGroup {
     public String getPassword(){
         return password;
     }
+
 
 
 
