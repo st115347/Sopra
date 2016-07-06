@@ -63,26 +63,18 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
-<p th:text="'Multiple-Choice Fragen dieser Lerngruppe'" />
+<h2>Quiz dieser Gruppe</h2>
 <table class="table">
     <tr>
-        <td><b>Thema</b></td>
-        <td><b>Frage</b></td>
+        <td><b>Name</b></td>
         <td><b>Autor</b></td>
+        <td><b>Anzahl der Fragen</b></td>
         <td></td>
-        <td><b>Frage zu Quiz hinzufügen</b></td>
-        <td><a th:href="'create_quiz/?id=' + ${quiz.id}" role="button" class="btn btn-success" >Quiz erstellen</a></td>
-        <td th:text="'Sie haben derzeit '+ ${size}+' Fragen ausgewählt'"></td>
     </tr>
-    <tr th:each="MCquestion : ${MCquestions}">
-    <td th:text="${MCquestion.getThema()}"></td>
-    <td th:text="${MCquestion.getFrage()}"></td>
-    <td th:text="${MCquestion.getAuthor()}"></td>
-    <td th:if="${user.username} == ${MCquestion.authorID}"><a th:href="'/changeMCquestion/?id=' + ${MCquestion.getId()}" role="button" class="btn btn-success" >Details anzeigen / bearbeiten</a></td>
-    <td th:if="${user.username} != ${MCquestion.authorID}"></td>
-    <td><a th:href="'add_question/?id=' + ${MCquestion.id} + '&amp;qid='+${quiz.id}" role="button" class="btn btn-success" >Zum Quiz hinzufügen</a></td>
-    <td></td>
+    <tr th:each="quiz : ${allquiz}">
+        <td th:text="${quiz.getName()}"></td>
+        <td th:text="${quiz.getAuthor()}"></td>
+        <td th:text="${quiz.getQuestions().size()}"></td>
     </tr>
 </table>
 <div style="position: absolute; left: 950px; top: -16px">
