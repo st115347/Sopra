@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5663588c-275e-47f5-b2f9-7f1a9917ef43" name="Default" comment="AddLgp und ChangeLgp">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/del_beitrag.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/add_beitrag_owner.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/add_beitrag_owner.html" />
     </list>
     <ignored path="Sopra.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,18 +99,34 @@
       <file leaf-file-name="show_beitrag_owner.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="1545">
               <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LearningGroupController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LearningGroupController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="470">
               <caret line="431" column="0" selection-start-line="431" selection-start-column="0" selection-end-line="431" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#2983#2998#0" expanded="false" />
+                <element signature="e#5742#5757#0" expanded="false" />
+                <element signature="e#9089#9104#0" expanded="false" />
+                <element signature="e#9506#9521#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_beitrag_owner.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_beitrag_owner.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="81" column="59" selection-start-line="81" selection-start-column="59" selection-end-line="81" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -593,7 +605,6 @@
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Antwort_Beitrag.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/SopraUser.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/add_beitrag_owner.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/answer_beitrag.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/answer_beitrag_owner.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/change_profileSettings.html" />
@@ -621,6 +632,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/del_erfolgreich.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/del_beitrag.html" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/add_beitrag_owner.html" />
       </list>
     </option>
   </component>
@@ -669,9 +681,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -870,6 +881,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1384,7 +1396,8 @@
       <workItem from="1467310546384" duration="4476000" />
       <workItem from="1467561690079" duration="6244000" />
       <workItem from="1467720942945" duration="6870000" />
-      <workItem from="1467805696909" duration="423000" />
+      <workItem from="1467805696909" duration="502000" />
+      <workItem from="1467824706630" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="Join Group now possible&#10;&#10;My learning groups now selects only groups in which you are member">
       <created>1465651960185</created>
@@ -1495,7 +1508,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149796000" />
+    <option name="totallyTimeSpent" value="150512000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1788,13 +1801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_beitrag_owner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="120" column="7" selection-start-line="120" selection-start-column="7" selection-end-line="120" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_beitrag.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="920">
@@ -1976,17 +1982,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/del_beitrag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="105" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/del_beitrag.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
+        <state relative-caret-position="1545">
           <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
           <folding />
         </state>
@@ -1994,8 +1993,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
+        <state relative-caret-position="470">
           <caret line="431" column="0" selection-start-line="431" selection-start-column="0" selection-end-line="431" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2983#2998#0" expanded="false" />
+            <element signature="e#5742#5757#0" expanded="false" />
+            <element signature="e#9089#9104#0" expanded="false" />
+            <element signature="e#9506#9521#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_beitrag_owner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="81" column="59" selection-start-line="81" selection-start-column="59" selection-end-line="81" selection-end-column="59" />
           <folding />
         </state>
       </provider>
