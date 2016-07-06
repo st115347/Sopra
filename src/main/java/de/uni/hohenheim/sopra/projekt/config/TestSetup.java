@@ -1,10 +1,7 @@
 package de.uni.hohenheim.sopra.projekt.config;
 
 import de.uni.hohenheim.sopra.projekt.UserService;
-import de.uni.hohenheim.sopra.projekt.model.LearningGroup;
-import de.uni.hohenheim.sopra.projekt.model.LearningGroupRepository;
-import de.uni.hohenheim.sopra.projekt.model.SopraUser;
-import de.uni.hohenheim.sopra.projekt.model.SopraUserRepository;
+import de.uni.hohenheim.sopra.projekt.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -38,6 +35,9 @@ public class TestSetup implements ApplicationListener<ContextRefreshedEvent> {
 
   @Autowired
   private SopraUserRepository sopraUserRepository;
+
+  @Autowired
+  private BeitragRepository beitragRepository;
 
 
 

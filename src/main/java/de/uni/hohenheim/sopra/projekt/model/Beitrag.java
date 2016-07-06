@@ -47,6 +47,13 @@ public class Beitrag implements Serializable{
 
     int countAnswers=0;
 
+    @ManyToMany
+    @JoinTable(
+            name="GROUPARTICLE",
+            joinColumns=@JoinColumn(name="GROUP_ID"),
+            inverseJoinColumns=@JoinColumn(name="BEITRAG_ID"))
+    List<Beitrag> beitrags = new ArrayList<>();
+
 
     public Integer getId() {
         return id;
@@ -96,8 +103,19 @@ public class Beitrag implements Serializable{
         return answers;
     }
 
+    public List<Beitrag> beitrags() {return beitrags;}
+
+    public List<Beitrag> getbeitrags() {
+        return beitrags;
+    }
+
     //not yet used. maybe never neccesary
     public void removeAnswer(){
+
+    }
+
+    public void removeBeitrag(Beitrag beitrag){
+        beitrags.remove(beitrag);
 
     }
 
