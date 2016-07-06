@@ -14,61 +14,64 @@ public class MCquestion {
 
 
 
-        @Id
-        @GeneratedValue
-        @Column(name = "id")
+    @Id
+    @GeneratedValue
+    @Column(name = "id")
     /*
     Changed ID type to Integer from String
      */
-        private Integer id;
+    private Integer id;
 
-        @Column(name = "author")
-        private String author;
+    @Column(name = "author")
+    private String author;
 
-        //Zur Zuordnung der Frage zu einem konkreten Quiz
-        @Column(name = "quiz")
-        private Integer quiz;
+    @Column(name = "authorID")
+    private String authorID;
 
-        //Zuordnung zu konkretem Thema
-        @Column(name = "thema")
-        private String thema;
+    //Zur Zuordnung der Frage zu einem konkreten Quiz
+    @Column(name = "quiz")
+    private Integer quiz;
 
-        //konkrete Fragestellung
-        @Column(name = "frage",length = 10000)
-        private String frage;
+    //Zuordnung zu konkretem Thema
+    @Column(name = "thema")
+    private String thema;
 
-        //Antwortmöglichkeit 1
-        @Column(name = "antwort1")
-        private String antwort1;
+    //konkrete Fragestellung
+    @Column(name = "frage",length = 10000)
+    private String frage;
 
-        //0 wenn Antwortmöglichkeit nicht benutzt wird
-        //1 wenn Antwortmöglichkeit richtig
-        //2 wenn Antwortmöglichkeit falsch
-        @Column(name ="antwort1_lsg")
-        private Integer antwort1_lsg;
+    //Antwortmöglichkeit 1
+    @Column(name = "antwort1")
+    private String antwort1;
 
-        @Column(name = "antwort2")
-        private String antwort2;
+    //0 wenn Antwortmöglichkeit nicht benutzt wird
+    //1 wenn Antwortmöglichkeit richtig
+    //2 wenn Antwortmöglichkeit falsch
+    @Column(name ="antwort1_lsg")
+    private Integer antwort1_lsg;
 
-        @Column(name ="antwort2_lsg")
-        private Integer antwort2_lsg;
+    @Column(name = "antwort2")
+    private String antwort2;
 
-        @Column(name = "antwort3")
-        private String antwort3;
+    @Column(name ="antwort2_lsg")
+    private Integer antwort2_lsg;
 
-        @Column(name ="antwort3_lsg")
-        private Integer antwort3_lsg;
+    @Column(name = "antwort3")
+    private String antwort3;
 
-        @Column(name = "antwort4")
-        private String antwort4;
+    @Column(name ="antwort3_lsg")
+    private Integer antwort3_lsg;
 
-        @Column(name ="antwort4_lsg")
-        private Integer antwort4_lsg;
+    @Column(name = "antwort4")
+    private String antwort4;
+
+    @Column(name ="antwort4_lsg")
+    private Integer antwort4_lsg;
 
 
-        //Zur Referenz auf die Richtige Lerngruppe
-        @Column(name = "lerngruppe")
-        private Integer groupId;
+    //Zur Referenz auf die Richtige Lerngruppe
+    @Column(name = "lerngruppe")
+    private Integer groupId;
 
 
     public Integer getId() {
@@ -172,9 +175,16 @@ public class MCquestion {
         this.groupId = groupId;
     }
 
+    public void setAuthorID(String id){authorID = id;}
+    public String getAuthorID(){return authorID;}
 
 
-    }
+}
+
+
+
+
+
 
 
 
