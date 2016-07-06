@@ -423,7 +423,6 @@ public class LearningGroupController {
         if (lgp.getSopraUsers().get(0).equals(user)) {
 
             Beitrag btg = beitragRepository.findOne(id);
-            // Beitrag.removeBeitrag(beitragRepository.findByOne(name));
 
             beitragRepository.delete(btg);
             model.addAttribute("lerngruppe", lgp);
@@ -431,9 +430,8 @@ public class LearningGroupController {
 
             learningGroupRepository.save(lgp);
 
-            // List<Beitrag> beitragList = Beitrag.getbeitrags();
             redirectAttributes.addAttribute("id", grpid);
-            //return "redirect:/show_beitrag_owner";
+
             return "redirect:/get_lgp";
         }
         redirectAttributes.addAttribute("id", id);
