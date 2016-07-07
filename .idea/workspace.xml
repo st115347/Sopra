@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5663588c-275e-47f5-b2f9-7f1a9917ef43" name="Default" comment="Aktualisierungen Design">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/add_lgp.html" afterPath="$PROJECT_DIR$/build/resources/main/templates/add_lgp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/greeting.html" afterPath="$PROJECT_DIR$/build/resources/main/templates/greeting.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/MCquestion.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/MCquestion.html" />
@@ -89,8 +82,8 @@
       <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state relative-caret-position="457">
+              <caret line="123" column="6" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#1;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -109,8 +102,8 @@
       <file leaf-file-name="show_beitrag.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+            <state relative-caret-position="457">
+              <caret line="119" column="6" selection-start-line="119" selection-start-column="6" selection-end-line="119" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -122,8 +115,8 @@
       <file leaf-file-name="show_beitrag_owner.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+            <state relative-caret-position="457">
+              <caret line="115" column="6" selection-start-line="115" selection-start-column="6" selection-end-line="115" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -135,8 +128,8 @@
       <file leaf-file-name="show_user_ownerlgp.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_user_ownerlgp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="102" column="7" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
+            <state relative-caret-position="457">
+              <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -148,8 +141,22 @@
       <file leaf-file-name="show_quiz.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_quiz.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="457">
+              <caret line="89" column="6" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_quiz_owner.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="92" column="6" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -162,24 +169,10 @@
       <file leaf-file-name="show_user_lgp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_user_lgp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+            <state relative-caret-position="457">
+              <caret line="95" column="6" selection-start-line="95" selection-start-column="6" selection-end-line="95" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show_quiz_owner.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -189,8 +182,8 @@
       <file leaf-file-name="myMCquestions.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myMCquestions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+            <state relative-caret-position="457">
+              <caret line="100" column="6" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -202,8 +195,8 @@
       <file leaf-file-name="myMCquestions_owner.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myMCquestions_owner.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="457">
+              <caret line="103" column="6" selection-start-line="103" selection-start-column="6" selection-end-line="103" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -215,8 +208,8 @@
       <file leaf-file-name="passwd_join_lgp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/passwd_join_lgp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="457">
+              <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -646,8 +639,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_beitrag.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_quiz.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/show_user_lgp.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/show_user_lgp.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_user_ownerlgp.html" />
       </list>
     </option>
@@ -1289,7 +1282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467921114803</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Aktualisierungen Design">
+      <created>1467922713520</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1467922713520</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1306,7 +1306,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668713" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1314,7 +1314,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51706487" sideWeight="0.50832075" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23006135" sideWeight="0.496511" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3006135" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3006135" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668713" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1519,8 +1519,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_beitrag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="125" column="6" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1530,8 +1530,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_beitrag_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="127" column="6" selection-start-line="127" selection-start-column="6" selection-end-line="127" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1540,8 +1540,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_lgp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="91" column="6" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1550,8 +1550,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/answer_beitrag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="114" column="6" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1560,8 +1560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/answer_beitrag_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="112" column="6" selection-start-line="112" selection-start-column="6" selection-end-line="112" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1571,8 +1571,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/change_lgp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1581,8 +1581,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/change_profileSettings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="120" column="6" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1591,8 +1591,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/create_quiz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="107" column="6" selection-start-line="107" selection-start-column="6" selection-end-line="107" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1602,8 +1602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/create_quiz_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="110" column="6" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1613,8 +1613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fileUploadForm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="96" column="6" selection-start-line="96" selection-start-column="6" selection-end-line="96" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1623,8 +1623,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state relative-caret-position="448">
+          <caret line="83" column="81" selection-start-line="83" selection-start-column="81" selection-end-line="83" selection-end-column="81" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1633,8 +1633,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/join_lgp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="87" column="6" selection-start-line="87" selection-start-column="6" selection-end-line="87" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1644,8 +1644,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="117" column="6" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1654,8 +1654,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="118" column="6" selection-start-line="118" selection-start-column="6" selection-end-line="118" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -1664,8 +1664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="139" column="7" selection-start-line="139" selection-start-column="7" selection-end-line="139" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1681,8 +1681,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/MCquestion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="141" column="6" selection-start-line="141" selection-start-column="6" selection-end-line="141" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1693,8 +1693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/MCquestion_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="141" column="6" selection-start-line="141" selection-start-column="6" selection-end-line="141" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1705,8 +1705,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myLearningGroups.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="91" column="6" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h3#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1717,8 +1717,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myMCquestions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="100" column="6" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1728,8 +1728,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myMCquestions_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="103" column="6" selection-start-line="103" selection-start-column="6" selection-end-line="103" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1739,8 +1739,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/passwd_join_lgp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1750,8 +1750,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="123" column="6" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#1;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1768,8 +1768,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="119" column="6" selection-start-line="119" selection-start-column="6" selection-end-line="119" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1779,8 +1779,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="115" column="6" selection-start-line="115" selection-start-column="6" selection-end-line="115" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1790,8 +1790,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_quiz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="89" column="6" selection-start-line="89" selection-start-column="6" selection-end-line="89" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="92" column="6" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1802,22 +1814,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_user_lgp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="95" column="6" selection-start-line="95" selection-start-column="6" selection-end-line="95" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -1825,8 +1825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_user_ownerlgp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="102" column="7" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
+        <state relative-caret-position="457">
+          <caret line="99" column="6" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
