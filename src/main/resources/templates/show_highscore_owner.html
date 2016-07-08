@@ -42,6 +42,12 @@
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
                     </ul>
                 </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a th:href="'/show_user_lgp?id=' + ${lerngruppe.id}" >Mitglieder anzeigen</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/logout">Logout</a></li>
@@ -56,32 +62,33 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<h3><span style="border-bottom: 3px solid LimeGreen;">Highscore dieses Quiz</span></h3>
+<table class="table">
+    <tr>
+        <td><b>Platz</b></td>
+        <td><b>Name</b></td>
+        <td><b>Punktzahl</b></td>
+        <td></td>
+    </tr>
+    <tr th:each="index : ${#numbers.sequence( 0, #arrays.length(htupels)-1)}">
+        <td th:text="'Rang: ' + ${index +1} "></td>
+        <td th:text="${htupels[index].getUsername()}" ></td>
+        <td th:text="${htupels[index].getScore()}" ></td>
 
+    </tr>
+</table>
+<a th:href="'/get_lgp/?id=' + ${lerngruppe.id}" role="button" class="btn btn-success" >Zuück zur Lerngruppe</a>
 <style>
-h1{
-    font-family: Forte;
-    color: LimeGreen;
-    text-align: center;
-    margin-top: -2px;
-}
-
-h3{
-    text-align: center;
-    font-style: italic;
-}
-
-img{
-    width: 840px;
-    height: 400px;
-    position: absolute;
-    left: 19%;
-    top: 25%;}
+    h1{
+        font-family: Forte;
+        color: LimeGreen;
+        text-align: center;
+        margin-top: 0px;
+    }
 </style>
-<br />
-<h3>Herzlich Willkommen auf der Lernplattform der Universität Hohenheim!</h3>
 <div style="position: absolute; left: 600px; top: 8px">
     <h1>Study 2.0</h1>
 </div>
-<img src="../static/images/UniversitätHohenheim.jpg" alt="UniversitätHohenheim"/>
+
 </body>
 </html>

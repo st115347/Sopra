@@ -31,23 +31,22 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="font-size:16px;">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/greeting">&#127968;</a></li>
+                <li><a href="/greeting">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Persönlicher Schreibtisch <span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="/greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
-                        <li><a href="/join_lgp">Lernguppe beitreten</a></li>
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
+                        <li><a href="/join_lgp">Lernguppe beitreten</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a th:href="'/change_lgp?id=' + ${lerngruppe.id}" >Einstellungen der Lerngruppe ändern</a></li>
                         <li><a th:href="'/show_user_lgp?id=' + ${lerngruppe.id}" >Mitglieder anzeigen</a></li>
-                        <li><a th:href="'/del_lgp?id=' + ${lerngruppe.id}">Lerngruppe löschen</a></li>
                     </ul>
                 </li>
             </ul>
@@ -64,36 +63,50 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<h1 style="text-align:center" th:text="'Sie haben ' + ${punkte}+' von maximal '+${max}+' Punkten erreicht!'" ><b></b></h1>
+<h4 style="text-align:center" th:text="'Bester Ranglisten Platz: ' + ${place}"></h4>
+<a th:href="'/get_lgp/?id=' + ${lerngruppe.id}" role="button" class="btn btn-success" >Weiter zur Lerngruppe</a>
 
-<h3><span style="border-bottom: 3px solid LimeGreen;">Quiz dieser Gruppe</span></h3>
-<table class="table">
-    <tr>
-        <td><b>Name</b></td>
-        <td><b>Autor</b></td>
-        <td><b>Anzahl der Fragen</b></td>
-        <td></td>
-    </tr>
-    <tr th:each="quiz : ${allquiz}">
-        <td th:text="${quiz.getName()}"></td>
-        <td th:text="${quiz.getAuthor()}"></td>
-        <td th:text="${quiz.getQuestions().size()}"></td>
-        <td th:if="${user.username} == ${quiz.authorID}"><a th:href="'/deleteQuiz/?id=' + ${quiz.getId()}" role="button" class="btn btn-success" >Quiz löschen</a></td>
-        <td th:if="${user.username} != ${quiz.authorID}"></td>
-        <td><a th:href="'doQuiz/?id=' + ${quiz.id}" role="button" class="btn btn-success" >Quiz spielen</a></td>
-        <td th:if="${quiz.getHighscore() != null}"><a th:href="'showHighscore/?id=' + ${quiz.id}" role="button" class="btn btn-success" >Highscore anzeigen</a></td>
-    </tr>
-</table>
-<style>
-h1{
-    font-family: Forte;
-    color: LimeGreen;
-    text-align: center;
-    margin-top: 0px;
-}
-</style>
-<div style="position: absolute; left: 600px; top: 8px">
-    <h1>Study 2.0</h1>
+
+        <table class="table" >
+            <tr>
+                <td><b>Frage</b></td>
+                <td><b>Richtige Antwort</b></td>
+                <td><b>Ihre Antwort</b></td>
+            </tr>
+            <tr th:each="tupel : ${alltupel}">
+                <td th:text="${tupel.getQ().getFrage()}"></td>
+                <td>
+                <span class="label label-default" th:if="${tupel.getQ().getAntwort1_lsg() == 1}">|Richtig|</span>
+                <span class="label label-default" th:if="${tupel.getQ().getAntwort1_lsg() == 2}">|Falsch|</span>
+
+                <span class="label label-default" th:if="${tupel.getQ().getAntwort2_lsg() == 1}">|Richtig|</span>
+                <span class="label label-default" th:if="${tupel.getQ().getAntwort2_lsg() == 2}">|Falsch|</span>
+
+                <span class="label label-default" th:if="${tupel.getQ().getAntwort3_lsg() == 1}">|Richtig|</span>
+                <span class="label label-default" th:if="${tupel.getQ().getAntwort3_lsg() == 2}">|Falsch|</span>
+
+                <span class="label label-default" th:if="${tupel.getQ().getAntwort4_lsg() == 1}">|Richtig|</span>
+                <span class="label label-default" th:if="${tupel.getQ().getAntwort4_lsg() == 2}">|Falsch|</span>
+                </td>
+                <td>
+                <span class="label label-default" th:if="${tupel.getA1() == 1}">|Richtig|</span>
+                <span class="label label-default" th:if="${tupel.getA1() == 2}">|Falsch|</span>
+
+                <span class="label label-default" th:if="${tupel.getA2() == 1}">|Richtig|</span>
+                <span class="label label-default" th:if="${tupel.getA2() == 2}">|Falsch|</span>
+
+                <span class="label label-default" th:if="${tupel.getA3() == 1}">|Richtig|</span>
+                <span class="label label-default" th:if="${tupel.getA3() == 2}">|Falsch|</span>
+
+                <span class="label label-default" th:if="${tupel.getA4() == 1}">|Richtig|</span>
+                <span class="label label-default" th:if="${tupel.getA4() ==2}">|Falsch|</span>
+                </td>
+            </tr>
+        </table>
+
+<div style="position: absolute; left: 950px; top: -16px">
+    <h1><font face="Forte" color="LimeGreen">Study 2.0</font></h1>
 </div>
-
 </body>
 </html>

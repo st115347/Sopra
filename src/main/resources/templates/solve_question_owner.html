@@ -31,15 +31,16 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="font-size:16px;">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/greeting">&#127968;</a></li>
+                <li><a href="/greeting">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Persönlicher Schreibtisch <span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="/greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
-                        <li><a href="/join_lgp">Lernguppe beitreten</a></li>
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
+                        <li><a href="/join_lgp">Lernguppe beitreten</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -65,35 +66,72 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<h3><span style="border-bottom: 3px solid LimeGreen;">Quiz dieser Gruppe</span></h3>
-<table class="table">
-    <tr>
-        <td><b>Name</b></td>
-        <td><b>Autor</b></td>
-        <td><b>Anzahl der Fragen</b></td>
-        <td></td>
-    </tr>
-    <tr th:each="quiz : ${allquiz}">
-        <td th:text="${quiz.getName()}"></td>
-        <td th:text="${quiz.getAuthor()}"></td>
-        <td th:text="${quiz.getQuestions().size()}"></td>
-        <td th:if="${user.username} == ${quiz.authorID}"><a th:href="'/deleteQuiz/?id=' + ${quiz.getId()}" role="button" class="btn btn-success" >Quiz löschen</a></td>
-        <td th:if="${user.username} != ${quiz.authorID}"></td>
-        <td><a th:href="'doQuiz/?id=' + ${quiz.id}" role="button" class="btn btn-success" >Quiz spielen</a></td>
-        <td th:if="${quiz.getHighscore() != null}"><a th:href="'showHighscore/?id=' + ${quiz.id}" role="button" class="btn btn-success" >Highscore anzeigen</a></td>
-    </tr>
-</table>
-<style>
-h1{
-    font-family: Forte;
-    color: LimeGreen;
-    text-align: center;
-    margin-top: 0px;
-}
-</style>
-<div style="position: absolute; left: 600px; top: 8px">
-    <h1>Study 2.0</h1>
-</div>
+<h2 th:text="'Frage Nr. '+${size}"></h2>
 
+<form action="#" th:action="@{/nextQuestion}" th:object="${tupel}" method="post" id="tupelform">
+    <table border="0" cellspacing="3" cellpadding="5">
+        <tbody>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1" th:text="${tupel.getQ().getFrage()}"></span>
+            <input type="hidden" th:field="*{id}"/>
+            <input type="hidden" th:field="*{q}"/>
+            <input type="hidden" th:field="*{qid}"/>
+
+        </div>
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" th:if="${tupel.getQ().getAntwort1_lsg()} != 0" id="sizing-addon1" th:text="${tupel.getQ().getAntwort1()}"></span>
+        </div>
+
+
+        <div class="input-group input-group-lg" th:if="${tupel.getQ().getAntwort1_lsg()} != 0">
+            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a1}" /> Weis nicht
+            <input name="Antwort richtig" type="radio" value="1" th:field="*{a1}" /> Richtig
+            <input name="Antwort falsch" type="radio" value="2" th:field="*{a1}" /> Falsch
+        </div>
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" th:if="${tupel.getQ().getAntwort2_lsg()} != 0" id="sizing-addon1" th:text="${tupel.getQ().getAntwort2()}"></span>
+        </div>
+
+        <div class="input-group input-group-lg" th:if="${tupel.getQ().getAntwort2()} != 0">
+            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a2}" /> Weis nicht
+            <input name="Antwort richtig" type="radio" value="1" th:field="*{a2}" /> Richtig
+            <input name="Antwort falsch" type="radio" value="2" th:field="*{a2}" /> Falsch
+        </div>
+
+        <div class="input-group input-group-lg">
+
+            <span class="input-group-addon" th:if="${tupel.getQ().getAntwort3_lsg()} != 0" id="sizing-addon1" th:text="${tupel.getQ().getAntwort3()}"></span>
+        </div>
+
+        <div class="input-group input-group-lg"  th:if="${tupel.getQ().getAntwort3_lsg()} != 0">
+            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a3}" /> Weis nicht
+            <input name="Antwort richtig" type="radio" value="1" th:field="*{a3}" /> Richtig
+            <input name="Antwort falsch" type="radio" value="2" th:field="*{a3}" /> Falsch
+        </div>
+
+        <div class="input-group input-group-lg" >
+
+            <span class="input-group-addon" th:if="${tupel.getQ().getAntwort4_lsg()} != 0" id="sizing-addon1" th:text="${tupel.getQ().getAntwort4()}"></span>
+        </div>
+
+        <div class="input-group input-group-lg" th:if="${tupel.getQ().getAntwort4_lsg()} != 0">
+            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a4}" /> Weis nicht
+            <input name="Antwort richtig" type="radio" value="1" th:field="*{a4}" /> Richtig
+            <input name="Antwort falsch" type="radio" value="2" th:field="*{a4}" /> Falsch
+        </div>
+
+        <button th:type="success" class="btn btn-default" id="submitbtn">Nächste Frage</button>
+
+        </tbody>
+    </table>
+</form>
+<div style="position: absolute; left: 950px; top: -16px">
+    <h1><font face="Forte" color="LimeGreen">Study 2.0</font></h1>
+</div>
 </body>
 </html>
