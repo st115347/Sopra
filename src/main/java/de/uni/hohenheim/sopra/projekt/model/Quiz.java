@@ -1,6 +1,7 @@
 package de.uni.hohenheim.sopra.projekt.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -39,6 +40,7 @@ public class Quiz implements Serializable{
     @Column(name = "finished")
     private Boolean finished;
 
+    @Size(min=1, message="Bitte tragen Sie einen Namen ein")
     @Column (name = "name")
     private String name;
 

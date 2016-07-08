@@ -302,7 +302,10 @@ public class QuizController {
     }
 
     @RequestMapping(value="/create_quiz", method=RequestMethod.POST)
-    public String finishCreateQuiz(@ModelAttribute Quiz quiz,Model model){
+    public String finishCreateQuiz(@ModelAttribute Quiz quiz,Model model, BindingResult result){
+        if(result.hasErrors()) {
+            return "create_quiz";
+        }
         quiz.setFinished(true);
         quizRepository.save(quiz);
         return"redirect:/get_lgp?id="+quiz.getGroupID();
