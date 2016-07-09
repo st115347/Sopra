@@ -18,34 +18,87 @@
 </head>
 <body style="background-color:#d9f2e4">
 
+
 <h3><span style="border-bottom: 3px solid LimeGreen;">Registrierung für neue Benutzer</span></h3>
 <br/>
 <form action="#" th:action="@{/register}" th:object="${sopraUser}" method="post">
     <table border="0" cellspacing="1" cellpadding="2">
         <tbody>
+        <style>
 
+body {
+   margin: 3em;
+}
 
+form {
+   width: 900px;
+   height: 570px;
+   border: 2px solid #8c8c8c;
+   background: #d9f2e4;
+   padding: 20px;
+
+}
+
+form label {
+   display: block;
+   margin: 9px;
+
+}
+
+input[type=text]{
+    font-family: Verdana,sans-serif;
+    color: black;
+    font-size: 12px;
+    border: none;
+    border-top: 1px solid LimeGreen;
+    border-bottom: 1px solid LimeGreen;
+    background-color: white;
+    height: 22px;
+    width: 250px;
+    padding :3px;}
+
+input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: 1px dotted;
+    color: white;
+    padding: 12px 26px;
+    text-decoration: none;
+    margin: 10px 5px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+label {
+    font-size: 16px;
+    font-family: 'Verdana', sans-serif;
+    color: #666;
+    display: block;
+    width: 600px;
+    border-radius: 18px;
+}
+</style>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon">E-Mail - Adresse</span>
-            <input type="text" th:field="*{username}" class="form-control" placeholder="" aria-describedby="sizing-addon"/>
+            <label for="" class="control-label">E-Mail</label>
+            <input type="text" th:field="*{username}" class="form-control" placeholder="" aria-describedby="sizing-addon" style="height: 43px;"/>
         </div>
         <div><p style="color:red" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Email Error.</p></div>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1" >Passwort</span>
-            <input type="text" th:field="*{passwort}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+            <label for="" class="control-label">Passwort</label>
+            <input type="text" th:field="*{passwort}" class="form-control" placeholder="" aria-describedby="sizing-addon1" style="height: 43px;"/>
         </div>
         <div><p style="color:red" th:if="${#fields.hasErrors('passwort')}" th:errors="*{passwort}">Password Error.</p></div>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon2">Nachname</span>
-            <input type="text" th:field="*{nachname}" class="form-control" placeholder="" aria-describedby="sizing-addon2"/>
+            <label for="" class="control-label">Nachname</label>
+            <input type="text" th:field="*{nachname}" class="form-control" placeholder="" aria-describedby="sizing-addon2" style="height: 43px;"/>
         </div>
         <div><p style="color:red" th:if="${#fields.hasErrors('nachname')}" th:errors="*{nachname}">Name Error.</p></div>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon3">Vorname</span>
-            <input type="text" th:field="*{vorname}" class="form-control" placeholder="" aria-describedby="sizing-addon3"/>
+            <label for="" class="control-label">Vorname</label>
+            <input type="text" th:field="*{vorname}" class="form-control" placeholder="" aria-describedby="sizing-addon3" style="height: 43px;"/>
         </div>
         <div><p style="color:red" th:if="${#fields.hasErrors('vorname')}" th:errors="*{vorname}">Name Error.</p></div>
-
         <tr>
             <td></td>
             <td>
@@ -57,8 +110,17 @@
         </tbody>
     </table>
 </form>
-<div style="position: absolute; left: 950px; top: -16px">
-    <h1><font face="Forte" color="LimeGreen">Study 2.0</font></h1>
+<style>
+h1{
+    font-family: Forte;
+    color: LimeGreen;
+    text-align: center;
+    margin-top: 0px;
+}
+</style>
+<div style="position: absolute; left: 600px; top: 10px">
+    <h1>Study 2.0</h1>
 </div>
+
 </body>
 </html>

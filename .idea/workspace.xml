@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="5663588c-275e-47f5-b2f9-7f1a9917ef43" name="Default" comment="AddLgp und ChangeLgp">
 <<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterPath="" />
@@ -13,23 +14,51 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/show_quiz.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html" />
 >>>>>>> master
+=======
+    <list default="true" id="5663588c-275e-47f5-b2f9-7f1a9917ef43" name="Default" comment="Quiz durchführen und Highscore anzeigen">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Highscore.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/HighscoreRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Htupel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/HtupelRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Tupel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/TupelRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/end_quiz.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/end_quiz_owner.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/show_highscore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/show_highscore_owner.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/solve_question.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/solve_question_owner.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/ListHelper.java" afterPath="" />
+>>>>>>> master
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java" />
 =======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/config/TestSetup.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/config/TestSetup.java" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/add_lgp.html" afterPath="$PROJECT_DIR$/build/resources/main/templates/add_lgp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/templates/greeting.html" afterPath="$PROJECT_DIR$/build/resources/main/templates/greeting.html" />
+>>>>>>> master
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/QuizController.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/QuizController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/MCquestion.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/MCquestion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Quiz.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Quiz.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/QuizRepository.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/QuizRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/SopraUser.java" afterPath="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/SopraUser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/change_lgp.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/change_lgp.html" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/myMCquestions.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/myMCquestions.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/myMCquestions_owner.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/myMCquestions_owner.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/show_user_lgp.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/show_user_lgp.html" />
+>>>>>>> master
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/join_lgp.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/join_lgp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/show_quiz.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/show_quiz.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html" />
 >>>>>>> master
     </list>
     <ignored path="Sopra.iws" />
@@ -123,6 +152,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="show_beitrag_owner.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -213,43 +243,32 @@
         </entry>
       </file>
       <file leaf-file-name="QuizController.java" pinned="false" current-in-tab="false">
+=======
+      <file leaf-file-name="QuizController.java" pinned="false" current-in-tab="true">
+>>>>>>> master
         <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/QuizController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="252" column="34" selection-start-line="252" selection-start-column="34" selection-end-line="252" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3133#3145#0" expanded="true" />
-                <element signature="e#10069#10081#0" expanded="true" />
-                <element signature="e#11852#11858#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_quiz.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/create_quiz.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="80" column="58" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="58" />
+            <state relative-caret-position="117">
+              <caret line="292" column="63" selection-start-line="292" selection-start-column="63" selection-end-line="292" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_quiz_owner.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/create_quiz_owner.html">
+      <file leaf-file-name="end_quiz.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/end_quiz.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="153">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LearningGroup.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html">
+      <file leaf-file-name="end_quiz_owner.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/end_quiz_owner.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="492">
               <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
               <folding />
@@ -262,6 +281,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+>>>>>>> master
+=======
+            <state relative-caret-position="127">
+              <caret line="67" column="106" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="106" />
 >>>>>>> master
               <folding />
             </state>
@@ -276,8 +299,8 @@
         <option value="CSS File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
         <option value="XHTML File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -470,7 +493,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="1467364774000" />
+        <entry key="$PROJECT_DIR$" value="1467765704000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -641,14 +664,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/StyleSheets/join_lgp.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/enter_password.html" />
-        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Antwort_BeitragRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Password.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/del_user_lgp.html" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Datei.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/GreetingController.java" />
@@ -657,15 +672,37 @@
 <<<<<<< HEAD
 =======
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java" />
+<<<<<<< HEAD
 >>>>>>> master
         <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.html" />
+=======
+        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/MCquestion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/QuizRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/ListHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/config/TestSetup.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/show_quiz.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Quiz.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/add_beitrag.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/add_beitrag_owner.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/add_lgp.html" />
+>>>>>>> master
         <option value="$PROJECT_DIR$/src/main/resources/templates/answer_beitrag.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/answer_beitrag_owner.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/change_profileSettings.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/create_quiz.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/create_quiz_owner.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/fileUploadForm.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/greeting.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/MCquestion.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/MCquestion_owner.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/myLearningGroups.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/myMCquestions.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/myMCquestions_owner.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/passwd_join_lgp.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/register.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_beitrag.html" />
@@ -673,6 +710,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_user_lgp.html" />
 =======
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html" />
+<<<<<<< HEAD
 >>>>>>> master
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_user_ownerlgp.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/add_lgp.html" />
@@ -682,9 +720,12 @@
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/MCquestion.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/QuizRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/ListHelper.java" />
+=======
+>>>>>>> master
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_user_lgp.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/join_lgp.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/show_user_ownerlgp.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/change_lgp.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/config/TestSetup.java" />
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/BeitragRepository.java" />
@@ -700,12 +741,25 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/myMCquestions.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_quiz.xhtml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.xhtml" />
+=======
+        <option value="$PROJECT_DIR$/src/main/resources/templates/join_lgp.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/show_highscore.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html" />
+>>>>>>> master
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_quiz.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/show_highscore_owner.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/show_highscore.html" />
+        <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Htupel.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/end_quiz_owner.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/end_quiz.html" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/QuizController.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/resources/templates/create_quiz_owner.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/create_quiz.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html" />
         <option value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Quiz.java" />
+>>>>>>> master
+=======
 >>>>>>> master
       </list>
     </option>
@@ -762,8 +816,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
       <pane id="Scope" />
+=======
+      <pane id="Scratches" />
+>>>>>>> master
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -933,11 +991,15 @@
         </subPane>
       </pane>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <pane id="Scope" />
 >>>>>>> master
       <pane id="Scratches" />
+=======
+>>>>>>> master
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -950,11 +1012,18 @@
     <property name="settings.editor.selected.configurable" value="vcs.CVS" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="prop_add_unversioned_files" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="UNSCRAMBLER_NAME_USED" value="ZKM" />
     <property name="UNSCRAMBLE_LOG_FILE_LAST_URL" value="$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Beitrag.java" />
     <property name="FullScreen" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tabea\GitProjekts\Sopra\src\main\java\de\uni\hohenheim\sopra\projekt\controller" />
+      <recent name="C:\Users\Tabea\GitProjekts\Sopra\src\main\java\de\uni\hohenheim\sopra\projekt\model" />
+      <recent name="C:\Users\Tabea\GitProjekts\Sopra\src\main\resources\templates" />
+    </key>
   </component>
   <component name="RunManager" selected="Gradle.Sopra [bootRun]">
     <configuration default="false" name="Sopra [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -1471,6 +1540,11 @@
       <workItem from="1467645956335" duration="1385000" />
       <workItem from="1467649779315" duration="3516000" />
       <workItem from="1467788564160" duration="9474000" />
+<<<<<<< HEAD
+>>>>>>> master
+=======
+      <workItem from="1467971695322" duration="1860000" />
+      <workItem from="1467984628173" duration="7058000" />
 >>>>>>> master
     </task>
     <task id="LOCAL-00001" summary="Join Group now possible&#10;&#10;My learning groups now selects only groups in which you are member">
@@ -1578,17 +1652,70 @@
       <option name="project" value="LOCAL" />
       <updated>1467469655018</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Aktualisierung">
+      <created>1467849922834</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1467849922834</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Aktualisierung">
+      <created>1467850099017</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1467850099017</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Aktualisierung">
+      <created>1467852857413</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1467852857413</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Aktualisierungen Design">
+      <created>1467921114803</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1467921114803</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Aktualisierungen Design">
+      <created>1467922713520</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1467922713520</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Aktualisierungen Design">
+      <created>1467927103477</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1467927103477</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Aktualisierungen Design">
+      <created>1467927612286</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1467927612302</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="151129000" />
 =======
     <option name="totallyTimeSpent" value="158585000" />
 >>>>>>> master
+=======
+    <option name="totallyTimeSpent" value="167503000" />
+>>>>>>> master
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -1603,11 +1730,15 @@
     <editor active="false" />
 =======
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+<<<<<<< HEAD
     <editor active="true" />
+>>>>>>> master
+=======
+    <editor active="false" />
 >>>>>>> master
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822084" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32593855" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51706487" sideWeight="0.50832075" order="7" side_tool="true" content_ui="tabs" />
@@ -1628,15 +1759,16 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25567323" sideWeight="0.5089058" order="4" side_tool="true" content_ui="tabs" />
 =======
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296131" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14570552" sideWeight="0.496511" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1331058" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668713" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22866894" sideWeight="0.496511" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14163822" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668713" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26701966" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55119455" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2193646" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1649,6 +1781,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34972677" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1658,6 +1791,10 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
 >>>>>>> master
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55119455" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+>>>>>>> master
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1674,16 +1811,16 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39419794" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822084" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668713" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14570552" sideWeight="0.496511" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2440273" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23006135" sideWeight="0.496511" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1996587" sideWeight="0.49167928" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668713" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700454" sideWeight="0.49109414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55119455" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2193646" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1717,10 +1854,14 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Design Teil1" />
     <MESSAGE value="AddLgp und ChangeLgp" />
-    <option name="LAST_COMMIT_MESSAGE" value="AddLgp und ChangeLgp" />
+    <MESSAGE value="Aktualisierung" />
+    <MESSAGE value="Aktualisierungen Design" />
+    <MESSAGE value="Quiz durchführen und Highscore anzeigen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quiz durchführen und Highscore anzeigen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <option name="time" value="8" />
 =======
@@ -1738,6 +1879,8 @@
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
+=======
+>>>>>>> master
       <option name="time" value="21" />
 >>>>>>> master
     </breakpoint-manager>
@@ -1748,6 +1891,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/LearningGroupRepository.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1778,13 +1922,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/GreetingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="63" column="56" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/config/TestSetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        <state relative-caret-position="314">
+          <caret line="118" column="44" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
+>>>>>>> master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="109" column="31" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userhome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1795,29 +1966,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/BeitragSchreiben.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userhome.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_beitrag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        <state relative-caret-position="193">
+          <caret line="100" column="17" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Datei.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Password.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/GreetingController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1928,18 +2084,89 @@
 =======
         <state relative-caret-position="1530">
           <caret line="90" column="7" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="7" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_beitrag_owner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="102" column="17" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_lgp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/answer_beitrag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/answer_beitrag_owner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="107" column="1" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/change_profileSettings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/create_quiz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/create_quiz_owner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fileUploadForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="91" column="1" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+>>>>>>> master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="97" selection-start-line="16" selection-start-column="97" selection-end-line="16" selection-end-column="97" />
+        <state relative-caret-position="491">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myLearningGroups.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/MCquestion.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="349">
 >>>>>>> master
           <caret line="85" column="7" selection-start-line="85" selection-start-column="7" selection-end-line="85" selection-end-column="7" />
@@ -2002,144 +2229,198 @@
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
 =======
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/passwd_join_lgp.html">
+=======
+        <state relative-caret-position="389">
+          <caret line="136" column="1" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/MCquestion_owner.html">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+        <state relative-caret-position="389">
+          <caret line="136" column="1" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myMCquestions_owner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="63" column="7" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/answer_beitrag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="102" column="7" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_beitrag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="70" column="84" selection-start-line="70" selection-start-column="84" selection-end-line="70" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/QuizRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/MCquestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="2006">
+          <caret line="118" column="1" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/AbstractList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-          <folding>
-            <element signature="e#6252#6253#0" expanded="false" />
-            <element signature="e#6320#6321#0" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#3;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#4;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#5;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#6;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#7;n#tbody#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="107" column="7" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
+        <state relative-caret-position="2023">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/ListHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/join_lgp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="117" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/GreetingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="63" column="56" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
+        <state relative-caret-position="1955">
+          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4193#4208#0" expanded="false" />
-            <element signature="e#6798#6813#0" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_user_lgp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-233">
-          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="1530">
+          <caret line="90" column="1" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_user_ownerlgp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
+        <state relative-caret-position="1496">
           <caret line="88" column="7" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_beitrag_owner.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myMCquestions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="53" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="1343">
+          <caret line="79" column="46" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/change_lgp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+        <state relative-caret-position="71">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="42" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/config/TestSetup.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1383">
+          <caret line="112" column="1" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1289">
+          <caret line="113" column="1" selection-start-line="113" selection-start-column="1" selection-end-line="113" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myLearningGroups.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="917">
+          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/join_lgp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="41" column="82" selection-start-line="41" selection-start-column="82" selection-end-line="41" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/passwd_join_lgp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1223">
+          <caret line="75" column="1" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/MCquestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/QuizRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/TupelRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/SopraUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1047">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Tupel.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="314">
           <caret line="118" column="44" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
+>>>>>>> master
+=======
+        <state relative-caret-position="524">
+          <caret line="36" column="10" selection-start-line="36" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
 >>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Antwort_BeitragRepository.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -2158,10 +2439,17 @@
         <state relative-caret-position="48">
           <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
 >>>>>>> master
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/HtupelRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="jar://$PROJECT_DIR$/../gradle-2.13/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.0.RC1/c8bed3be54c18d3bc50524376a7aa33218e4fe7f/spring-core-4.3.0.RC1-sources.jar!/org/springframework/util/Assert.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -2176,22 +2464,31 @@
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
 =======
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/add_lgp.html">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/HighscoreRepository.java">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="78" column="60" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="60" />
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/LearningGroupController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/solve_question_owner.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="193">
           <caret line="109" column="31" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
+>>>>>>> master
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 >>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LearningGroup_owner.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -2217,10 +2514,17 @@
         <state relative-caret-position="-531">
           <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
 >>>>>>> master
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Highscore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Beitrag.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -2232,10 +2536,17 @@
         <state relative-caret-position="932">
           <caret line="119" column="86" selection-start-line="119" selection-start-column="86" selection-end-line="119" selection-end-column="86" />
 >>>>>>> master
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Quiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/del_erfolgreich.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html">
@@ -2251,43 +2562,44 @@
           <caret line="90" column="51" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
 =======
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myMCquestions.html">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_quiz.html">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="46" column="54" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="7" />
+        <state relative-caret-position="188">
+          <caret line="76" column="153" selection-start-line="76" selection-start-column="153" selection-end-line="76" selection-end-column="153" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LearningGroup.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/solve_question.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
+        <state relative-caret-position="1060">
+          <caret line="124" column="95" selection-start-line="124" selection-start-column="95" selection-end-line="124" selection-end-column="95" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myMCquestions_owner.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="193">
+          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/create_quiz_owner.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_highscore_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state relative-caret-position="281">
+          <caret line="75" column="48" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
           <folding />
 >>>>>>> master
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/create_quiz.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_highscore.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="126">
           <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
@@ -2319,46 +2631,47 @@
 =======
         <state relative-caret-position="97">
           <caret line="80" column="58" selection-start-line="80" selection-start-column="58" selection-end-line="80" selection-end-column="58" />
+=======
+        <state relative-caret-position="285">
+          <caret line="75" column="48" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_quiz.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Htupel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="78" selection-end-column="8" />
+        <state relative-caret-position="299">
+          <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/show_quiz_owner.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/end_quiz_owner.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="127">
+          <caret line="67" column="106" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/end_quiz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/controller/QuizController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="252" column="34" selection-start-line="252" selection-start-column="34" selection-end-line="252" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3133#3145#0" expanded="true" />
-            <element signature="e#10069#10081#0" expanded="true" />
-            <element signature="e#11852#11858#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/uni/hohenheim/sopra/projekt/model/Quiz.java">
-      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="340">
           <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+>>>>>>> master
+=======
+        <state relative-caret-position="117">
+          <caret line="292" column="63" selection-start-line="292" selection-start-column="63" selection-end-line="292" selection-end-column="63" />
 >>>>>>> master
           <folding />
         </state>

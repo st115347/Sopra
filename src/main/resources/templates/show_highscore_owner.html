@@ -62,48 +62,33 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
-<h3><span style="border-bottom: 3px solid LimeGreen;">Quiz fertigstellen</span></h3>
-<br/>
-<div>
-    <form action="#" th:action="@{/create_quiz}" th:object="${quiz}" method="post">
-        <div class="input-group input-group-lg" >
-            <span class="input-group-addon" id="sizing-addon1">Name des Quiz</span>
-            <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-        <div>
-            <input type="hidden" th:field="*{id}"/>
-            <input type="hidden" th:field="*{groupID}"/>
-            <input type="hidden" th:field="*{author}"/>
-            <input type="hidden" th:field="*{authorID}"/>
-            <input type="hidden" th:field="*{finished}"/>
-            <input type="hidden" th:field="*{questions}"/>
-            <input type="submit" value="Quiz fertigstellen" />
-        </div>
-    </form>
-</div>
+<h3><span style="border-bottom: 3px solid LimeGreen;">Highscore dieses Quiz</span></h3>
 <table class="table">
     <tr>
-        <td><b>Thema</b></td>
-        <td><b>Frage</b></td>
-        <td><b>Autor</b></td>
+        <td><b>Platz</b></td>
+        <td><b>Name</b></td>
+        <td><b>Punktzahl</b></td>
+        <td></td>
     </tr>
-    <tr th:each="MCquestion : ${MCquestions}">
-        <td th:text="${MCquestion.getThema()}"></td>
-        <td th:text="${MCquestion.getFrage()}"></td>
-        <td th:text="${MCquestion.getAuthor()}"></td>
+    <tr th:each="index : ${#numbers.sequence( 0, #arrays.length(htupels)-1)}">
+        <td th:text="'Rang: ' + ${index +1} "></td>
+        <td th:text="${htupels[index].getUsername()}" ></td>
+        <td th:text="${htupels[index].getScore()}" ></td>
+
     </tr>
 </table>
+<a th:href="'/get_lgp/?id=' + ${lerngruppe.id}" role="button" class="btn btn-success" >Zuück zur Lerngruppe</a>
 <style>
-h1{
-    font-family: Forte;
-    color: LimeGreen;
-    text-align: center;
-    margin-top: 0px;
-}
+    h1{
+        font-family: Forte;
+        color: LimeGreen;
+        text-align: center;
+        margin-top: 0px;
+    }
 </style>
 <div style="position: absolute; left: 600px; top: 8px">
     <h1>Study 2.0</h1>
 </div>
+
 </body>
 </html>
