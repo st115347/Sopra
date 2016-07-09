@@ -45,6 +45,9 @@ public class Quiz implements Serializable{
     @ManyToMany
     private List<MCquestion> questions = new ArrayList<MCquestion>();
 
+    @OneToOne
+    private Highscore highscore;
+
     public Integer getId() {
         return id;
     }
@@ -92,4 +95,11 @@ public class Quiz implements Serializable{
         this.name = name;
     }
 
+    public Highscore getHighscore() {
+        return highscore;
+    }
+
+    public void setHighscore(Highscore highscore) {
+        this.highscore = highscore;
+    }
 }

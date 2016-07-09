@@ -65,6 +65,8 @@
     </div><!-- /.container-fluid -->
 </nav>
 
+<a href="javascript:history.back()">Zurück</a>
+
 <h3><span style="border-bottom: 3px solid LimeGreen;">Quiz dieser Gruppe</span></h3>
 <table class="table">
     <tr>
@@ -77,6 +79,10 @@
         <td th:text="${quiz.getName()}"></td>
         <td th:text="${quiz.getAuthor()}"></td>
         <td th:text="${quiz.getQuestions().size()}"></td>
+        <td th:if="${user.username} == ${quiz.authorID}"><a th:href="'/deleteQuiz/?id=' + ${quiz.getId()}" role="button" class="btn btn-success" >Quiz löschen</a></td>
+        <td th:if="${user.username} != ${quiz.authorID}"></td>
+        <td><a th:href="'doQuiz/?id=' + ${quiz.id}" role="button" class="btn btn-success" >Quiz spielen</a></td>
+        <td th:if="${quiz.getHighscore() != null}"><a th:href="'showHighscore/?id=' + ${quiz.id}" role="button" class="btn btn-success" >Highscore anzeigen</a></td>
     </tr>
 </table>
 <style>
