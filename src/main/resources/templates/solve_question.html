@@ -63,6 +63,9 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+<a href="javascript:history.back()">Zurück</a>
+
 <h2 th:text="'Frage Nr. '+${size}"></h2>
 
 <form action="#" th:action="@{/nextQuestion}" th:object="${tupel}" method="post" id="tupelform">

@@ -65,6 +65,9 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+
+<a href="javascript:history.back()">Zurück</a>
+
 <h1 style="text-align:center" th:text="'Sie haben ' + ${punkte}+' von maximal '+${max}+' Punkten erreicht!'" ><b></b></h1>
 <h4 style="text-align:center" th:text="'Bester Ranglisten Platz: ' + ${place}"></h4>
 <a th:href="'/get_lgp/?id=' + ${lerngruppe.id}" role="button" class="btn btn-success" >Weiter zur Lerngruppe</a>

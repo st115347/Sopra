@@ -16,6 +16,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.UserDetailsManager;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -407,6 +408,39 @@ public class LearningGroupController {
         groupIDSave = lgp.getId();
         return "show_user_ownerlgp";
     }
+
+
+
+    /**
+     * Deleting beitrag from learninggroup only if current user is also owner of group
+     * @param id
+     * @param model
+     * @return
+     */
+    @RequestMapping(value="/del_beitrag")
+    public String del_beitrag(@RequestParam (value ="id")Integer id, @RequestParam(value="grpid") Integer grpid,
+                              Model model, RedirectAttributes redirectAttributes) {
+        LearningGroup lgp = learningGroupRepository.findOne(grpid);
+        SopraUser user = userService.getCurrentSopraUser();
+        if (lgp.getSopraUsers().get(0).equals(user)) {
+
+            Beitrag btg = beitragRepository.findOne(id);
+
+            beitragRepository.delete(btg);
+            model.addAttribute("lerngruppe", lgp);
+            model.addAttribute("beitrag", btg);
+
+            learningGroupRepository.save(lgp);
+
+            redirectAttributes.addAttribute("id", grpid);
+
+            return "redirect:/get_lgp";
+        }
+        redirectAttributes.addAttribute("id", id);
+        redirectAttributes.addAttribute("grpid", grpid);
+        return "redirect:/show_beitrag";
+    }
+
 
 
 
