@@ -16,7 +16,6 @@
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
 </head>
-
 <body style="background-color:#d9f2e4">
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -46,9 +45,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a th:href="'/change_lgp?id=' + ${lerngruppe.id}" >Einstellungen der Lerngruppe ändern</a></li>
                         <li><a th:href="'/show_user_lgp?id=' + ${lerngruppe.id}" >Mitglieder anzeigen</a></li>
-                        <li><a th:href="'/del_lgp?id=' + ${lerngruppe.id}">Lerngruppe löschen</a></li>
                     </ul>
                 </li>
             </ul>
@@ -66,42 +63,37 @@
     </div><!-- /.container-fluid -->
 </nav>
 
+<h3><span style="border-bottom: 3px solid LimeGreen;">Quiz fertigstellen</span></h3>
 <br/>
-<br/>
-<br/>
-
-<div class="page-header">
-
-    <h1 th:text="${beitrag.name}"></h1>
-    <a th:href="'/answer_beitrag/?id=' + ${beitrag.id}+'&amp;grpid='+${lerngruppe.id}" role="button" class="btn btn-success" >Antworten</a>
-</div>
-
 <div>
-    <table class="table" width="80%">
-        <tr>
-            <td th:text="${beitrag.author+':'}"></td>
-        </tr>
-        <tr>
-            <td th:utext="${beitrag.text}"></td>
-        </tr>
-
-        <tr>
-            <table th:each="answer : ${beitrag.answers}" class="table table-striped">
-                <tr>
-                    <td th:text="${'@'+answer.to}"></td>
-                    <td th:text="${'From:'+answer.author}"></td>
-                </tr>
-                <tr>
-                    <td th:utext="${''+answer.content}"></td>
-
-                    <td></td>
-                </tr>
-                <tr></tr>
-            </table>
-        </tr>
-
-    </table>
+    <form action="#" th:action="@{/create_quiz}" th:object="${quiz}" method="post">
+        <div class="input-group input-group-lg" >
+            <span class="input-group-addon" id="sizing-addon1">Name des Quiz</span>
+            <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        </div>
+        <div>
+            <input type="hidden" th:field="*{id}"/>
+            <input type="hidden" th:field="*{groupID}"/>
+            <input type="hidden" th:field="*{author}"/>
+            <input type="hidden" th:field="*{authorID}"/>
+            <input type="hidden" th:field="*{finished}"/>
+            <input type="hidden" th:field="*{questions}"/>
+            <input type="submit" value="Quiz fertigstellen" />
+        </div>
+    </form>
 </div>
+<table class="table">
+    <tr>
+        <td><b>Thema</b></td>
+        <td><b>Frage</b></td>
+        <td><b>Autor</b></td>
+    </tr>
+    <tr th:each="MCquestion : ${MCquestions}">
+        <td th:text="${MCquestion.getThema()}"></td>
+        <td th:text="${MCquestion.getFrage()}"></td>
+        <td th:text="${MCquestion.getAuthor()}"></td>
+    </tr>
+</table>
 <style>
 h1{
     font-family: Forte;
@@ -113,6 +105,5 @@ h1{
 <div style="position: absolute; left: 600px; top: 8px">
     <h1>Study 2.0</h1>
 </div>
-
 </body>
 </html>

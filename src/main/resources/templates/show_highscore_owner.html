@@ -16,7 +16,6 @@
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
 </head>
-
 <body style="background-color:#d9f2e4">
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -46,9 +45,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a th:href="'/change_lgp?id=' + ${lerngruppe.id}" >Einstellungen der Lerngruppe ändern</a></li>
                         <li><a th:href="'/show_user_lgp?id=' + ${lerngruppe.id}" >Mitglieder anzeigen</a></li>
-                        <li><a th:href="'/del_lgp?id=' + ${lerngruppe.id}">Lerngruppe löschen</a></li>
                     </ul>
                 </li>
             </ul>
@@ -65,50 +62,29 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<h3><span style="border-bottom: 3px solid LimeGreen;">Highscore dieses Quiz</span></h3>
+<table class="table">
+    <tr>
+        <td><b>Platz</b></td>
+        <td><b>Name</b></td>
+        <td><b>Punktzahl</b></td>
+        <td></td>
+    </tr>
+    <tr th:each="index : ${#numbers.sequence( 0, #arrays.length(htupels)-1)}">
+        <td th:text="'Rang: ' + ${index +1} "></td>
+        <td th:text="${htupels[index].getUsername()}" ></td>
+        <td th:text="${htupels[index].getScore()}" ></td>
 
-<br/>
-<br/>
-<br/>
-
-<div class="page-header">
-
-    <h1 th:text="${beitrag.name}"></h1>
-    <a th:href="'/answer_beitrag/?id=' + ${beitrag.id}+'&amp;grpid='+${lerngruppe.id}" role="button" class="btn btn-success" >Antworten</a>
-</div>
-
-<div>
-    <table class="table" width="80%">
-        <tr>
-            <td th:text="${beitrag.author+':'}"></td>
-        </tr>
-        <tr>
-            <td th:utext="${beitrag.text}"></td>
-        </tr>
-
-        <tr>
-            <table th:each="answer : ${beitrag.answers}" class="table table-striped">
-                <tr>
-                    <td th:text="${'@'+answer.to}"></td>
-                    <td th:text="${'From:'+answer.author}"></td>
-                </tr>
-                <tr>
-                    <td th:utext="${''+answer.content}"></td>
-
-                    <td></td>
-                </tr>
-                <tr></tr>
-            </table>
-        </tr>
-
-    </table>
-</div>
+    </tr>
+</table>
+<a th:href="'/get_lgp/?id=' + ${lerngruppe.id}" role="button" class="btn btn-success" >Zuück zur Lerngruppe</a>
 <style>
-h1{
-    font-family: Forte;
-    color: LimeGreen;
-    text-align: center;
-    margin-top: 0px;
-}
+    h1{
+        font-family: Forte;
+        color: LimeGreen;
+        text-align: center;
+        margin-top: 0px;
+    }
 </style>
 <div style="position: absolute; left: 600px; top: 8px">
     <h1>Study 2.0</h1>

@@ -1,11 +1,8 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-
     <title>Study 2.0</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
@@ -18,17 +15,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
-    <!-- include libraries(jQuery, bootstrap) -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet"/>
-
-    <!-- include summernote css/js-->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet"/>
-
-
 </head>
 <body style="background-color:#d9f2e4">
-
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,23 +31,22 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="font-size:16px;">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/greeting">&#127968;</a></li>
+                <li><a href="/greeting">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Persönlicher Schreibtisch <span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="/greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
-                        <li><a href="/join_lgp">Lernguppe beitreten</a></li>
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
+                        <li><a href="/join_lgp">Lernguppe beitreten</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a th:href="'/change_lgp?id=' + ${lerngruppe.id}" >Einstellungen der Lerngruppe ändern</a></li>
                         <li><a th:href="'/show_user_lgp?id=' + ${lerngruppe.id}" >Mitglieder anzeigen</a></li>
-                        <li><a th:href="'/del_lgp?id=' + ${lerngruppe.id}">Lerngruppe löschen</a></li>
                     </ul>
                 </li>
             </ul>
@@ -76,53 +63,73 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<h2 th:text="'Frage Nr. '+${size}"></h2>
 
-
-<h3><span style="border-bottom: 3px solid LimeGreen;">Neue Lerngruppe hinzufügen</span></h3>
-<br/>
-<form action="#" th:action="@{/add_beitrag_owner}" th:object="${beitrag}" method="post" id="beitragform">
-    <table border="0" cellspacing="1" cellpadding="2">
+<form action="#" th:action="@{/nextQuestion}" th:object="${tupel}" method="post" id="tupelform">
+    <table border="0" cellspacing="3" cellpadding="5">
         <tbody>
 
-
-        <div>
-            <input type="hidden" th:field="*{groupId}" class="form-control"/>
-        </div>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Thema des Beitrags</span>
-            <input type="text" th:field="*{name}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-        <div><p style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error.</p></div>
-        <div id="summernote"></div>
-        <input type="hidden" class="form-control" id="content" placeholder="" th:field="*{text}"/>
-        <script>
-            $(document).ready(function() {
-                $('#summernote').summernote()
-            });
+            <span class="input-group-addon" id="sizing-addon1" th:text="${tupel.getQ().getFrage()}"></span>
+            <input type="hidden" th:field="*{id}"/>
+            <input type="hidden" th:field="*{q}"/>
+            <input type="hidden" th:field="*{qid}"/>
 
-        </script>
-        <script>
-            function output (){
-                document.getElementById('content').value=""+$('#summernote').summernote('code');
-            }
-        </script>
-        <div><p style="color:red" th:if="${#fields.hasErrors('text')}" th:errors="*{text}">Text Error.</p></div>
-        <button onclick="output()" th:type="submit" class="btn btn-default" id="submitbtn">Bestätigen</button>
+        </div>
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" th:if="${tupel.getQ().getAntwort1_lsg()} != 0" id="sizing-addon1" th:text="${tupel.getQ().getAntwort1()}"></span>
+        </div>
+
+
+        <div class="input-group input-group-lg" th:if="${tupel.getQ().getAntwort1_lsg()} != 0">
+            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a1}" /> Weis nicht
+            <input name="Antwort richtig" type="radio" value="1" th:field="*{a1}" /> Richtig
+            <input name="Antwort falsch" type="radio" value="2" th:field="*{a1}" /> Falsch
+        </div>
+
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" th:if="${tupel.getQ().getAntwort2_lsg()} != 0" id="sizing-addon1" th:text="${tupel.getQ().getAntwort2()}"></span>
+        </div>
+
+        <div class="input-group input-group-lg" th:if="${tupel.getQ().getAntwort2()} != 0">
+            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a2}" /> Weis nicht
+            <input name="Antwort richtig" type="radio" value="1" th:field="*{a2}" /> Richtig
+            <input name="Antwort falsch" type="radio" value="2" th:field="*{a2}" /> Falsch
+        </div>
+
+        <div class="input-group input-group-lg">
+
+            <span class="input-group-addon" th:if="${tupel.getQ().getAntwort3_lsg()} != 0" id="sizing-addon1" th:text="${tupel.getQ().getAntwort3()}"></span>
+        </div>
+
+        <div class="input-group input-group-lg"  th:if="${tupel.getQ().getAntwort3_lsg()} != 0">
+            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a3}" /> Weis nicht
+            <input name="Antwort richtig" type="radio" value="1" th:field="*{a3}" /> Richtig
+            <input name="Antwort falsch" type="radio" value="2" th:field="*{a3}" /> Falsch
+        </div>
+
+        <div class="input-group input-group-lg" >
+
+            <span class="input-group-addon" th:if="${tupel.getQ().getAntwort4_lsg()} != 0" id="sizing-addon1" th:text="${tupel.getQ().getAntwort4()}"></span>
+        </div>
+
+        <div class="input-group input-group-lg" th:if="${tupel.getQ().getAntwort4_lsg()} != 0">
+            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a4}" /> Weis nicht
+            <input name="Antwort richtig" type="radio" value="1" th:field="*{a4}" /> Richtig
+            <input name="Antwort falsch" type="radio" value="2" th:field="*{a4}" /> Falsch
+        </div>
+
+        <button th:type="success" class="btn btn-default" id="submitbtn">Nächste Frage</button>
 
         </tbody>
     </table>
 </form>
-<style>
-h1{
-    font-family: Forte;
-    color: LimeGreen;
-    text-align: center;
-    margin-top: 0px;
-}
-</style>
 
-<div style="position: absolute; left: 600px; top: 8px">
-    <h1>Study 2.0</h1>
+<div style="position: absolute; left: 950px; top: -16px">
+    <h1><font face="Forte" color="LimeGreen">Study 2.0</font></h1>
 </div>
 </body>
 </html>

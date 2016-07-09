@@ -16,7 +16,6 @@
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
 </head>
-
 <body style="background-color:#d9f2e4">
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -66,42 +65,24 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<br/>
-<br/>
-<br/>
-
-<div class="page-header">
-
-    <h1 th:text="${beitrag.name}"></h1>
-    <a th:href="'/answer_beitrag/?id=' + ${beitrag.id}+'&amp;grpid='+${lerngruppe.id}" role="button" class="btn btn-success" >Antworten</a>
-</div>
-
-<div>
-    <table class="table" width="80%">
-        <tr>
-            <td th:text="${beitrag.author+':'}"></td>
-        </tr>
-        <tr>
-            <td th:utext="${beitrag.text}"></td>
-        </tr>
-
-        <tr>
-            <table th:each="answer : ${beitrag.answers}" class="table table-striped">
-                <tr>
-                    <td th:text="${'@'+answer.to}"></td>
-                    <td th:text="${'From:'+answer.author}"></td>
-                </tr>
-                <tr>
-                    <td th:utext="${''+answer.content}"></td>
-
-                    <td></td>
-                </tr>
-                <tr></tr>
-            </table>
-        </tr>
-
-    </table>
-</div>
+<h3><span style="border-bottom: 3px solid LimeGreen;">Quiz dieser Gruppe</span></h3>
+<table class="table">
+    <tr>
+        <td><b>Name</b></td>
+        <td><b>Autor</b></td>
+        <td><b>Anzahl der Fragen</b></td>
+        <td></td>
+    </tr>
+    <tr th:each="quiz : ${allquiz}">
+        <td th:text="${quiz.getName()}"></td>
+        <td th:text="${quiz.getAuthor()}"></td>
+        <td th:text="${quiz.getQuestions().size()}"></td>
+        <td th:if="${user.username} == ${quiz.authorID}"><a th:href="'/deleteQuiz/?id=' + ${quiz.getId()}" role="button" class="btn btn-success" >Quiz löschen</a></td>
+        <td th:if="${user.username} != ${quiz.authorID}"></td>
+        <td><a th:href="'doQuiz/?id=' + ${quiz.id}" role="button" class="btn btn-success" >Quiz spielen</a></td>
+        <td th:if="${quiz.getHighscore() != null}"><a th:href="'showHighscore/?id=' + ${quiz.id}" role="button" class="btn btn-success" >Highscore anzeigen</a></td>
+    </tr>
+</table>
 <style>
 h1{
     font-family: Forte;

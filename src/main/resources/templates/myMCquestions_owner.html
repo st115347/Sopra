@@ -31,16 +31,15 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="font-size:16px;">
             <ul class="nav navbar-nav">
-                <li><a href="/greeting">Home</a></li>
+                <li><a href="/greeting">&#127968;</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Persönlicher Schreibtisch <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/greeting">Übersicht</a></li>
                         <li><a href="/add_lgp">Lerngruppe hinzufügen</a></li>
-                        <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
                         <li><a href="/join_lgp">Lernguppe beitreten</a></li>
+                        <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -65,25 +64,43 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<style>
+h3 {
+    font-style: italic;
+</style>
+<h3 th:text="'Multiple-Choice Fragen dieser Lerngruppe'" />
 
-<p th:text="'Multiple-Choice Fragen dieser Lerngruppe'" />
-
-<table class="table">
-    <tr>
-        <td><b>Thema</b></td>
-        <td><b>Frage</b></td>
-        <td><b>Autor</b></td>
-        <td></td>
-    </tr>
-    <tr th:each="MCquestion : ${MCquestions}" >
-        <td th:text="${MCquestion.getThema()}"></td>
-        <td th:text="${MCquestion.getFrage()}"></td>
-        <td th:text="${MCquestion.getAuthor()}"></td>
-        <td><a th:href="'/changeMCquestion/?id=' + ${MCquestion.getId()}" role="button" class="btn btn-success" >Details anzeigen / bearbeiten</a></td>
-    </tr>
-</table>
-<div style="position: absolute; left: 950px; top: -16px">
-    <h1><font face="Forte" color="LimeGreen">Study 2.0</font></h1>
+    <table class="table">
+        <tr>
+            <td><b>Thema</b></td>
+            <td><b>Frage</b></td>
+            <td><b>Autor</b></td>
+            <td></td>
+            <td><b>Frage zu Quiz hinzufügen</b></td>
+            <td><a th:href="'create_quiz/?id=' + ${quiz.id}" role="button" class="btn btn-success" >Quiz erstellen</a></td>
+            <td th:text="'Sie haben derzeit '+ ${size}+' Fragen ausgewählt'"></td>
+        </tr>
+        <tr th:each="MCquestion : ${MCquestions}">
+            <td th:text="${MCquestion.getThema()}"></td>
+            <td th:text="${MCquestion.getFrage()}"></td>
+            <td th:text="${MCquestion.getAuthor()}"></td>
+            <td th:if="${user.username} == ${MCquestion.authorID}"><a th:href="'/changeMCquestion/?id=' + ${MCquestion.getId()}" role="button" class="btn btn-success" >Details anzeigen / bearbeiten</a></td>
+            <td th:if="${user.username} != ${MCquestion.authorID}"></td>
+            <td><a th:href="'add_question/?id=' + ${MCquestion.id} + '&amp;qid='+${quiz.id}" role="button" class="btn btn-success" >Zum Quiz hinzufügen</a></td>
+            <td></td>
+        </tr>
+    </table>
+<style>
+h1{
+    font-family: Forte;
+    color: LimeGreen;
+    text-align: center;
+    margin-top: 0px;
+}
+</style>
+<div style="position: absolute; left: 600px; top: 8px">
+    <h1>Study 2.0</h1>
 </div>
+
 </body>
 </html>

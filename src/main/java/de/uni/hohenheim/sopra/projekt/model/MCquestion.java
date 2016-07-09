@@ -25,6 +25,9 @@ public class MCquestion {
         @Column(name = "author")
         private String author;
 
+        @Column(name = "authorID")
+        private String authorID;
+
         //Zur Zuordnung der Frage zu einem konkreten Quiz
         @Column(name = "quiz")
         private Integer quiz;
@@ -172,6 +175,8 @@ public class MCquestion {
         this.groupId = groupId;
     }
 
+    public void setAuthorID(String id){authorID = id;}
+    public String getAuthorID(){return authorID;}
 
 
     }

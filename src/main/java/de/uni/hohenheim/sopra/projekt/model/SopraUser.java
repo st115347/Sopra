@@ -51,6 +51,9 @@ public class SopraUser implements Serializable{
   @Column(name = "fachsemester")
   private Integer fachsemester;
 
+  @OneToMany
+  private List<Tupel> active = new ArrayList<Tupel>();
+
 
   public String getGeburtsdatum() {
     return geburtsdatum;
@@ -124,6 +127,12 @@ public class SopraUser implements Serializable{
     this.username = username;
   }
 
+  public List<Tupel> getActive() {
+    return active;
+  }
 
+  public void setActive(List<Tupel> active) {
+    this.active = active;
+  }
 }
 
