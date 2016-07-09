@@ -37,11 +37,9 @@ public class TestSetup implements ApplicationListener<ContextRefreshedEvent> {
   private SopraUserRepository sopraUserRepository;
 
   @Autowired
-<<<<<<< HEAD
-  private BeitragRepository beitragRepository;
-=======
+
   private MCquestionRepository mCquestionRepository;
->>>>>>> master
+
 
 
 
