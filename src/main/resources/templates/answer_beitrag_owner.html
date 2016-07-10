@@ -145,7 +145,7 @@ label {
     width: 600px;
     border-radius: 18px;}
 </style>
-<form th:action="@{/answer_beitrag}" th:object="${answer}" method="post">
+<form th:action="@{/answer_beitrag_owner}" th:object="${answer}" method="post">
     <div class="form-group">
         <label for="to">An</label>
         <input type="text" id="to" placeholder="" th:field="*{to}" style="height: 43px;"/>
