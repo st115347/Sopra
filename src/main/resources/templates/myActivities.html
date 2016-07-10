@@ -42,12 +42,6 @@
                         <li><a href="/myLearningGroups">Meine Lerngruppen</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lerngruppe verwalten<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a th:href="'/show_user_lgp?id=' + ${lerngruppe.id}" >Mitglieder anzeigen</a></li>
-                    </ul>
-                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/logout">Logout</a></li>
@@ -63,31 +57,23 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<style>
-h3 {
-    font-style: italic;
-</style>
-<h3 th:text="'Multiple-Choice Fragen dieser Lerngruppe'" />
-<table class="table">
-    <tr>
-        <td><b>Thema</b></td>
-        <td><b>Frage</b></td>
-        <td><b>Autor</b></td>
-        <td></td>
-        <td><b>Frage zu Quiz hinzufügen</b></td>
-        <td><a th:href="'create_quiz/?id=' + ${quiz.id}" role="button" class="btn btn-success" >Quiz erstellen</a></td>
-        <td th:text="'Sie haben derzeit '+ ${size}+' Fragen ausgewählt'"></td>
-    </tr>
-    <tr th:each="MCquestion : ${MCquestions}">
-    <td th:text="${MCquestion.getThema()}"></td>
-    <td th:text="${MCquestion.getFrage()}"></td>
-    <td th:text="${MCquestion.getAuthor()}"></td>
-    <td th:if="${user.username} == ${MCquestion.authorID}"><a th:href="'/changeMCquestion/?id=' + ${MCquestion.getId()}" role="button" class="btn btn-success" >Details anzeigen / bearbeiten</a></td>
-    <td th:if="${user.username} != ${MCquestion.authorID}"></td>
-    <td><a th:href="'add_question/?id=' + ${MCquestion.id} + '&amp;qid='+${quiz.id}" role="button" class="btn btn-success" >Zum Quiz hinzufügen</a></td>
-    <td></td>
-    </tr>
-</table>
+
+<div class="page-header">
+    <h3><span style="border-bottom: 3px solid LimeGreen;">Aktivitäten:</span></h3>
+</div>
+<div>
+    <p ></p>
+</div>
+
+<div class="list-group">
+    <a th:each="act : ${activities}" href="#" class="list-group-item active">
+        <h4 class="list-group-item-heading" th:text="${act.category}"></h4>
+        <p class="list-group-item-text" th:text="${act.infotext}" ></p>
+        <br/>
+    </a>
+</div>
+
+
 <style>
 h1{
     font-family: Forte;

@@ -37,6 +37,9 @@ public class GreetingController {
     SopraUserRepository sopraUserRepository;
 
     @Autowired
+    ActivityRepository activityRepository;
+
+    @Autowired
     private UserDetailsManager userDetailsManager;
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
@@ -93,6 +96,15 @@ public class GreetingController {
         SopraUser sopraUser_new = userService.getCurrentSopraUser();
         sopraUser_new = sopraUser_old;
         sopraUserRepository.save(sopraUser_new);
+
+        //Neue Activity wird erzeugt
+        Activity act = new Activity();
+        act.setType(1);
+        act.setUser(userService.getCurrentSopraUser().getEmail());
+        act.generateActivity();
+        activityRepository.save(act);
+
+
         return "greeting";
     }
 
@@ -143,6 +155,15 @@ public class GreetingController {
             return "redirect:/join_lgp";
         }
         learningGroupRepository.save(grp);
+
+        //Neue Activity wird erzeugt
+        Activity act = new Activity();
+        act.setType(0);
+        act.setUser(userService.getCurrentSopraUser().getEmail());
+        act.setVariable(grp.getName());
+        act.generateActivity();
+        activityRepository.save(act);
+
         return displayLGP(model);
 
     }
@@ -166,7 +187,18 @@ public class GreetingController {
         if (grp.comparePassword(password)) {
             if (grp.addUser(user)) {
                 learningGroupRepository.save(grp);
+
+                //Neue Activity wird erzeugt
+                Activity act = new Activity();
+                act.setType(0);
+                act.setUser(userService.getCurrentSopraUser().getEmail());
+                act.setVariable(grp.getName());
+                act.generateActivity();
+                activityRepository.save(act);
+
+
                 return displayLGP(model);
+
             }
                 showgrpfullerror=true;
                 return "redirect:/join_lgp";
@@ -197,4 +229,23 @@ public class GreetingController {
     model.addAttribute("lerngruppe",usergrps);
     return"myLearningGroups";
 }
+
+    @RequestMapping(value = "/myActivities", method = RequestMethod.GET)
+    public String myActivities(Model model) {
+
+        SopraUser user = userService.getCurrentSopraUser();
+
+        List<Activity> activities = new ArrayList<Activity>();
+        for (Activity act : activityRepository.findAll()){
+
+                activities.add(act);
+
+        }
+
+        model.addAttribute("activities", activities);
+
+            return "myActivities";
+
+        }
+
 }

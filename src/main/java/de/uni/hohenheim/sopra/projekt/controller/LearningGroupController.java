@@ -32,6 +32,9 @@ public class LearningGroupController {
     LearningGroupRepository learningGroupRepository;
 
     @Autowired
+    ActivityRepository activityRepository;
+
+    @Autowired
     SopraUserRepository sopraUserRepository;
 
     @Autowired
@@ -76,6 +79,15 @@ public class LearningGroupController {
 
         lerngruppe.addUser(userService.getCurrentSopraUser());
         learningGroupRepository.save(lerngruppe);
+
+        //Neue Activity wird erzeugt
+        Activity act = new Activity();
+        act.setType(0);
+        act.setUser(userService.getCurrentSopraUser().getEmail());
+        act.setVariable(lerngruppe.getName());
+        act.generateActivity();
+        activityRepository.save(act);
+
         return myLearningGroups(model);
     }
 
@@ -214,6 +226,17 @@ public class LearningGroupController {
         beitragRepository.save(beitrag);
         model.addAttribute("lerngruppe", lgp);
         model.addAttribute("beitrag",beitrag);
+
+
+        //Neue Activity wird erzeugt
+        Activity act = new Activity();
+        act.setType(2);
+        act.setUser(userService.getCurrentSopraUser().getEmail());
+        act.setVariable(beitrag.getName());
+        act.generateActivity();
+        activityRepository.save(act);
+
+
         return "show_beitrag";
     }
 
@@ -230,6 +253,15 @@ public class LearningGroupController {
         beitragRepository.save(beitrag);
         model.addAttribute("beitrag",beitrag);
         model.addAttribute("lerngruppe", lgp);
+
+        //Neue Activity wird erzeugt
+        Activity act = new Activity();
+        act.setType(2);
+        act.setUser(userService.getCurrentSopraUser().getEmail());
+        act.setVariable(beitrag.getName());
+        act.generateActivity();
+        activityRepository.save(act);
+
         return "show_beitrag_owner";
     }
 
@@ -262,6 +294,16 @@ public class LearningGroupController {
             }
         }
         model.addAttribute("lerngruppe", usergrps);
+
+        //Neue Activity wird erzeugt
+        Activity act = new Activity();
+        act.setType(3);
+        act.setUser(userService.getCurrentSopraUser().getEmail());
+        act.setVariable(lgp.getName());
+        act.generateActivity();
+        activityRepository.save(act);
+
+
         return "myLearningGroups";
 
     }
