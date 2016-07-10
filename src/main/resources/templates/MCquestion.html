@@ -55,7 +55,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Meine Quiz</a></li>
                         <li><a href="/myActivities">Profil anzeigen</a></li>
                         <li><a href="/change_profileSettings">Profil ändern</a></li>
                     </ul>
@@ -72,6 +71,90 @@
 <p>Bitte geben Sie zu jeder Antwortmöglichkeit an, ob diese richtig ist oder nicht.</p>
 <p>Es können keine, eine oder mehrere (auch alle) Antworten richtig sein.</p>
 <br/>
+<style>
+
+form {
+    width: 1000px;
+    height: 750px;
+    border: 2px solid #8c8c8c;
+    background: #d9f2e4;
+    padding: 20px;
+    margin-left: 180px;
+    margin-top: 5px;
+
+}
+
+form label {
+    display: block;
+    margin: 9px;
+
+}
+
+input[type=text]:focus {
+    border: 2px solid #666;
+}
+
+input[type=hidden]:focus {
+    border: 2px solid #666;
+}
+input[type=hidden]{
+    font-family: Verdana,sans-serif;
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-top: 1px solid LimeGreen;
+    border-bottom: 1px solid LimeGreen;
+    background-color: white;
+    height: 22px;
+    width: 700px;
+    padding: 3px;
+}
+input[type=text]{
+    font-family: Verdana,sans-serif;
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-top: 1px solid LimeGreen;
+    border-bottom: 1px solid LimeGreen;
+    background-color: white;
+    height: 22px;
+    width: 1400px;
+    padding: 3px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    border: 1px dotted;
+    color: white;
+    padding: 12px 26px;
+    text-decoration: none;
+    margin: 28px 5px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+input[type=reset] {
+    background-color: #4CAF50;
+    border: 1px dotted;
+    color: white;
+    padding: 12px 26px;
+    text-decoration: none;
+    margin: 28px 5px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+label {
+    font-size: 16px;
+    font-family: 'Verdana', sans-serif;
+    color: #666;
+    display: block;
+    width: 600px;
+    border-radius: 18px;}
+</style>
+
 <form action="#" th:action="@{/MCquestion}" th:object="${MCquestion}" method="post" >
     <div>
         <input type="hidden" th:field="*{id}" class="form-control"/>
@@ -83,15 +166,15 @@
         <input type="hidden" th:field="*{groupId}" class="form-control"/>
     </div>
     <div class="input-group input-group-lg" >
-        <span class="input-group-addon" id="sizing-addon1">Thema der Frage</span>
+        <label id="sizing-addon1">Thema der Frage</label>
         <input type="text" th:field="*{thema}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
     </div>
     <div class="input-group input-group-lg" >
-        <span class="input-group-addon" id="sizing-addon1">Fragestellung</span>
+        <label id="sizing-addon1">Fragestellung</label>
         <input type="text" th:field="*{frage}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
     </div>
     <div class="input-group input-group-lg" >
-        <span class="input-group-addon" id="sizing-addon1">Antwortmöglichkeit 1</span>
+        <label id="sizing-addon1">Antwortmöglichkeit 1</label>
         <input type="text" th:field="*{antwort1}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
     </div>
     <div class="input-group input-group-lg" >
@@ -100,7 +183,7 @@
         <input name="Antwort falsch" type="radio" value="2" th:field="*{antwort1_lsg}" /> Antwort falsch
     </div>
     <div class="input-group input-group-lg" >
-        <span class="input-group-addon" id="sizing-addon1">Antwortmöglichkeit 2</span>
+        <label id="sizing-addon1">Antwortmöglichkeit 2</label>
         <input type="text" th:field="*{antwort2}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
     </div>
     <div class="input-group input-group-lg" >
@@ -108,7 +191,7 @@
         <input name="Antwort richtig" type="radio" value="1" th:field="*{antwort2_lsg}" /> Antwort richtig
         <input name="Antwort falsch" type="radio" value="2" th:field="*{antwort2_lsg}" /> Antwort falsch
     </div>    <div class="input-group input-group-lg" >
-    <span class="input-group-addon" id="sizing-addon1">Antwortmöglichkeit 3</span>
+    <label id="sizing-addon1">Antwortmöglichkeit 3</label>
     <input type="text" th:field="*{antwort3}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
 </div>
     <div class="input-group input-group-lg" >
@@ -117,7 +200,7 @@
         <input name="Antwort falsch" type="radio" value="2" th:field="*{antwort3_lsg}" /> Antwort falsch
     </div>
     <div class="input-group input-group-lg" >
-        <span class="input-group-addon" id="sizing-addon1">Antwortmöglichkeit 4</span>
+        <label id="sizing-addon1">Antwortmöglichkeit 4</label>
         <input type="text" th:field="*{antwort4}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
     </div>
     <div class="input-group input-group-lg" >
@@ -134,7 +217,7 @@ h1{
     font-family: Forte;
     color: LimeGreen;
     text-align: center;
-    margin-top: 0px;
+    margin-top: -2px;
 }
 </style>
 <div style="position: absolute; left: 600px; top: 8px">

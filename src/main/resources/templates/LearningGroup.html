@@ -55,7 +55,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Meine Quiz</a></li>
                         <li><a href="/myActivities">Profil anzeigen</a></li>
                         <li><a href="/change_profileSettings">Profil ändern</a></li>
                     </ul>
@@ -74,19 +73,33 @@ h3 {
     font-style: italic;
 </style>
 <h3 th:text="'Willkommen in der Lerngruppe ' + ${lerngruppe.name}"/>
-<br/>
+<p>Wählen Sie eine Funktion aus.</p>
 
-<br/>
-<br/>
-
-<a class="btn btn-success" th:href="'/fileUploadForm?id='+ ${lerngruppe.id}" role="button">Datei hochladen</a>
-<a class="btn btn-success" th:href="'/MCquestion?id='+ ${lerngruppe.id}" role="button">Neue MC-Frage erstellen</a>
-<a class="btn btn-success" th:href="'/myMCquestions?id='+ ${lerngruppe.id}" role="button">Alle MC-Fragen anzeigen</a>
-<a class="btn btn-success" th:href="'/showQuiz?id='+ ${lerngruppe.id}" role="button">Alle Quiz anzeigen</a>
+<style>
+a [type=button] {
+background-color: #4CAF50;
+border: 1px dotted;
+color: white;
+padding: 12px 26px;
+text-decoration: none;
+margin: 28px 5px;
+font-family: 'Verdana', sans-serif;
+font-size: 14px;
+cursor: pointer;
+border-radius: 16px;
+}
+</style>
+<h3><span style="border-bottom: 3px solid LimeGreen;">Dateien der Lerngruppe</span></h3><br/>
+<a th:href="'/fileUploadForm?id='+ ${lerngruppe.id}" type="button">Datei hochladen</a>
+<h3><span style="border-bottom: 3px solid LimeGreen;">Multiple-Choice-Fragen</span></h3><br/>
+<a  class="btn btn-success" th:href="'/MCquestion?id='+ ${lerngruppe.id}" type="button">Neue MC-Frage erstellen</a>
+<a class="btn btn-success" th:href="'/myMCquestions?id='+ ${lerngruppe.id}" type="button">Alle MC-Fragen anzeigen</a>
+<h3><span style="border-bottom: 3px solid LimeGreen;">Quiz der Lerngruppe</span></h3><br/>
+<a class="btn btn-success" th:href="'/showQuiz?id='+ ${lerngruppe.id}" type="button">Alle Quiz anzeigen</a>
 
 
 <div class="page-header">
-    <h3><span style="border-bottom: 3px solid LimeGreen;">Diskussionen dieser Lerngruppe</span></h3>
+    <h3><span style="border-bottom: 3px solid LimeGreen;">Diskussionen dieser Lerngruppe</span></h3><br/>
     <a class="btn btn-success" th:href="'/add_beitrag?id='+ ${lerngruppe.id}" role="button">Neues Topic erstellen</a>
 
 </div>
@@ -111,7 +124,7 @@ h1{
     font-family: Forte;
     color: LimeGreen;
     text-align: center;
-    margin-top: 0px;
+    margin-top: -2px;
 }
 </style>
 <div style="position: absolute; left: 600px; top: 8px">

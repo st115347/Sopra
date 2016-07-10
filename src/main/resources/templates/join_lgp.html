@@ -48,7 +48,6 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Meine Quiz</a></li>
                         <li><a href="/myActivities">Profil anzeigen</a></li>
                         <li><a href="/change_profileSettings">Profil ändern</a></li>
                     </ul>
@@ -59,7 +58,8 @@
 </nav>
 
 <a href="javascript:history.back()">Zurück</a>
-
+<h3><span style="border-bottom: 3px solid LimeGreen;">Lerngruppen beitreten</span></h3>
+<br/>
 <p th:if="${error != null}" style="color:red" >Die Lerngruppe ist bereits voll!</p>
 <table class="table">
     <tr>
@@ -75,7 +75,7 @@
         <td th:unless="${lgp.visibility}">Nein</td>
         <td th:text="${lgp.owner}"></td>
         <td th:text="${10 - lgp.membercount}"></td>
-        <td><a th:href="'finish_join_lgp/?id=' + ${lgp.id}" role="button" class="btn btn-success" >Beitreten</a></td>
+        <td><a th:href="'finish_join_lgp/?id=' + ${lgp.id}" role="button" >Beitreten</a></td>
     </tr>
 </table>
 <style>
@@ -83,7 +83,7 @@ h1{
     font-family: Forte;
     color: LimeGreen;
     text-align: center;
-    margin-top: 0px;
+    margin-top: -2px;
 }
 </style>
 <div style="position: absolute; left: 600px; top: 8px">
