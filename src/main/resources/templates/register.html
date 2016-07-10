@@ -46,6 +46,11 @@ form label {
 
 }
 
+input[type=text]:focus {
+    border: 2px solid #666;
+}
+
+
 input[type=text]{
     font-family: Verdana,sans-serif;
     color: black;
@@ -56,7 +61,7 @@ input[type=text]{
     background-color: white;
     height: 22px;
     width: 250px;
-    padding :3px;}
+    padding: 10px;}
 
 input[type=submit], input[type=reset] {
     background-color: #4CAF50;
@@ -80,23 +85,23 @@ label {
     border-radius: 18px;
 }
 </style>
-        <div class="input-group input-group-lg">
-            <label for="" class="control-label">E-Mail</label>
+        <div class="input-group">
+            <label for="" >E-Mail</label>
             <input type="text" th:field="*{username}" class="form-control" placeholder="" aria-describedby="sizing-addon" style="height: 43px;"/>
         </div>
         <div><p style="color:red" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Email Error.</p></div>
-        <div class="input-group input-group-lg">
-            <label for="" class="control-label">Passwort</label>
+        <div class="input-group">
+            <label for="" >Passwort</label>
             <input type="text" th:field="*{passwort}" class="form-control" placeholder="" aria-describedby="sizing-addon1" style="height: 43px;"/>
         </div>
         <div><p style="color:red" th:if="${#fields.hasErrors('passwort')}" th:errors="*{passwort}">Password Error.</p></div>
-        <div class="input-group input-group-lg">
-            <label for="" class="control-label">Nachname</label>
+        <div class="input-group">
+            <label for="" >Nachname</label>
             <input type="text" th:field="*{nachname}" class="form-control" placeholder="" aria-describedby="sizing-addon2" style="height: 43px;"/>
         </div>
         <div><p style="color:red" th:if="${#fields.hasErrors('nachname')}" th:errors="*{nachname}">Name Error.</p></div>
-        <div class="input-group input-group-lg">
-            <label for="" class="control-label">Vorname</label>
+        <div class="input-group">
+            <label for="">Vorname</label>
             <input type="text" th:field="*{vorname}" class="form-control" placeholder="" aria-describedby="sizing-addon3" style="height: 43px;"/>
         </div>
         <div><p style="color:red" th:if="${#fields.hasErrors('vorname')}" th:errors="*{vorname}">Name Error.</p></div>
@@ -116,7 +121,7 @@ h1{
     font-family: Forte;
     color: LimeGreen;
     text-align: center;
-    margin-top: 0px;
+    margin-top: -2px;
 }
 </style>
 <div style="position: absolute; left: 600px; top: 10px">

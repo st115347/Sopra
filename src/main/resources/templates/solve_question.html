@@ -55,7 +55,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Meine Quiz</a></li>
+                        <li><a href="/myActivities">Profil anzeigen</a></li>
                         <li><a href="/change_profileSettings">Profil ändern</a></li>
                     </ul>
                 </li>
@@ -65,7 +65,14 @@
 </nav>
 
 
-
+<style>
+h2{
+    font-family: Forte;
+    color: LimeGreen;
+    text-align: center;
+    margin-top: -2px;
+}
+</style>
 <h2 th:text="'Frage Nr. '+${size}"></h2>
 
 <form action="#" th:action="@{/nextQuestion}" th:object="${tupel}" method="post" id="tupelform">
@@ -109,7 +116,7 @@
         </div>
 
         <div class="input-group input-group-lg"  th:if="${tupel.getQ().getAntwort3_lsg()} != 0">
-            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a3}" /> Weis nicht
+            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a3}" /> Weiß nicht
             <input name="Antwort richtig" type="radio" value="1" th:field="*{a3}" /> Richtig
             <input name="Antwort falsch" type="radio" value="2" th:field="*{a3}" /> Falsch
         </div>
@@ -120,7 +127,7 @@
         </div>
 
         <div class="input-group input-group-lg" th:if="${tupel.getQ().getAntwort4_lsg()} != 0">
-            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a4}" /> Weis nicht
+            <input name="Antwort richtig" checked="checked" type="radio" value="0" th:field="*{a4}" /> Weiß nicht
             <input name="Antwort richtig" type="radio" value="1" th:field="*{a4}" /> Richtig
             <input name="Antwort falsch" type="radio" value="2" th:field="*{a4}" /> Falsch
         </div>

@@ -51,6 +51,9 @@ public class QuizController {
     HtupelRepository htupelRepository;
 
 
+    @Autowired
+    ActivityRepository activityRepository;
+
     @RequestMapping(value="/MCquestion", method= RequestMethod.GET)
     public String mcqestionForm (@RequestParam(value="id", required=true) Integer groupId, Model model) {
 
@@ -87,6 +90,14 @@ public class QuizController {
         mcquestion.setAuthorID(user.getUsername());
         mcquestionRepository.save(mcquestion);
         model.addAttribute("lerngruppe", lgp);
+
+        //Neue Activity wird erzeugt
+        Activity act = new Activity();
+        act.setType(4);
+        act.setUser(userService.getCurrentSopraUser().getEmail());
+        act.setVariable(mcquestion.getThema());
+        act.generateActivity();
+        activityRepository.save(act);
 
 
       return "redirect:myMCquestions?id="+mcquestion.getGroupId();
@@ -223,6 +234,15 @@ public class QuizController {
     public String finishCreateQuiz(@ModelAttribute Quiz quiz,Model model){
         quiz.setFinished(true);
         quizRepository.save(quiz);
+
+        //Neue Activity wird erzeugt
+        Activity act = new Activity();
+        act.setType(5);
+        act.setUser(userService.getCurrentSopraUser().getEmail());
+        act.setVariable(quiz.getName());
+        act.generateActivity();
+        activityRepository.save(act);
+
         return"redirect:/get_lgp?id="+quiz.getGroupID();
     }
 
@@ -326,8 +346,27 @@ public class QuizController {
                     model.addAttribute("alltupel", alltupel);
                     model.addAttribute("lerngruppe", learningGroupRepository.findOne(t.getQ().getGroupId()));
                     if(userService.getCurrentSopraUser().equals(learningGroupRepository.findOne(tupel.getQ().getGroupId()).getSopraUsers().get(0))){
+
+                        //Neue Activity wird erzeugt
+                        Activity act = new Activity();
+                        act.setType(6);
+                        act.setUser(userService.getCurrentSopraUser().getEmail());
+                        act.setVariable(quiz.getName());
+                        act.setVariable2(total.toString());
+                        act.generateActivity();
+                        activityRepository.save(act);
+
                         return "end_quiz_owner";
                     }
+                    //Neue Activity wird erzeugt
+                    Activity act = new Activity();
+                    act.setType(6);
+                    act.setUser(userService.getCurrentSopraUser().getEmail());
+                    act.setVariable(quiz.getName());
+                    act.setVariable2(total.toString());
+                    act.generateActivity();
+                    activityRepository.save(act);
+
                     return "end_quiz";
                 }
 
