@@ -63,34 +63,31 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<a href="javascript:history.back()">Zurück</a>
 
-<style>
-   h3{
-   text-decoration: underline;
-   text-decoration-color: LimeGreen;
-}
-</style>
-<h3 th:text="${'Mitglieder in der Lernguppe ' + lerngruppe.name}"></h3>
-<br></br>
 
+<h3><span style="border-bottom: 3px solid LimeGreen;">Highscore dieses Quiz</span></h3>
 <table class="table">
-
     <tr>
-        <td><b>Mitglieder</b></td>
+        <td><b>Platz</b></td>
+        <td><b>Name</b></td>
+        <td><b>Punktzahl</b></td>
         <td></td>
     </tr>
-    <tr th:each="user : ${users}">
-        <td th:text="${user.vorname +' '+ user.nachname}" ></td>
+    <tr th:each="index : ${#numbers.sequence( 0, #arrays.length(htupels)-1)}">
+        <td th:text="'Rang: ' + ${index +1} "></td>
+        <td th:text="${htupels[index].getUsername()}" ></td>
+        <td th:text="${htupels[index].getScore()}" ></td>
+
     </tr>
 </table>
+<a th:href="'/get_lgp/?id=' + ${lerngruppe.id}" role="button" class="btn btn-success" >Zuück zur Lerngruppe</a>
 <style>
-h1{
-    font-family: Forte;
-    color: LimeGreen;
-    text-align: center;
-    margin-top: -2px;
-}
+    h1{
+        font-family: Forte;
+        color: LimeGreen;
+        text-align: center;
+        margin-top: -2px;
+    }
 </style>
 <div style="position: absolute; left: 600px; top: 8px">
     <h1>Study 2.0</h1>

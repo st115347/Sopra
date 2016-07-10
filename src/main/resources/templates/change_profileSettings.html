@@ -62,6 +62,65 @@
 
 <h3><span style="border-bottom: 3px solid LimeGreen;">Eigenes Profil ändern</span></h3>
 <br/>
+<style>
+
+form {
+width: 700px;
+height: 650px;
+border: 2px solid #8c8c8c;
+background: #d9f2e4;
+padding: 20px;
+margin-left: 350px;
+margin-top: 0px;
+
+}
+
+form label {
+display: block;
+margin: 9px;
+
+}
+
+input[type=text]:focus {
+    border: 2px solid #666;
+}
+
+input[type=text]{
+    font-family: Verdana,sans-serif;
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-top: 1px solid LimeGreen;
+    border-bottom: 1px solid LimeGreen;
+    background-color: white;
+    height: 150px;
+    width: 400px;
+    padding: 10px;
+    margin-left: 10px;
+}
+input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: 1px dotted;
+    color: white;
+    padding: 12px 26px;
+    text-decoration: none;
+    margin: 10px 5px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+label {
+font-size: 16px;
+font-family: 'Verdana', sans-serif;
+color: #666;
+display: block;
+width: 700px;
+border-radius: 18px;
+margin-left: 150px;}
+</style>
+
 <form action="#" th:action="@{/change_profileSettings}" th:object="${sopraUser}" method="post">
     <table border="0" cellspacing="1" cellpadding="2">
         <tbody>
@@ -72,29 +131,29 @@
         <div>
             <input type="hidden" th:field="*{email}" class="form-control"/>
         </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Vorname</span>
-            <input type="text" th:field="*{vorname}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+        <div class="input-group">
+            <label id="sizing-addon1">Vorname</label>
+            <input type="text" th:field="*{vorname}" placeholder="" aria-describedby="sizing-addon1" style="height: 43px;"/>
+        </div>
+        <div class="input-group">
+            <label id="sizing-addon1">Nachname</label>
+            <input type="text" th:field="*{nachname}"  placeholder="" aria-describedby="sizing-addon1" style="height: 43px;"/>
+        </div>
+        <div class="input-group">
+            <label id="sizing-addon1">Geburtsdatum</label>
+            <input type="text" th:field="*{geburtsdatum}" placeholder="" aria-describedby="sizing-addon1" style="height: 43px;"/>
         </div>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Nachname</span>
-            <input type="text" th:field="*{nachname}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+            <label id="sizing-addon1">Hochschule</label>
+            <input type="text" th:field="*{hochschule}" placeholder="" aria-describedby="sizing-addon1" style="height: 43px;"/>
         </div>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Geburtsdatum</span>
-            <input type="text" th:field="*{geburtsdatum}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+            <label id="sizing-addon1">Studiengang</label>
+            <input type="text" th:field="*{studiengang}" placeholder="" aria-describedby="sizing-addon1" style="height: 43px;"/>
         </div>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Hochschule</span>
-            <input type="text" th:field="*{hochschule}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Studiengang</span>
-            <input type="text" th:field="*{studiengang}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
-        </div>
-        <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="sizing-addon1">Fachsemester</span>
-            <input type="text" th:field="*{fachsemester}" class="form-control" placeholder="" aria-describedby="sizing-addon1"/>
+            <label id="sizing-addon1">Fachsemester</label>
+            <input type="text" th:field="*{fachsemester}" placeholder="" aria-describedby="sizing-addon1" style="height: 43px;"/>
         </div>
 
         <tr>
@@ -113,7 +172,7 @@ h1{
     font-family: Forte;
     color: LimeGreen;
     text-align: center;
-    margin-top: 0px;
+    margin-top: -2px;
 }
 </style>
 <div style="position: absolute; left: 600px; top: 8px">
