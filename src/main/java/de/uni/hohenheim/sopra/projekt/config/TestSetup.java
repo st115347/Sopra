@@ -116,7 +116,7 @@ public class TestSetup implements ApplicationListener<ContextRefreshedEvent> {
     question1.setGroupId(1);
 
     MCquestion question2= new MCquestion();
-    question2.setThema("Harry Potter");
+    question2.setThema("CSS");
     question2.setAuthor("Tabea Schmid");
     question2.setAuthorID(user.getUsername());
     question2.setFrage("Was beudetet CSS?");
