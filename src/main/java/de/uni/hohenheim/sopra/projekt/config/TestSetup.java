@@ -119,7 +119,7 @@ public class TestSetup implements ApplicationListener<ContextRefreshedEvent> {
     question2.setThema("CSS");
     question2.setAuthor("Tabea Schmid");
     question2.setAuthorID(user.getUsername());
-    question2.setFrage("Was beudetet CSS?");
+    question2.setFrage("Was bedeuted CSS?");
     question2.setId(2);
     question2.setAntwort1("Counter-Strike Source");
     question2.setAntwort1_lsg(2);
