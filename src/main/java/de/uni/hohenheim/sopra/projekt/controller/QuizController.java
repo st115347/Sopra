@@ -309,21 +309,36 @@ public class QuizController {
         for (Tupel t : alltupel){
             index = alltupel.indexOf(t);
             next = index +1;
+
+            //Prüfen ob die Frage des Tupels der Iteration mit der Frage des Parameters übereinstimmt.
+            //Wenn ja -> aktuelles Tupel gefunden
+            //Wenn nein -> nächstes Tupel in der List betrachten
             if (t.getQ().equals(tupel.getQ())){
-                if(alltupel.indexOf(t) == (alltupel.size()-1)){
+
+                //Prüfen ob das aktuelle Tupel das letzte Tupel ist.
+                //Wenn ja -> Quiz auswerten und Ergebnis anzeigen
+                //Wenn nein -> Nächste Frage anzeigen.
+                if(alltupel.indexOf(t) == (alltupel.size()-1)) {
 
                     tupelRepository.save(tupel);
                     alltupel.set(index,tupel);
                     userService.getCurrentSopraUser().setActive(alltupel);
                     sopraUserRepository.save(userService.getCurrentSopraUser());
 
+                    //Berechnung der erreichten Punktzahl mit Hilfsmethode
                     Integer total = evaluate(alltupel);
                     Quiz quiz = quizRepository.findOne(alltupel.get(0).getQid());
+
+                    //Erstellen eines neuen Htupels um User und Punktzahl zu speichern
                     Htupel ht = new Htupel();
                     ht.setScore(total);
                     ht.setUsername(userService.getCurrentSopraUser().getVorname() + " " + userService.getCurrentSopraUser().getNachname());
                     htupelRepository.save(ht);
                     Highscore highscore = quiz.getHighscore();
+
+                    //Prüfen ob bereits ein Highscore existiert
+                    //Wenn ja -> einspeichern des Htupels
+                    //Wenn nein -> erstellen einer neuen Highscore
                     if(highscore == null){
                     highscore = new Highscore();
                     highscore.setHtupels(new ArrayList<Htupel>());
@@ -333,6 +348,8 @@ public class QuizController {
                     quiz.setHighscore(highscore);
                     quizRepository.save(quiz);
                     Integer place =0;
+
+                    //Berechnen der Platzierung des Users
                     for (Htupel h : highscore.getHtupels()){
                         if (h.getUsername().equals(userService.getCurrentSopraUser().getVorname() + " " + userService.getCurrentSopraUser().getNachname())){
                             place = highscore.getHtupels().indexOf(h) +1;
@@ -377,6 +394,8 @@ public class QuizController {
         alltupel.set(index,tupel);
         userService.getCurrentSopraUser().setActive(alltupel);
         sopraUserRepository.save(userService.getCurrentSopraUser());
+
+        //Das nächste Tupel wird aus der activ Liste geholt
         tupel = alltupel.get(next);
         model.addAttribute("tupel", tupel);
         model.addAttribute("size", next +1);
