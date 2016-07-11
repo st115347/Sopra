@@ -64,7 +64,6 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<a href="javascript:history.back()">Zurück</a>
 
 <!--/*@thymesVar id="lerngruppe" type="de.uni.hohenheim.sopra.projekt.model.LearningGroup"*/-->
 <!--/*@thymesVar id="beitrag" type="de.uni.hohenheim.sopra.projekt.model.Beitrag"*/-->
@@ -89,21 +88,20 @@ cursor: pointer;
 border-radius: 16px;
 }
 </style>
-<h3><span style="border-bottom: 3px solid LimeGreen;">Dateien der Lerngruppe</span></h3><br/>
-<a th:href="'/fileUploadForm?id='+ ${lerngruppe.id}" type="button">Datei hochladen</a>
-<h3><span style="border-bottom: 3px solid LimeGreen;">Multiple-Choice-Fragen</span></h3><br/>
-<a  class="btn btn-success" th:href="'/MCquestion?id='+ ${lerngruppe.id}" type="button">Neue MC-Frage erstellen</a>
-<a class="btn btn-success" th:href="'/myMCquestions?id='+ ${lerngruppe.id}" type="button">Alle MC-Fragen anzeigen</a>
-<h3><span style="border-bottom: 3px solid LimeGreen;">Quiz der Lerngruppe</span></h3><br/>
-<a class="btn btn-success" th:href="'/showQuiz?id='+ ${lerngruppe.id}" type="button">Alle Quiz anzeigen</a>
-
-
-<div class="page-header">
+<div style="margin: 10px">
+    <h3><span style="border-bottom: 3px solid LimeGreen;">Dateien der Lerngruppe</span></h3><br/>
+    <a class="btn btn-success" th:href="'/fileUploadForm?id='+ ${lerngruppe.id}" type="button">Datei hochladen</a></div>
+<div style="margin: 0px 200px">
+    <h3><span style="border-bottom: 3px solid LimeGreen;">Multiple-Choice-Fragen</span></h3><br/>
+    <a  class="btn btn-success" th:href="'/MCquestion?id='+ ${lerngruppe.id}" type="button">Neue MC-Frage erstellen</a>
+    <a class="btn btn-success" th:href="'/myMCquestions?id='+ ${lerngruppe.id}" type="button">Alle MC-Fragen anzeigen</a></div>
+<div style="margin: 0px 560px">
+    <h3><span style="border-bottom: 3px solid LimeGreen;">Quiz der Lerngruppe</span></h3><br/>
+    <a class="btn btn-success" th:href="'/showQuiz?id='+ ${lerngruppe.id}" type="button">Alle Quiz anzeigen</a></div>
+<div style="position:relative; margin: 0px 750px;">
     <h3><span style="border-bottom: 3px solid LimeGreen;">Diskussionen dieser Lerngruppe</span></h3><br/>
-    <a class="btn btn-success" th:href="'/add_beitrag?id='+ ${lerngruppe.id}" role="button">Neues Topic erstellen</a>
-
-</div>
-
+    <a class="btn btn-success" th:href="'/add_beitrag?id='+ ${lerngruppe.id}" role="button">Neues Topic erstellen</a></div>
+<br/>
 <table class="table">
 
     <tr>

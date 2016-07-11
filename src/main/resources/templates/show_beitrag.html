@@ -63,7 +63,6 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<a href="javascript:history.back()">Zurück</a>
 
 <br/>
 <br/>
@@ -74,6 +73,7 @@
 
     <h1 th:text="${beitrag.name}"></h1>
     <a th:href="'/answer_beitrag/?id=' + ${beitrag.id}+'&amp;grpid='+${lerngruppe.id}" role="button" class="btn btn-success" >Antworten</a>
+    <a th:href="'/get_lgp/?id=' + ${lerngruppe.id}" role="button" class="btn btn-success" >Weiter zur Lerngruppe</a>
 </div>
 
 <div>
